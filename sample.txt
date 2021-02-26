@@ -1,0 +1,65 @@
+Company Detail
+1. Logo
+2. FirstName
+3.LastName
+4.Postion/Designation
+5.Phone No.
+6.Whatsapp No 
+7.Address
+8.Email.id
+9.Website
+10.Location
+11.Company Establish
+12.About us
+
+Social Detail
+1.Facebook
+2.Whatsapp
+3.Twitter
+4.Instagram
+5.Linkdin
+6.Youtube
+7.Interest
+8.YouTUBE VIDEOS LINKS  = [5]
+
+
+Payment Option
+1.Paytm ={qr,number}
+2.Google={qr,number}
+3.Phone={qr,number}
+4.Bank Account Detail ={name,account no.,IFSC,bank name}
+
+
+PRODUCT AND SERVICES
+1.TEMPLATES={image,name,}
+
+ECOMMERCE 
+{
+    1.image,2.productname,3.mrp,4.selling 5.price
+}
+
+
+Image Gallery
+1.image=[url=[10]];
+
+
+CONTACT US
+1.NAME
+2.MOBILE
+3.EMAIL
+4.MSG
+5.Views
+
+FeedBack
+1.Name
+2.Feedback
+3.star
+4.date
+
+
+User 
+1.FirstName
+2.LastName
+3.Email
+4.Password
+5.Admin or Client

@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const Mongoose  = require("mongoose");
 
 const CompanySchema = new Mongoose.Schema({
     userId:String,
@@ -28,4 +28,4 @@ const CompanySchema = new Mongoose.Schema({
 
 });
 
-module.exports= CompanySchema;
+module.exports= Mongoose.model('CompanyDetails', CompanySchema)

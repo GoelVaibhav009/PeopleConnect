@@ -1,3 +1,4 @@
+
 const CompanyDetail = require('../model/Company')
 
 //@desc         GET all Company Detail

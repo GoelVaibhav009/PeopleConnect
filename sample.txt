@@ -1,16 +1,3 @@
-Company Detail
-1. Logo
-2. FirstName
-3.LastName
-4.Postion/Designation
-5.Phone No.
-6.Whatsapp No 
-7.Address
-8.Email.id
-9.Website
-10.Location
-11.Company Establish
-12.About us
 
 Social Detail
 1.Facebook
@@ -31,7 +18,7 @@ Payment Option
 
 
 PRODUCT AND SERVICES
-1.TEMPLATES={image,name,}
+1.[TEMPLATES={image,name,}]
 
 ECOMMERCE 
 {

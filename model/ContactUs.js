@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const Mongoose  = require("mongoose");
 
 const ContactSchema = new Mongoose.Schema({
     name:String,
@@ -8,4 +8,4 @@ const ContactSchema = new Mongoose.Schema({
 
 });
 
-module.exports= ContactSchema;
+module.exports= Mongoose.model('ContactDetails', ContactSchema)

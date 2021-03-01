@@ -19,4 +19,4 @@ const SocialSchema = new Mongoose.Schema({
   ],
 });
 
-module.exports = SocialSchema;
+module.exports = Mongoose.model('social', SocialSchema)

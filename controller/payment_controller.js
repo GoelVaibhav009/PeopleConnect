@@ -1,12 +1,21 @@
-//@desc         GET all Company Detail
+const PaymentDetail = require("../model/payment");
+
+
+//desc         GET all Company Detail
 //@route        GET /api/v1/company
 //@acces        Public
 
-exports.getPayments = (req, res, next) => {
+exports.getPayments =async (req, res, next) => {
+  try {
+    const companydetails = await PaymentDetail.find();
     res.status(200).json({
+      companydetails,
       success: true,
       msg: "Show all Details",
     });
+  } catch (error) {
+    next(error);
+  }
   };
   
   //@desc         GET all Company Detail
@@ -24,11 +33,12 @@ exports.getPayments = (req, res, next) => {
   //@route        POST /api/v1/company/:id
   //@acces        Private
   
-  exports.createPayment = (req, res, next) => {
-      res.status(200).json({
-          success: true,
-          msg: " Create Company Detail ",
-        });
+  exports.createPayment =async (req, res, next) => {
+    await PaymentDetail.create(req.body),
+    res.status(200).json({
+      success: true,
+      msg: " Created Payment Detail ",
+    });
   };
   //@desc         PUT all Company Detail
   //@route        PUT /api/v1/company/:id

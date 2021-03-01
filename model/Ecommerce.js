@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const Mongoose = require("mongoose");
 
 const EcommerceSchema = new Mongoose.Schema({
   userId: String,
@@ -8,4 +8,4 @@ const EcommerceSchema = new Mongoose.Schema({
   sellingPrice: String,
 });
 
-module.exports = EcommerceSchema;
+module.exports= Mongoose.model('Ecommerce Products', EcommerceSchema)

@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const Mongoose = require("mongoose");
 
 const FeedbackSchema = new Mongoose.Schema({
     userId:String,
@@ -8,4 +8,4 @@ const FeedbackSchema = new Mongoose.Schema({
     date:String,
 });
 
-module.exports= FeedbackSchema;
+module.exports = Mongoose.model('Feedbacks Products', FeedbackSchema)

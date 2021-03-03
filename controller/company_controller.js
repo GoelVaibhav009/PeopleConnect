@@ -43,26 +43,30 @@ exports.createCompanyDetail = async (req, res, next) => {
 //@acces        Private
 
 exports.updateCompanyDetail = async (req, res, next) => {
+  
     let companydetails = await CompanyDetail.findById(req.params.id)
-    if (!companydetails) {
-      // error in this
-      res.json({
-        msg: "company details with this id not found"
-      })
-    } else {
-      companydetails= await CompanyDetail.findOneAndUpdate(
-        {_id: req.params.id }, 
-        req.body, 
-        {
-          new: true,
-          runValidators: true,
+    try {
+      if (!companydetails) {
+        res.json({
+          msg: "company details with this id not found"
         })
-
-      res.status(200).json({
-        companydetails,
-        success: true,
-        msg: " Update Company Detail of" + req.params.id,
-      });
+      } else {
+        companydetails= await CompanyDetail.findOneAndUpdate(
+          {_id: req.params.id }, 
+          req.body, 
+          {
+            new: true,
+            runValidators: true,
+          })
+    
+        res.status(200).json({
+          companydetails,
+          success: true,
+          msg: " Update Company Detail of" + req.params.id,
+        });
+      }
+    } catch (e) {
+      console.log(e)
     }
 };
 
@@ -72,8 +76,8 @@ exports.updateCompanyDetail = async (req, res, next) => {
 
 exports.deleteCompanyDetail = async (req, res, next) => {
   let companydetails = await CompanyDetail.findById(req.params.id)
+  try {
     if (!companydetails) {
-      // error in this
       res.json({
         msg: "company details with this id not found"
       })
@@ -84,4 +88,8 @@ exports.deleteCompanyDetail = async (req, res, next) => {
         msg: "Delete Company Detail of" + req.params.id,
       });
     }
+  } catch (e) {
+    console.log(e)
+  }
+    
 };

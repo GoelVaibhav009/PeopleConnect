@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+const Mongoose = require("mongoose");
 
 const SocialSchema = new Mongoose.Schema({
   userId:String,
@@ -19,4 +19,4 @@ const SocialSchema = new Mongoose.Schema({
   ],
 });
 
-module.exports = SocialSchema;
+module.exports= Mongoose.model('SocialDetails', SocialSchema);

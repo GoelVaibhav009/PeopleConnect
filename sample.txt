@@ -18,7 +18,7 @@ Payment Option
 
 
 PRODUCT AND SERVICES
-1.[TEMPLATES={image,name,}]
+1.Templates= [TEMPLATE={image:String,name:String,}]
 
 ECOMMERCE 
 {

@@ -13,32 +13,13 @@ exports.getAllUser = async (req, res, next) => {
   }
 };
 
-exports.getUserDetail = async (req, res, next) => {
-  try {
-    const userDetail = await UserDetail.findById(req.params.id);
-    if (!userDetail) {
-      return res.status(400).json({ success: false });
-    }
-    res.status(200).json({
-      userDetail,
-      success: true,
-      msg: "Company Detail of" + req.params.id,
-    });
-  } catch (error) {
-    next(error);
-  }
-};
+
 
 exports.register = async (req, res, next) => {
   const user = await UserDetail.create(req.body);
 
-  const token = user.getSignedJwtToken();
-
-  res.status(200).json({
-    success: true,
-    token: token,
-    msg: " User Register Succesfully",
-  });
+  sendTokenResponse(user,200,res);
+ 
 };
 
 exports.login = async (req, res, next) => {
@@ -70,14 +51,58 @@ exports.login = async (req, res, next) => {
   }
 
 
-  const token = user.getSignedJwtToken();
-
-  res.status(200).json({
-    success: true,
-    token: token,
-    msg: " User Register Succesfully",
-  });
+  sendTokenResponse(user,200,res);
+  
 };
+const sendTokenResponse=(user,statusCode,res)=>{
+
+    const token = user.getSignedJwtToken();
+
+    const options={
+        expires:new Date(Date.now()+process.env.JWT_COOKIE*24*60*60*1000),
+        httpOnly: true    
+    };
+
+    res.status(statusCode).cookie('token',token,options).json({
+        success:true,
+        token
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.getUserDetail = async (req, res, next) => {
+    try {
+      const userDetail = await UserDetail.findById(req.params.id);
+      if (!userDetail) {
+        return res.status(400).json({ success: false });
+      }
+      res.status(200).json({
+        userDetail,
+        success: true,
+        msg: "Company Detail of" + req.params.id,
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+
 
 exports.updateUserDetail = async (req, res, next) => {
   let userDetail = await UserDetail.findById(req.params.id);

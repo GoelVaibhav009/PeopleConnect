@@ -5,15 +5,14 @@ const {
   getImages,
   getImage,
   createImage,
-  updateImage,
   deleteImage,
 } = require("../controller/images_controller");
 
-router.route("/").get(getImages).post(createImage);
+router.route("/").get(getImages);
 router
   .route("/:id")
+  .post(createImage)
   .get(getImage)
-  .put(updateImage)
   .delete(deleteImage);
 
-  module.exports = router;
+module.exports = router;

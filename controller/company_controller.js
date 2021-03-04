@@ -1,5 +1,5 @@
 const CompanyDetail = require("../model/Company");
-
+const ErrorResponse = require("../utils/errorResponse");
 //@desc         GET all Company Detail
 //@route        GET /api/v1/company
 //@acces        Public
@@ -7,13 +7,16 @@ const CompanyDetail = require("../model/Company");
 exports.getAllCompanyDetail = async (req, res, next) => {
   try {
     const companydetails = await CompanyDetail.find();
+    if (!companydetails) {
+      return next(new ErrorResponse("Company Not Found "));
+    }
     res.status(200).json({
       companydetails,
       success: true,
       msg: "Show all Details",
     });
   } catch (error) {
-    next(error);
+    next(new ErrorResponse('Company Not found '));
   }
 };
 
@@ -22,19 +25,19 @@ exports.getAllCompanyDetail = async (req, res, next) => {
 //@acces        Public
 
 exports.getCompanyDetail = async (req, res, next) => {
- try {
-  const companydetails = await CompanyDetail.findById(req.params.id);
-  if(!companydetails){
-    return res.status(400).json({success:false});
+  try {
+    const companydetails = await CompanyDetail.findById(req.params.id);
+    if (!companydetails) {
+      return res.status(400).json({ success: false });
+    }
+    res.status(200).json({
+      companydetails,
+      success: true,
+      msg: "Company Detail of" + req.params.id,
+    });
+  } catch (error) {
+    next(new ErrorResponse('Company Not found '));
   }
-  res.status(200).json({
-    companydetails,
-    success: true,
-    msg: "Company Detail of" + req.params.id,
-  });
- } catch (error) {
-   next(error)
- }
 };
 
 //@desc         POST Company Detail

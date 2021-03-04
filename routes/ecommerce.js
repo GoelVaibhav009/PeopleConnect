@@ -1,4 +1,5 @@
 const express = require("express");
+const {protect} =require('../middleware/auth');
 
 const router = express.Router();
 
@@ -10,11 +11,11 @@ const {
   deleteproduct,
 } = require("../controller/ecommerce_controller");
 
-router.route("/").get(getproducts).post(createproduct);
+router.route("/").get(getproducts).post(protect,createproduct);
 router
   .route("/:id")
-  .get(getproduct)
-  .put(updateproduct)
-  .delete(deleteproduct);
+  .get(protect,getproduct)
+  .put(protect,updateproduct)
+  .delete(protect,deleteproduct);
 
 module.exports = router;

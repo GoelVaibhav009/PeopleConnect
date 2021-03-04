@@ -9,11 +9,14 @@ const {
   deleteSocial,
 } = require("../controller/social_controller");
 
-router.route("/").get(getSocials).post(createSocial);
+const {protect} =require('../middleware/auth');
+
+
+router.route("/").get(getSocials).post(protect,createSocial);
 router
   .route("/:id")
   .get(getSocial)
-  .put(updateSocial)
-  .delete(deleteSocial);
+  .put(protect,updateSocial)
+  .delete(protect,deleteSocial);
 
   module.exports = router;

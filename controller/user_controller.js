@@ -1,6 +1,9 @@
 const User = require("../model/User");
 const UserDetail = require("../model/User");
 const asyncHandler = require('../middleware/async');
+
+
+
 exports.getAllUser = async (req, res, next) => {
   try {
     const userDetail = await UserDetail.find();

@@ -36,3 +36,12 @@ exports.protect = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse("Not Authrize ", 401));
   }
 });
+
+//Grant acces to specific roles
+exports.authorize = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return next(new ErrorResponse(`User role ${req.user.role} is unauthrized to commit this action`, 401));
+    }
+  };
+};

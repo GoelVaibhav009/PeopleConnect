@@ -1,10 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const path = require("path");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const colors = require("colors");
 const errorHandler = require("./middleware/error");
 const morgan = require("morgan");
+const fileupload = require("express-fileupload");
+const cokkie = require("cookie-parser");
 
 const userRoute = require("./routes/auth");
 const companyRoute = require("./routes/company");
@@ -26,10 +29,19 @@ connectDB();
 const app = express();
 
 app.use(express.json());
+
+app.use(cokkie());
 // Dev Logging Middleware
 if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
 }
+
+//File  upload
+app.use(fileupload());
+
+//Set Static Folder
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // Mount Routes
 app.use("/api/v1/company", companyRoute);

@@ -43,26 +43,30 @@ exports.createContact = async (req, res, next) => {
 
 exports.updateContact = async (req, res, next) => {
   let contactdetails = await ContactDetail.findById(req.params.id)
-  if (!contactdetails) {
-    // error in this
-    res.json({
-      msg: "company details with this id not found"
-    })
-  } else {
-    contactdetails= await ContactDetail.findOneAndUpdate(
-      {_id: req.params.id }, 
-      req.body, 
-      {
-        new: true,
-        runValidators: true,
+  try {
+    if (!contactdetails) {
+      res.json({
+        msg: "company details with this id not found"
       })
-
-    res.status(200).json({
-      contactdetails,
-      success: true,
-      msg: " Update Contact Detail of" + req.params.id,
-    });
+    } else {
+      contactdetails= await ContactDetail.findOneAndUpdate(
+        {_id: req.params.id }, 
+        req.body, 
+        {
+          new: true,
+          runValidators: true,
+        })
+  
+      res.status(200).json({
+        contactdetails,
+        success: true,
+        msg: " Update Contact Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+   console.log(e)
   }
+  
 };
 
 //@desc         DELETE Contact Detail
@@ -71,16 +75,20 @@ exports.updateContact = async (req, res, next) => {
 
 exports.deleteContact = async (req, res, next) => {
 let contactdetails = await ContactDetail.findById(req.params.id)
-  if (!contactdetails) {
-    // error in this
-    res.json({
-      msg: "company details with this id not found"
-    })
-  } else {
-    contactdetails= await ContactDetail.remove({ _id: req.params.id })
-    res.status(200).json({
-      success: true,
-      msg: "Delete Contact Detail of" + req.params.id,
-    });
+  try {
+    if (!contactdetails) {
+      res.json({
+        msg: "company details with this id not found"
+      })
+    } else {
+      contactdetails= await ContactDetail.remove({ _id: req.params.id })
+      res.status(200).json({
+        success: true,
+        msg: "Delete Contact Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+    console.log(e)
   }
+  
 };

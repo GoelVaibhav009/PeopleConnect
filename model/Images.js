@@ -6,4 +6,4 @@ const ImagesSchema = new mongoose.Schema({
   userId: String,
 });
 
-module.exports = mongoose.model("image", ImagesSchema);
+module.exports = mongoose.model("Images", ImagesSchema);

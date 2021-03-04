@@ -55,29 +55,31 @@ exports.createCompanyDetail = async (req, res, next) => {
 //@route        PUT /api/v1/company/:id
 //@acces        Private
 
-exports.updateCompanyDetail = async (req, res, next) => {
-  let companydetails = await CompanyDetail.findById(req.params.id);
-  if (!companydetails) {
-    // error in this
-    res.json({
-      msg: "company details with this id not found",
-    });
-  } else {
-    companydetails = await CompanyDetail.findOneAndUpdate(
-      { _id: req.params.id },
-      req.body,
-      {
-        new: true,
-        runValidators: true,
+exports.updateCompanyDetail = async (req, res, next) => {  
+    let companydetails = await CompanyDetail.findById(req.params.id)
+    try {
+      if (!companydetails) {
+        res.json({
+          msg: "company details with this id not found"
+        })
+      } else {
+        companydetails= await CompanyDetail.findOneAndUpdate(
+          {_id: req.params.id }, 
+          req.body, 
+          {
+            new: true,
+            runValidators: true,
+          })
+    
+        res.status(200).json({
+          companydetails,
+          success: true,
+          msg: " Update Company Detail of" + req.params.id,
+        });
       }
-    );
-
-    res.status(200).json({
-      companydetails,
-      success: true,
-      msg: " Update Company Detail of" + req.params.id,
-    });
-  }
+    } catch (e) {
+      console.log(e)
+    }
 };
 
 //@desc         DELETE Company Detail
@@ -85,17 +87,22 @@ exports.updateCompanyDetail = async (req, res, next) => {
 //@acces        Private
 
 exports.deleteCompanyDetail = async (req, res, next) => {
-  let companydetails = await CompanyDetail.findById(req.params.id);
-  if (!companydetails) {
-    // error in this
-    res.json({
-      msg: "company details with this id not found",
-    });
-  } else {
-    companydetails = await CompanyDetail.remove({ _id: req.params.id });
-    res.status(200).json({
-      success: true,
-      msg: "Delete Company Detail of" + req.params.id,
-    });
+  let companydetails = await CompanyDetail.findById(req.params.id)
+  try {
+    if (!companydetails) {
+      res.json({
+        msg: "company details with this id not found"
+      })
+    } else {
+      companydetails= await CompanyDetail.remove({ _id: req.params.id })
+      res.status(200).json({
+        success: true,
+        msg: "Delete Company Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+    console.log(e)
   }
+    
+
 };

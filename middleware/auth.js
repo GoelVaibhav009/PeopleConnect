@@ -43,5 +43,6 @@ exports.authorize = (...roles) => {
     if (!roles.includes(req.user.role)) {
       return next(new ErrorResponse(`User role ${req.user.role} is unauthrized to commit this action`, 401));
     }
+    next()
   };
 };

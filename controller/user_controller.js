@@ -1,5 +1,6 @@
+const User = require("../model/User");
 const UserDetail = require("../model/User");
-
+const asyncHandler = require('../middleware/async');
 exports.getAllUser = async (req, res, next) => {
   try {
     const userDetail = await UserDetail.find();
@@ -54,6 +55,19 @@ exports.login = async (req, res, next) => {
   sendTokenResponse(user,200,res);
   
 };
+
+
+exports.getMe = asyncHandler(async(req,res,next)=>{
+  const user = await User.findById(req.user.id);
+
+  res.status(200).json({
+    success:true,
+    data:user
+  });
+})
+
+
+
 const sendTokenResponse=(user,statusCode,res)=>{
 
     const token = user.getSignedJwtToken();

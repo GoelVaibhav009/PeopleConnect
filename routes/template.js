@@ -9,11 +9,14 @@ const {
   deleteTemplate,
 } = require("../controller/template_controller");
 
-router.route("/").get(getTemplates).post(createTemplate);
+const {protect} =require('../middleware/auth');
+
+
+router.route("/").get(getTemplates).post(protect,createTemplate);
 router
   .route("/:id")
   .get(getTemplate)
-  .put(updateTemplate)
-  .delete(deleteTemplate);
+  .put(protect,updateTemplate)
+  .delete(protect,deleteTemplate);
 
 module.exports = router;

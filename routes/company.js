@@ -1,4 +1,5 @@
 const express = require("express");
+const {protect} =require('../middleware/auth');
 
 const router = express.Router();
 const {
@@ -9,10 +10,10 @@ const {
   deleteCompanyDetail,
 } = require("../controller/company_controller");
 
-router.route("/").get(getAllCompanyDetail).post(createCompanyDetail);
+router.route("/").get(getAllCompanyDetail).post(protect,createCompanyDetail);
 router.route("/:id")
   .get(getCompanyDetail)
-  .put(updateCompanyDetail)
-  .delete(deleteCompanyDetail);
+  .put(protect,updateCompanyDetail)
+  .delete(protect,deleteCompanyDetail);
 
 module.exports = router;

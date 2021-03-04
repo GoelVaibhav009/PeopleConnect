@@ -8,11 +8,15 @@ const {
   deleteImage,
 } = require("../controller/images_controller");
 
-router.route("/").get(getImages);
+
+const {protect} =require('../middleware/auth');
+
+
+router.route("/").get(protect,getImages);
 router
   .route("/:id")
-  .post(createImage)
+  .post(protect,createImage)
   .get(getImage)
-  .delete(deleteImage);
+  .delete(protect,deleteImage);
 
 module.exports = router;

@@ -12,7 +12,7 @@ const {
 const {protect,authorize} =require('../middleware/auth');
 
 
-router.route("/").get(getTemplates).post(protect,authorize('admin'),createTemplate);
+router.route("/").get(protect,authorize('admin'),getTemplates).post(protect,authorize('admin'),createTemplate);
 router
   .route("/:id")
   .get(getTemplate)

@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
+const exphbs = require('express-handlebars')
 const colors = require("colors");
 const errorHandler = require("./middleware/error");
 const morgan = require("morgan");
@@ -18,9 +19,9 @@ const imagesRoute = require("./routes/images");
 const templateRoute = require("./routes/template");
 const ecommerceRoute = require("./routes/ecommerce");
 const paymentRoute = require("./routes/payment");
+const selectedTemplateRoute = require("./routes/selectedTemplate");
 
 //Lod env vars
-
 dotenv.config({ path: "./config/config.env" });
 
 //Connect To Databse
@@ -36,6 +37,11 @@ if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
 }
 
+//Handlesbars
+app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}))
+app.set('view engine', '.hbs')
+
+
 //File  upload
 app.use(fileupload());
 
@@ -44,6 +50,11 @@ app.use(fileupload());
 app.use(express.static(path.join(__dirname, "public")));
 
 // Mount Routes
+app.get('/main', (req, res) => {
+  res.render('main', {
+      layout: 'main'
+  })
+})
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/contact", contactRoute);
@@ -53,6 +64,8 @@ app.use("/api/v1/social", socialRoute);
 app.use("/api/v1/images", imagesRoute);
 app.use("/api/v1/payment", paymentRoute);
 app.use("/api/v1/feedback", feedbackRoute);
+app.use("/api/v1/selectedTemplate", selectedTemplateRoute);
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;

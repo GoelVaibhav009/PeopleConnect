@@ -6,10 +6,13 @@ const ErrorResponse = require("../utils/errorResponse");
 
 exports.getAllCompanyDetail = async (req, res, next) => {
   try {
-    const companydetails = await CompanyDetail.find();
+    const companydetails = await CompanyDetail.find().populate('user').lean();
     if (!companydetails) {
       return next(new ErrorResponse("Company Not Found "));
     }
+    // res.render('templates/template1', {
+    //   companydetails,
+    // })
     res.status(200).json({
       companydetails,
       success: true,

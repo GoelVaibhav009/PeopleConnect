@@ -4,18 +4,18 @@ const router = express.Router();
 const {
   getAllSelectedTemplate,
   getSelectedTemplate,
-  createSlectedTemplate,
-  updateSlectedTemplate,
-  deleteSlectedTemplate,
+  createSelectedTemplate,
+  updateSelectedTemplate,
+  deleteSelectedTemplate,
 } = require("../controller/selectTemplate_controller");
 
 const { protect } = require("../middleware/auth");
 
-router.route("/").get(getAllSelectedTemplate).post(protect, createSlectedTemplate);
+router.route("/").get(getAllSelectedTemplate).post(protect, createSelectedTemplate);
 router
   .route("/:id")
   .get(getSelectedTemplate)
-  .put(protect, updateSlectedTemplate)
-  .delete(protect, deleteSlectedTemplate);
+  .put(protect, updateSelectedTemplate)
+  .delete(protect, deleteSelectedTemplate);
 
 module.exports = router;

@@ -26,10 +26,9 @@ exports.register = async (req, res, next) => {
  
 };
 
-exports.login = async (req, res, next) => {
+exports.login = asyncHandler(async(req,res,next)=>{
   const { email, password } = req.body;
-
-  //validate email and pass
+  
   if (!email || !password) {
     return res.status(400).json({
       success: fasle,
@@ -57,10 +56,10 @@ exports.login = async (req, res, next) => {
 
   sendTokenResponse(user,200,res);
   
-};
-
+});
 
 exports.getMe = asyncHandler(async(req,res,next)=>{
+
   const user = await User.findById(req.user.id);
 
   res.status(200).json({

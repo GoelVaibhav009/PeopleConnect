@@ -45,11 +45,16 @@ exports.getSelectedTemplate = async (req, res, next) => {
 //@acces        Private
 
 exports.createSelectedTemplate = async (req, res, next) => {
-  await SelectedTemplate.create(req.body),
+  try {
+    await SelectedTemplate.create(req.body),
     res.status(200).json({
       success: true,
       msg: " Created Template Detail ",
     });
+  } catch (e) {
+    console.log(e)
+  }
+  
 };
 //@desc         PUT all Template Detail
 //@route        PUT /api/v1/Template/:id
@@ -57,27 +62,31 @@ exports.createSelectedTemplate = async (req, res, next) => {
 
 exports.updateSelectedTemplate = async (req, res, next) => {
   let SelectedTemplates = await SelectedTemplate.findById(req.params.id);
-  if (!SelectedTemplates) {
-    // error in this
-    res.json({
-      msg: "Template details with this id not found",
-    });
-  } else {
-    SelectedTemplates = await SelectedTemplate.findOneAndUpdate(
-      { _id: req.params.id },
-      req.body,
-      {
-        new: true,
-        runValidators: true,
-      }
-    );
-
-    res.status(200).json({
-      SelectedTemplates,
-      success: true,
-      msg: " Update Template Detail of" + req.params.id,
-    });
+  try {
+    if (!SelectedTemplates) {
+      res.json({
+        msg: "Template details with this id not found",
+      });
+    } else {
+      SelectedTemplates = await SelectedTemplate.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body,
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+  
+      res.status(200).json({
+        SelectedTemplates,
+        success: true,
+        msg: " Update Template Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+    console.log(e)
   }
+
 };
 
 //@desc         DELETE Template Detail
@@ -85,9 +94,9 @@ exports.updateSelectedTemplate = async (req, res, next) => {
 //@acces        Private
 
 exports.deleteSelectedTemplate = async (req, res, next) => {
-  let SelectedTemplates = await SelectedTemplate.findById(req.params.id);
-  if (!SelectedTemplates) {
-    // error in this
+  try {
+    let SelectedTemplates = await SelectedTemplate.findById(req.params.id);
+    if (!SelectedTemplates) {
     res.json({
       msg: "Template details with this id not found",
     });
@@ -98,4 +107,8 @@ exports.deleteSelectedTemplate = async (req, res, next) => {
       msg: "Delete Template Detail of" + req.params.id,
     });
   }
+  } catch (e) {
+    console.log(e)
+  }
+  
 };

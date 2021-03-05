@@ -25,6 +25,15 @@ const CompanySchema = new Mongoose.Schema({
     location:String,
     about:String,
     establish:String,
+    companyUrl:{
+            type:String,
+            required:[true,'Add Company Name'],
+            trim:true,
+    },
+    companyName:{
+        type:String,
+        required:[true,'Add Company Name'],
+},
 
 });
 

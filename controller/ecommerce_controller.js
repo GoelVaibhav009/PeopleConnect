@@ -31,11 +31,16 @@ exports.getproduct = async (req, res, next) => {
 //@acces        Private
 
 exports.createproduct = async (req, res, next) => {
-  await EcomProducts.create(req.body),
-  res.status(200).json({
-      success: true,
-      msg: " Created Ecom Detail ",
-    });
+  try {
+    await EcomProducts.create(req.body),
+    res.status(200).json({
+        success: true,
+        msg: " Created Ecom Detail ",
+      });
+  } catch (e) {
+    console.log(e)
+  }
+  
 };
 //@desc         PUT all Ecom Detail
 //@route        PUT /api/v1/ecom/:id

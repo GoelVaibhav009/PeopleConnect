@@ -1,7 +1,7 @@
 const Mongoose = require("mongoose");
 
 const FeedbackSchema = new Mongoose.Schema({
-    userId:String,
+    companyId:String,
     name:String,
     feedback:String,
     star:String,

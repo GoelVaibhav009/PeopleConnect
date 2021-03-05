@@ -1,15 +1,31 @@
-const Mongoose = require("mongoose");
+// // Payment Option
+// // 1.Paytm ={qr,number}
+// // 2.Google={qr,number}
+// // 3.Phone={qr,number}
+// // 4.Bank Account Detail ={name,account no.,IFSC,bank name}
 
-const PaymentSchema = new Mongoose.Schema({
-  Method: [
-    {
-      Paytm: { number: String, qr: String },
-      Google: { number: String, qr: String },
-      Phone: { number: String, qr: String },
-      Bank: { name: String, acc_no: String, ifsc: String, bank_name: String },
-    },
-  ],
-  userId: String,
-});
+// const mongoose = require("mongoose");
 
-module.exports = Mongoose.model("PaymentDetails", PaymentSchema);
+// const PaymentSchema = new mongoose.Schema({
+//     paytm:{
+//       qr: String,
+//       paytmNumber: number,
+//     },
+//     googlePay:{
+//       qr: String,
+//       gpayNumber: number,
+//     },
+//     phonePay:{
+//       qr: String,
+//       phonePayNumber: number,
+//     },
+//     bankAccountDetails:{
+//         holderName: String,
+//         accountNo: number,
+//         ifsc: String,
+//         bankName: String
+//     },
+//    userId:String,
+// });
+
+// module.exports = mongoose.model("PaymentDetails", PaymentSchema);

@@ -22,43 +22,77 @@ exports.getPayments =async (req, res, next) => {
   //@route        GET /api/v1/company/:id
   //@acces        Public
   
-  exports.getPayment = (req, res, next) => {
+  exports.getPayment = async(req, res, next) => {
+    await PaymentDetail.find({userId: req.params.userId})
       res.status(200).json({
           success: true,
           msg: "Company Detail of" + req.params.id,
         });
   };
   
-  //@desc         POST all Company Detail
-  //@route        POST /api/v1/company/:id
-  //@acces        Private
-  
-  exports.createPayment =async (req, res, next) => {
-    await PaymentDetail.create(req.body),
-    res.status(200).json({
-      success: true,
-      msg: " Created Payment Detail ",
-    });
-  };
-  //@desc         PUT all Company Detail
-  //@route        PUT /api/v1/company/:id
-  //@acces        Private
-  
-  exports.updatePayment = (req, res, next) => {
+
+  exports.createPayment = async (req, res, next) => {
+    try {
+      await PaymentDetail.find({userId: req.params.userId})
+      .create(req.body),
       res.status(200).json({
           success: true,
-          msg: " Update Company Detail of" + req.params.id,
+          msg: " Created Payemnt Detail ",
         });
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+
+  exports.updatePayment = async (req, res, next) => {
+    let paymentdetails = await PaymentDetail.findById(req.params.id)
+    try {
+      if (!paymentdetails) {
+        res.json({
+          msg: "company details with this id not found"
+        })
+      } else {
+        paymentdetails= await PaymentDetail.findOneAndUpdate(
+          {_id: req.params.id }, 
+          req.body, 
+          {
+            new: true,
+            runValidators: true,
+          })
+    
+        res.status(200).json({
+          paymentdetails,
+          success: true,
+          msg: " Update Payment Detail of" + req.params.id,
+        });
+      }
+    } catch (e) {
+     console.log(e)
+    }
+    
   };
   
-  //@desc         DELETE all Company Detail
+  //@desc         DELETE Payment Detail
   //@route        DELETE /api/v1/company/:id
   //@acces        Private
   
-  exports.deletePayment = (req, res, next) => {
-      res.status(200).json({
+  exports.deletePayment = async (req, res, next) => {
+  let paymentdetails = await PaymentDetail.findById(req.params.id)
+    try {
+      if (!paymentdetails) {
+        res.json({
+          msg: "company details with this id not found"
+        })
+      } else {
+        paymentdetails= await PaymentDetail.remove({ _id: req.params.id })
+        res.status(200).json({
           success: true,
-          msg: "Delete Company Detail of" + req.params.id,
+          msg: "Delete Payment Detail of" + req.params.id,
         });
+      }
+    } catch (e) {
+      console.log(e)
+    }
+    
   };
-  

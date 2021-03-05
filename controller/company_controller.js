@@ -10,11 +10,12 @@ exports.getAllCompanyDetail = async (req, res, next) => {
     if (!companydetails) {
       return next(new ErrorResponse("Company Not Found "));
     }
-    // res.render('templates/template1', {
-    //   companydetails,
-    // })
+    res.render('templates/template1', {
+      // lastName:companydetails[0].lastName,
+      companydetails: companydetails[0],
+    })
     res.status(200).json({
-      companydetails,
+      lastName:companydetails[0].lastName,
       success: true,
       msg: "Show all Details",
     });

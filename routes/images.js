@@ -12,7 +12,7 @@ const {
 const {protect} =require('../middleware/auth');
 
 
-router.route("/").get(protect,getImages);
+router.route("/").get(getImages);
 router
   .route("/:id")
   .post(protect,createImage)

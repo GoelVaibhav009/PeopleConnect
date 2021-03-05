@@ -86,24 +86,6 @@ const sendTokenResponse=(user,statusCode,res)=>{
     })
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 exports.getUserDetail = async (req, res, next) => {
     try {
       const userDetail = await UserDetail.findById(req.params.id);

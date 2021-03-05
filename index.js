@@ -20,6 +20,8 @@ const templateRoute = require("./routes/template");
 const ecommerceRoute = require("./routes/ecommerce");
 const paymentRoute = require("./routes/payment");
 const selectedTemplateRoute = require("./routes/selectedTemplate");
+const purchasedUserRoute = require("./routes/purchasedUser");
+
 
 //Lod env vars
 dotenv.config({ path: "./config/config.env" });
@@ -55,6 +57,8 @@ app.get('/main', (req, res) => {
       layout: 'main'
   })
 })
+
+app.use("/card", purchasedUserRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/contact", contactRoute);

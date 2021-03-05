@@ -14,7 +14,7 @@ const {
 router.route("/").get(getproducts).post(protect,createproduct);
 router
   .route("/:id")
-  .get(protect,getproduct)
+  .get(getproduct)
   .put(protect,updateproduct)
   .delete(protect,deleteproduct);
 

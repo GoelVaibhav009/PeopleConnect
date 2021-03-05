@@ -1,3 +1,5 @@
+const templateDetails = require("../model/template");
+
 //@desc         GET all Company Detail
 //@route        GET /api/v1/company
 //@acces        Public
@@ -20,35 +22,74 @@ exports.getTemplates = (req, res, next) => {
         });
   };
   
-  //@desc         POST all Company Detail
-  //@route        POST /api/v1/company/:id
-  //@acces        Private
+//@desc         POST Template Detail
+//@route        POST /api/v1/company
+//@acces        Private
+
+exports.createTemplate = async (req, res, next) => {
+  try {
+    await templateDetails.create(req.body),
+    res.status(200).json({
+    success: true,
+    msg: " Created Template Detail ",
+  });
+  } catch (e) {
+   console.log(e)
+  }
   
-  exports.createTemplate = (req, res, next) => {
+};
+//@desc         PUT all Template Detail
+//@route        PUT /api/v1/company/:id
+//@acces        Private
+
+exports.updateTemplate = async (req, res, next) => {
+  let Templatedetails = await templateDetails.findById(req.params.id)
+  try {
+    if (!Templatedetails) {
+      res.json({
+        msg: "company details with this id not found"
+      })
+    } else {
+      Templatedetails= await templateDetails.findOneAndUpdate(
+        {_id: req.params.id }, 
+        req.body, 
+        {
+          new: true,
+          runValidators: true,
+        })
+  
       res.status(200).json({
-          success: true,
-          msg: " Create Company Detail ",
-        });
-  };
-  //@desc         PUT all Company Detail
-  //@route        PUT /api/v1/company/:id
-  //@acces        Private
+        Templatedetails,
+        success: true,
+        msg: " Update Template Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+   console.log(e)
+  }
   
-  exports.updateTemplate = (req, res, next) => {
+};
+
+//@desc         DELETE Template Detail
+//@route        DELETE /api/v1/company/:id
+//@acces        Private
+
+exports.deleteTemplate = async (req, res, next) => {
+let Templatedetails = await templateDetails.findById(req.params.id)
+  try {
+    if (!Templatedetails) {
+      res.json({
+        msg: "company details with this id not found"
+      })
+    } else {
+      Templatedetails= await templateDetails.remove({ _id: req.params.id })
       res.status(200).json({
-          success: true,
-          msg: " Update Company Detail of" + req.params.id,
-        });
-  };
+        success: true,
+        msg: "Delete Template Detail of" + req.params.id,
+      });
+    }
+  } catch (e) {
+    console.log(e)
+  }
   
-  //@desc         DELETE all Company Detail
-  //@route        DELETE /api/v1/company/:id
-  //@acces        Private
-  
-  exports.deleteTemplate = (req, res, next) => {
-      res.status(200).json({
-          success: true,
-          msg: "Delete Company Detail of" + req.params.id,
-        });
-  };
-  
+};

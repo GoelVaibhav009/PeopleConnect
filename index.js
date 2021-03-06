@@ -41,6 +41,15 @@ if (process.env.NODE_ENV == "development") {
 
 //Handlesbars
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}))
+app.engine('.hbs', exphbs({defaultLayout: 'template1', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template2', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template3', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template4', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template5', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template6', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'template7', extname: '.hbs'}))
+
+
 app.set('view engine', '.hbs')
 
 

@@ -6,6 +6,7 @@ const EcommerceSchema = new Mongoose.Schema({
   image: String,
   mrp: String,
   sellingPrice: String,
+  description: String
 });
 
 module.exports= Mongoose.model('Ecommerce Products', EcommerceSchema)

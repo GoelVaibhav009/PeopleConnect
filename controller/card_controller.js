@@ -20,7 +20,8 @@ exports.getCard = async (req, res, next) => {
     let EcommerceDetails = await ecommerceDetails.find({userId: CompanyDetail[0].userId}).lean()
     let PaymentDetails = await paymentDetails.find({userId: CompanyDetail[0].userId}).lean()
 
-    res.render(`templates/${TemplateDetails[0].name}`, {
+
+    res.render('templates/template1', {
         contactDetailsValue: ContactDetails[0],
         companyDetailsValue: CompanyDetail[0],
         socialDetailsValue: SocialDetails[0],
@@ -29,6 +30,16 @@ exports.getCard = async (req, res, next) => {
         ecommerceDetailsValue: EcommerceDetails[0],
         paymentDetailsValue: PaymentDetails[0]
     })
+
+    // res.render(`layouts/${TemplateDetails[0].name}`, {
+    //     contactDetailsValue: ContactDetails[0],
+    //     companyDetailsValue: CompanyDetail[0],
+    //     socialDetailsValue: SocialDetails[0],
+    //     feedbackDetailsValue: FeedbackDetails[0],
+    //     imagesDetailsValue: ImagesDetails[0],
+    //     ecommerceDetailsValue: EcommerceDetails[0],
+    //     paymentDetailsValue: PaymentDetails[0]
+    // })
 
     // res.send(SelectedTemplated[0].TemplateId)
     // console.log(`template/${TemplateDetails[0].name}`)

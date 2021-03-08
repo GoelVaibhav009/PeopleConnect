@@ -40,8 +40,8 @@ if (process.env.NODE_ENV == "development") {
 }
 
 //Handlesbars
-app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}))
-app.engine('.hbs', exphbs({defaultLayout: 'template1', extname: '.hbs'}))
+app.engine('.hbs', exphbs({defaultLayout: 'template', extname: '.hbs'}))
+// app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}))
 // app.engine('.hbs', exphbs({defaultLayout: 'template2', extname: '.hbs'}))
 // app.engine('.hbs', exphbs({defaultLayout: 'template3', extname: '.hbs'}))
 // app.engine('.hbs', exphbs({defaultLayout: 'template4', extname: '.hbs'}))

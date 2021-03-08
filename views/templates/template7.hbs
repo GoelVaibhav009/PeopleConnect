@@ -2,10 +2,11 @@
 
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into Light&amp;display=swap" media="all" id="shr-font-shadows-into light">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
-        <link rel="stylesheet" href="../template6/css.css">        
+        <link rel="stylesheet" href="/template7/css.css">
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
         <meta property="og:image" itemprop="image" content="https://vcard-bucket.s3.us-east-2.amazonaws.com/link-connect/1585901910030.jpeg"/>
@@ -18,7 +19,7 @@
                 "name": "Link Connect",
                 "short_name": "Link Connect",
                 "description": "Link Connect",
-                "start_url": "https://card.linkconnect.in/link-connect-3",
+                "start_url": "https://card.linkconnect.in/link-connect",
                 "background_color": "#000000",
                 "theme_color": "#0f4a73",
                 "icons": [{
@@ -32,135 +33,187 @@
           const blob = new Blob([stringManifest], {type: 'application/json'});
           const manifestURL = URL.createObjectURL(blob);
           document.querySelector('#manifest-placeholder').setAttribute('href', manifestURL);
+          window.cardId = 'link-connect';
         </script>
-        <script>
-            document.documentElement.style.setProperty('--theme-color', '#e91e63');
-            document.documentElement.style.setProperty('--theme-color-light', '#e91e6326');
-            window.cardId = 'link-connect-3';
-        </script>
+        <style>
+            .profile-pic .profile-pic-img {
+                width: 150px;
+                margin-top: 25px;
+                border-radius: 8px;
+                border: 2px solid #ffffff;
+            }
+
+            .name,
+            .firmname {
+                font-size: 14px;
+                font-weight: 500;
+                color: white;
+                letter-spacing: 0.6px;
+                // margin-bottom: 10px;
+                margin: 0;
+                margin-bottom: 7px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+            .firmname {
+                font-size: 18px;
+                margin-bottom: 14px;
+                margin-top: 10px;
+            }
+            .name {
+                text-transform: capitalize;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        </style>
     </head>
     <body>
         <div class="page-wrapper" id="home-section">
-            <div class="upper">
-                <div class="views-label"><i class="fas fa-eye"></i> Views: <b>5522</b></div>
-                <!-- User Profile Pic -->
-                <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/link-connect/1585901910030.jpeg" class="profile-pic-img">
+            <div class="page-details">
+                <div>
+                    <div class="p-10"></div>
+                    <div class="views-label"><i class="fas fa-eye"></i> Views: <b>13292</b></div>
 
-                <!-- User Company Name -->
-                <div class="firmname">Link Connect</div>
-                <div style="width: 40%;background-color: #e91e63; height:2px;"></div>
-
-                <!-- User First Name and Last Name -->
-                <div class="name">Mr. Paresh Patel <span style="margin-top: 5px;display: inline"><i style="font-size: 12px;">(Founder)</i></span></div>
-                <div class="name">Mr. Alpesh Patel <span style="margin-top: 5px;display: inline"><i style="font-size: 12px;">(Founder)</i></span></div>
-                <div class="round-contact-buttons">
-                    <a target="_blank" href="tel:9509434880">
-                        <i class="fas fa-phone fa-flip-horizontal contact-buttons-icon"></i>
-                        <!-- <img src="/public/vcard/vjimages/call.png" > -->
-                        <span class="contact-buttons-text">Call Me</span>
-                    </a>
-                    <a target="_blank" href="https://wa.me/919509434880?text=Got reference from your Digital vCard. Want to know more about your products and services.">
-                        <i class="fab fa-whatsapp contact-buttons-icon"></i>
-                        <!-- <img src="/public/vcard/vjimages/call.png" > -->
-                        <span class="contact-buttons-text">Whatsapp</span>
-                    </a>
-                    <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733">
-                        <i class="fas fa-map-marker-alt fa-flip-horizontal contact-buttons-icon"></i>
-                        <!-- <img src="/public/vcard/vjimages/call.png" > -->
-                        <span class="contact-buttons-text">Direction</span>
-                    </a>
-                    <a target="_blank" href="mailto:digivisitingcard@gmail.com">
-                        <i class="fas fa-envelope fa-flip-horizontal contact-buttons-icon"></i>
-                        <!-- <img src="/public/vcard/vjimages/call.png" > -->
-                        <span class="contact-buttons-text">Mail</span>
-                    </a>
-                </div>
-            </div>
-            <div class="lower">
-                <table class="contact-action-table">
-                    <tbody>
-                        
-                                    <tr>
-                                        <td>
-                                            <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733">
-                                                <i class="fas fa-map-marker-alt contact-action-container-icon"></i>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733" class="contact-action-container-text">
-                                                1st Floor, Mahila Ashram Road, Near Veer Sawerkar Chouk, Bhopal Gunj, Bhilwara,Rajasthan - 311001
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-                        <tr>
-                            <td>
-                                <a href="mailto:digivisitingcard@gmail.com">
-                                    <i class="fas fa-envelope contact-action-container-icon"></i>
-                                </a>
-                            </td>
-                            <td>
-                                
-                                        <a href="mailto:digivisitingcard@gmail.com" class="contact-action-container-text">
-                                            digivisitingcard@gmail.com
-                                        </a><br />
-                                        
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a target="_blank" href="http://www.digivisitingcard.co.in">
-                                    <i class="fas fa-globe contact-action-container-icon"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a target="_blank" href="http://www.digivisitingcard.co.in" class="contact-action-container-text">
-                                    http://www.digivisitingcard.co.in
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a target="_blank" href="tel:9509434880">
-                                    <i class="fas fa-phone fa-flip-horizontal contact-action-container-icon"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a target="_blank" href="tel:9509434880" class="contact-action-container-text" >
-                                    +919509434880
-                                </a>
-                                
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-
-                <div class="p-30"></div>
-
-                <div class="whatsapp-input">
-                    <div class="input-wrapper">
-                        <input type="tel" id="whatsapp-input" class="input" placeholder="Enter whatsapp number" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                    <!-- User Profile Pic -->
+                    <div class="profile-pic">
+                        <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/link-connect/1585901910030.jpeg" class="profile-pic-img">
                     </div>
-                    <a class="whatsapp-button"
-                        target="_blank"
-                        href="javascript:;"
-                        onclick="handleWhatsappShare(this)">
-                        <i class="fab fa-whatsapp"></i>Share on Whatsapp
-                    </a>
+
+                    <!-- User Company Name -->
+                    <h1 class="firmname">Link Connect</h1>
+
+                    <!-- User First Name and Last Name -->
+                    <h1 class="name">Mr. Paresh Patel <span class="designation">(Founder)</span></h1>
+                    <h1 class="name">Mr. Alpesh Patel <span class="designation">(Founder)</span></h1>
+
+                    <div style="width:60px;background-color:#0085C4;height:2px;margin-top: 15px;"></div>
+                    <!-- Cover Photo, Photo, Name and Profession section completed -->
                 </div>
+                <div>
+                    <!-- FRONT CONTACT ACTIONS START-->
+                    <div class="p-10"></div>
+                    <div class="contact-buttons">
+                        <a class="contact-button" href="tel:9509434880">
+                            <i class="fas fa-phone fa-flip-horizontal"></i>
+                            Call
+                        </a>
+                        <a class="contact-button" target="_blank" href="https://wa.me/919509434880?text=Got reference from your Digital vCard. Want to know more about your products and services.">
+                            <i class="fab fa-whatsapp"></i>
+                            Whatsapp
+                        </a>
+                        <a class="contact-button" target="_blank" href="https://maps.google.com/?cid=13681914601966132733">
+                            <i class="fas fa-map-marker-alt fa-flip-horizontal"></i>
+                            Direction
+                        </a>
+                        <a class="contact-button" target="_blank" href="mailto:info@linkconnect.in">
+                            <i class="fas fa-envelope fa-flip-horizontal"></i>
+                            Mail
+                        </a>
+                    </div>
 
-                <div class="p-20"></div>
+                    <table class="contact-action-table">
+                        <tbody>
+                            
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733">
+                                                    <i class="fas fa-map-marker-alt contact-action-container-icon"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733" class="contact-action-container-text" style="max-width: 220px;">
+                                                    1st Floor, Mahila Ashram Road, Near Veer Sawerkar Chouk, Bhopal Gunj, Bhilwara,Rajasthan - 311001
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733">
+                                                    <i class="fas fa-map-marker-alt contact-action-container-icon"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a target="_blank" href="https://maps.google.com/?cid=13681914601966132733" class="contact-action-container-text" style="max-width: 220px;">
+                                                    1st Floor, Mahila Ashram Road, Near Veer Sawerkar Chouk, Bhopal Gunj, Bhilwara,Rajasthan - 311001
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                            
+                                <tr>
+                                    <td>
+                                        <a href="mailto:info@linkconnect.in">
+                                            <i class="fas fa-envelope contact-action-container-icon"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        
+                                                <a href="mailto:info@linkconnect.in" class="contact-action-container-text">
+                                                    info@linkconnect.in
+                                                </a><br />
+                                                
+                                                <a href="mailto:patel.paresh894@gmail.com" class="contact-action-container-text">
+                                                    patel.paresh894@gmail.com
+                                                </a><br />
+                                                
+                                    </td>
+                                </tr>
+                                
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="http://www.digivisitingcard.co.in">
+                                        <i class="fas fa-globe contact-action-container-icon"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="http://www.digivisitingcard.co.in" class="contact-action-container-text">
+                                        http://www.digivisitingcard.co.in
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="tel:9509434880">
+                                        <i class="fas fa-phone fa-flip-horizontal contact-action-container-icon"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="tel:9509434880" class="contact-action-container-text" >
+                                        +919509434880
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
 
-                <div class="shadow-buttons">
-                    <a class="shadow-button" href="https://vcard-bucket.s3.us-east-2.amazonaws.com/link-connect/link-connect.vcf" download><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
-                    <a class="shadow-button" onclick="openShareModal(this, `Link Connect`)"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
-                </div>
-                <div><a class="shadow-button save-card-button"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a></div>
+                    <div class="p-30"></div>
 
-                <div class="p-30"></div>
+                    <div class="whatsapp-input">
+                        <div class="input-wrapper">
+                            <input type="tel" id="whatsapp-input" class="input" placeholder="Enter whatsapp number" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                        </div>
+                        <a class="whatsapp-button"
+                            target="_blank"
+                            href="javascript:;"
+                            onclick="handleWhatsappShare(this)">
+                            <i class="fab fa-whatsapp"></i>Share on Whatsapp
+                        </a>
+                    </div>
 
-                <ul class="inprofile share-buttons">
+                    <div class="p-30"></div>
+
+                    <div class="shadow-buttons">
+                        <a class="shadow-button" href="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3/3.vcf" download><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
+                        <a class="shadow-button" onclick="openShareModal(this, `Link Connect`)"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
+                    </div>
+                    <div><a class="shadow-button save-card-button"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a></div>
+
+                    <div class="p-30"></div>
+
+                    <ul class="inprofile share-buttons">
                         <li class="share-button">
                                 <a target="_blank" href="https://m.facebook.com/Digital-Vcard-101768194678968"><i class="share-button-facebook fab fa-facebook-f"></i></a>
                             </li>
@@ -184,13 +237,16 @@
                             </li>
                     </ul>
 
-                <div class="p-20"></div>
+                    <div class="p-20"></div>
+                    <!-- FRONT CONTACT ACTIONS COMPLETED-->
+                    <!-- <div style="width:90%;background-color:#05A1CA;height:2px;"></div> -->
+                </div>
             </div>
         </div>
         
             <div class="section-container" id="about-us-section">
                 <h2 class="section-header">About Us</h2>
-                <div class="section-header-seperator"></div>
+                <div style="width:60px;background-color:#0085C4;height:2px;"></div>
                 <table class="about-us-table">
                     <tbody>
                         <tr>
@@ -220,7 +276,7 @@
                             </tr>
                     </tbody>
                 </table>
-                <h3 class="speciality-label">Our Specialities</h3>
+                <h3>Our Specialities</h3>
                     <ul class="unorderedList">
                         
                                 <li>Knowledgeable team of professionals</li>
@@ -251,14 +307,21 @@
 We help businesses and individuals to share their contact details using Digital Visiting Card.
 With our Digital Business Card, you can create and share your contact information that has Actionable one click events like Call, Email, Whatsapp, Navigation, Website Link, Payment, Social Links, Maps and more.
 Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
+                <h3>Documents</h3>
+                    
+                            <a class="document-wrapper" href="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/link-connect/1587884730184.pdf" download>
+                                <div class="pdf-icon"><i class="fa fa-file-pdf"></i></div>
+                                <div class="pdf-number">LinkConnect (1).pdf</div>
+                                <div class="download-icon"><i class="fa fa-download"></i></div>
+                            </a>
+                            
+                    
                 
-                
-                <div class="section-close"></div>
             </div>
             
         <div class="section-container" id="products-services-section">
                 <h2 class="section-header">Products/Services</h2>
-                <div class="section-header-seperator" style="width: 130px;"></div>
+                <div style="width:60px;background-color:#0085C4;height:2px;"></div>
                 <div class="p-10"></div>
                 <div>
                     <div class="card">
@@ -297,13 +360,12 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                     
                     
                 </div>
-                <div class="section-close"></div>
 
             </div>
         
         <div class="section-container" id="gallery-section">
                 <h2 class="section-header">Gallery</h2>
-                <div class="section-header-seperator"></div>
+                <div style="width:60px;background-color:#0085C4;height:2px;"></div>
                 <div class="p-10"></div>
                 <div class="images-container">
                 <div class="image-wrapper">
@@ -335,12 +397,12 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                     </div>
                     
                 </div>
-                <div class="section-close"></div>
             </div>
         
         <div class="section-container" id="feedback-section">
                 <h2 class="section-header">Feedbacks</h2>
-                <div class="section-header-seperator"></div>
+                <div style="width:60px;background-color:#0085C4;height:2px;"></div>
+                <div class="p-10"></div>
                 <div class="feedback-list" id="feedback-list"></div>
                 <div class="feedback-button-wrapper">
                     <input type="button" value="Load more feedbacks" id="load-more-feedback-btn"/>
@@ -358,13 +420,14 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                     <input type="text" name="feedbackName" id="feedbackName" placeholder="Enter Full Name"/>
                     <textarea name="feedback" id="feedback" placeholder="Enter your feedback"></textarea>
                     <!-- Message:<br/> -->
-                    <input type="button" value="Give Feedback" onclick="sendFeedback(this, 'link-connect-3')"/>
+                    <input type="button" value="Give Feedback" onclick="sendFeedback(this, 'link-connect')"/>
                 </form>
             </div>
         
             <div class="section-container" id="enquiry-section">
                 <h2 class="section-header">Enquiry Form</h2>
-                <div class="section-header-seperator" style="width: 120px;"></div>
+                <div style="width:60px;background-color:#0085C4;height:2px;"></div>
+                <div class="p-10"></div>
                 <form class="enquiry-form" novalidate>
                     <!-- Full Name:<br/> -->
                     <input type="text" name="enquiryName" id="enquiryName" placeholder="Enter Full Name"/><br/>
@@ -380,16 +443,15 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                     </div>
                     <!-- Message:<br/> -->
                     <textarea name="message" id="message" placeholder="Enter Message"></textarea><br/>
-                    <input type="button" value="Send" onclick="sendEnquiry(this, 'digivisitingcard@gmail.com')"/>
+                    <input type="button" value="Send" onclick="sendEnquiry(this, 'info@linkconnect.in')"/>
                 </form>
-                <div class="section-close"></div>
             </div>
             
+
         <div class="copyright-wrapper">
-            <div class="copyright-wrapper-inner">
-                © 2021 <a href="http://card.linkconnect.in" target="_blank"><b>card.linkconnect.in</b></a>
-            </div>
+            © 2021 <a href="http://card.linkconnect.in" target="_blank"><b>card.linkconnect.in</b></a>
         </div>
+
         <!-- Footer Menu -->
         <div class="footer">
             <ul class="footer-menu">
@@ -418,6 +480,7 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                             <div class="footer-menu-text">GALLERY</div>
                         </a>
                     </li>
+                    
                 
                 <li>
                         <a class="footer-menu-link" href="#feedback-section">
@@ -449,37 +512,37 @@ Make Digital Visiting Card => Share digital Card => Add Leads In Business</div>
                 <div class="share-form-buttons-container">
                     <p>Share my Digital vCard in your network.</p>
                     <div class="share-buttons-heading">
-                        <img src="../templates/template4/tild-arrow.svg" class="share-buttons-arrow">
+                        <img src="../templates/template1/tild-arrow.svg" class="share-buttons-arrow">
                         <div class="share-buttons-heading-text">Share my Digital vCard</div>
                     </div>
                     <ul class="share-buttons">
                         <li class="share-button">
-                        <a href="javascript:;" target="_blank" onclick="handleDirectWhatsappShare(this, 9509434880)">
+                            <a href="javascript:;" target="_blank" onclick="handleDirectWhatsappShare(this, 9509434880)">
                                 <i class="share-button-whatsapp fab fa-whatsapp"></i>
                             </a>
                         </li>
                         <li class="share-button">
-                            <a target="_blank" href="sms:?body=http://card.linkconnect.in/link-connect-3">
+                            <a target="_blank" href="sms:?body=http://card.linkconnect.in/link-connect">
                                 <i class="share-button-sms fas fa-comment-dots"></i>
                             </a>
                         </li>
                         <li class="share-button">
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://card.linkconnect.in/link-connect-3&src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://card.linkconnect.in/link-connect&src=sdkpreparse" class="fb-xfbml-parse-ignore">
                                 <i class="share-button-facebook fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li class="share-button">
-                            <a target="_blank" href="https://twitter.com/intent/tweet?text=http://card.linkconnect.in/link-connect-3" data-size="large">
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=http://card.linkconnect.in/link-connect" data-size="large">
                                 <i class="share-button-twitter fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="share-button">
-                            <a target="_blank" href="http://pinterest.com/pin/create/link/?url=http://card.linkconnect.in/link-connect-3">
+                            <a target="_blank" href="http://pinterest.com/pin/create/link/?url=http://card.linkconnect.in/link-connect">
                                 <i class="share-button-pinterest fab fa-pinterest-p"></i>
                             </a>
                         </li>
                         <li class="share-button">
-                            <a target="_blank" href="mailto:?subject=Digital Card&amp;body=Check out this digital card http://card.linkconnect.in/link-connect-3.">
+                            <a target="_blank" href="mailto:?subject=Digital Card&amp;body=Check out this digital card http://card.linkconnect.in/link-connect.">
                                 <i class="share-button-mail fas fa-envelope"></i>
                             </a>
                         </li>

@@ -1,0 +1,548 @@
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into Light&amp;display=swap" media="all" id="shr-font-shadows-into light">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
+        <script src="https://connect.facebook.net/en_US/sdk.js?hash=9fd289b669a723c54e0d115f45a6f418&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v5.0"></script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+        <meta property="og:image" itemprop="image" content="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1606115791845.jpeg">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="   " />
+        <link rel="stylesheet" href="/template3/css.css">
+        <title>SD photography</title>
+        <link rel="manifest" id="manifest-placeholder">
+        <script>
+            var dynamicManifest = {
+                "name": "SD photography",
+                "short_name": "SD photography",
+                "description": "SD photography",
+                "start_url": "https://card.linkconnect.in/sd-photography",
+                "background_color": "#000000",
+                "theme_color": "#0f4a73",
+                "icons": [{
+                    "src": "https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1606115791845.jpeg",
+                    "sizes": "256x256",
+                    "type": "image/png"
+                }],
+                "display": "standalone"
+            }
+            const stringManifest = JSON.stringify(dynamicManifest);
+            const blob = new Blob([stringManifest], {type: 'application/json'});
+            const manifestURL = URL.createObjectURL(blob);
+            document.querySelector('#manifest-placeholder').setAttribute('href', manifestURL);
+        </script>
+        <script>
+            function ColorLuminance(hex, lum) {
+                // validate hex string
+                hex = String(hex).replace(/[^0-9a-f]/gi, '');
+                if (hex.length < 6) {
+                    hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+                }
+                lum = lum || 0;
+
+                // convert to decimal and change luminosity
+                var rgb = "#", c, i;
+                for (i = 0; i < 3; i++) {
+                    c = parseInt(hex.substr(i*2,2), 16);
+                    c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+                    rgb += ("00"+c).substr(c.length);
+                }
+
+                return rgb;
+            }
+            document.documentElement.style.setProperty('--theme-color', '#78C9D1');
+            document.documentElement.style.setProperty('--theme-color-light', '#78C9D126');
+            document.documentElement.style.setProperty('--theme-color-100', '#78C9D1');
+            document.documentElement.style.setProperty('--theme-color-75', '#78C9D190');
+            document.documentElement.style.setProperty('--theme-color-50', '#78C9D180');
+            document.documentElement.style.setProperty('--theme-color-25', '#78C9D170');
+            window.cardId = 'sd-photography';
+        </script>
+    </head>
+    <body>
+        <div class="page-wrapper" id="home-section">
+            <div class="upper">
+                <div class="views-label"><i class="fas fa-eye"></i> Views: <b>840</b></div>
+                <!-- User Profile Pic -->
+                <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1606115791845.jpeg" class="profile-pic-img">
+                <!-- User Company Name -->
+                <div class="firmname">SD photography</div>
+                <div class="firmname-underline"></div>
+                <!-- User First Name and Last Name -->
+                <div class="name"> {{companyDetailsValue.firstName}}  </div>
+                
+            </div>
+            <div class="theme-stripe"></div>
+            <div class="trapezoid"></div>
+            <div class="lower">
+                <div class="contact-info-container">
+                    <a class="contact-button" target="_blank" href="tel:9578060003" style="margin-bottom: 0">
+                        <i class="fas fa-phone fa-flip-horizontal contact-buttons-icon"></i>
+                        <span class="contact-buttons-text">+91-9578060003</span>
+                    </a>
+                    <a class="contact-button alternate-number" target="_blank" href="tel:9578060003">
+                            <span class="contact-buttons-text">+91-9578060003</span>
+                        </a>
+                    
+                    <a class='contact-button' target="_blank" href="mailto:sdphotography0003@gmail.com">
+                                <i class="fas fa-envelope fa-flip-horizontal contact-buttons-icon"></i>
+                                <span class="contact-buttons-text">sdphotography0003@gmail.com</span>
+                            </a>
+                    <a class="contact-button" target="_blank" href="https://wa.me/919578060003?text=Got reference from your Digital vCard. Want to know more about your products and services.">
+                        <i class="fab fa-whatsapp contact-buttons-icon"></i>
+                        <span class="contact-buttons-text">+91-9578060003</span>
+                    </a>
+                    
+                    
+                                <a class="contact-button" target="_blank" >
+                                    <i class="fas fa-map-marker-alt fa-flip-horizontal contact-buttons-icon"></i>
+                                    <span class="contact-buttons-text">india</span>
+                                </a>
+                                
+                </div>
+                <div class="share-buttons-box">
+                    <div class="whatsapp-input">
+                        <div class="input-wrapper">
+                            <label>+91</label>
+                            <input id="whatsapp-input" class="input" placeholder="Enter mobile number" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                        </div>
+                        <a class="whatsapp-button" target="_blank" href="javascript:;" onclick="handleWhatsappShare(this)">
+                        <i class="fab fa-whatsapp"></i>Share on Whatsapp
+                        </a>
+                    </div>
+                    <div class="p-20"></div>
+                    <div class="shadow-buttons">
+                        <a class="shadow-button" href="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/3453.vcf" download=""><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
+                        <a class="shadow-button" onclick="openShareModal(this, `SD photography`)"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
+                    </div>
+                    <div>
+                        <a class="shadow-button save-card-button"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a>
+                    </div>
+                </div>
+                <ul class="inprofile share-buttons">
+                        <li class="share-button">
+                                <a target="_blank" href="https://www.facebook.com/sdphotography0003/"><i class="share-button-facebook fab fa-facebook-f"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-twitter fab fa-twitter"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" href="https://www.instagram.com/invites/contact/?i=4uzpvj8d1cvt&utm_content=elzy65w"><i class="share-button-instagram fab fa-instagram"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-youtube fab fa-youtube"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-pinterest fab fa-pinterest-p"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-linkedin fab fa-linkedin-in"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-telegram fab fa-telegram-plane"></i></a>
+                            </li>
+                    </ul>
+                <div class="p-20"></div>
+            </div>
+        </div>
+        <div class="section-container" id="about-us-section">
+            <div class="theme-stripe"></div>
+            <div class="trapezoid section-top-trapezoid"></div>
+            <div class="section-content-wrapper">
+                <h2 class="section-header">About Us</h2>
+                <table class="about-us-table">
+                    <tbody>
+                        <tr>
+                            <td class="table-row-label">
+                                <h3 class="table-row-label-text">Company Name</h3>
+                                <b class="table-row-label-separator">:</b>
+                            </td>
+                            <td>
+                            </td>
+                            <td class="table-row-value">
+                                SD photography
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr>
+                                <td class="table-row-label">
+                                    <h3 class="table-row-label-text">Nature Of Business</h3><b class="table-row-label-separator">:</b>
+                                <td>
+                                <td class="table-row-value">
+                                    Service provider, photographer
+                                <td>
+                            </tr>
+                    </tbody>
+                </table>
+                <h3 class="speciality-label">Our Specialities</h3>
+                    <ul class="unorderedList">
+                        
+                                <li>Knowledgeable team of professionals</li>
+                                
+                                <li>Complete client satisfaction</li>
+                                
+                                <li>Affordable pricing</li>
+                                
+                                <li>Qualitative products</li>
+                                
+                                <li>Reliable services</li>
+                                
+                                <li>Ability to undertake bulk orders</li>
+                                
+                                <li>Easy payment mode</li>
+                                
+                                <li>Use of advanced technology</li>
+                                
+                                <li>A great experience with Happy clients</li>
+                                
+                    </ul>
+                <div class="about-us-text"></div>
+                
+                
+                <div class="section-close"></div>
+            </div>
+            <div class="trapezoid section-bottom-trapezoid"></div>
+            <div class="theme-stripe"></div>
+        </div>
+        <div class="section-container" id="products-services-section">
+                <div class="theme-stripe"></div>
+                <div class="trapezoid section-top-trapezoid"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Products/Services</h2>
+                    <div>
+                        <div class="card">
+                            <h3 class="card-title"> Wedding photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt=" Wedding photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605952791712.jpeg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service:  Wedding photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Birthday parties photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Birthday parties photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605952923692.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Birthday parties photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Corporate Events photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Corporate Events photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605952936567.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Corporate Events photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Product Shoots photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Product Shoots photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605952999875.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Product Shoots photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Product Launching photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Product Launching photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953027189.png" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Product Launching photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">College Events photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="College Events photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953074341.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: College Events photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">School Events photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="School Events photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953140763.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: School Events photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Under Water Photography</h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Under Water Photography" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953197584.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Under Water Photography. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Drones Photo Shoot photography </h3>
+                            
+                            <img onclick="openImageModal(this)" alt="Drones Photo Shoot photography " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953243881.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/919578060003?text=Hi, I am interested in your product/service: Drones Photo Shoot photography . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="trapezoid section-bottom-trapezoid"></div>
+                <div class="theme-stripe"></div>
+            </div>
+        
+        <div class="section-container" id="gallery-section">
+                <div class="theme-stripe"></div>
+                <div class="trapezoid section-top-trapezoid"></div>
+                <div class="section-content-wrapper">
+                <h2 class="section-header">Gallery</h2>
+                    <div class="images-container">
+                    <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 1" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558178.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 2" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558179.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 3" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558180.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 4" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558181.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 5" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558182.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 6" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558183.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 7" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558184.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 8" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558185.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 9" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953558186.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 10" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564611.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 11" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564612.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 12" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564613.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 13" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564614.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 14" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564615.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 15" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564616.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 16" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/3453/1605953564617.jpeg" style="width:100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="trapezoid section-bottom-trapezoid"></div>
+                <div class="theme-stripe"></div>
+            </div>
+        
+        <div class="section-container" id="feedback-section">
+                <div class="theme-stripe"></div>
+                <div class="trapezoid section-top-trapezoid"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Feedbacks</h2>
+                    <div class="feedback-list" id="feedback-list"></div>
+                    <div class="feedback-button-wrapper">
+                        <input type="button" value="Load more feedbacks" id="load-more-feedback-btn"/>
+                    </div>
+                    <form class="feedback-form card" novalidate>
+                        <div class="feedback-form-heading">Give Feedback</div>
+                        <select class="star-rating" id="rating" name="rating">
+                            <option value="">Select a rating</option>
+                            <option value="5">Excellent</option>
+                            <option value="4">Very Good</option>
+                            <option value="3">Average</option>
+                            <option value="2">Poor</option>
+                            <option value="1">Terrible</option>
+                        </select>
+                        <input type="text" name="feedbackName" id="feedbackName" placeholder="Enter Full Name"/>
+                        <textarea name="feedback" id="feedback" placeholder="Enter your feedback"></textarea>
+                        <!-- Message:<br/> -->
+                        <input type="button" value="Give Feedback" onclick="sendFeedback(this, 'sd-photography')"/>
+                    </form>
+                </div>
+                <div class="trapezoid section-bottom-trapezoid"></div>
+                <div class="theme-stripe"></div>
+            </div>
+        <div class="section-container" id="enquiry-section">
+                <div class="theme-stripe"></div>
+                <div class="trapezoid section-top-trapezoid"></div>
+                <div class="section-content-wrapper">
+                <h2 class="section-header">Enquiry Form</h2>
+                    <form class="enquiry-form" novalidate>
+                        <!-- Full Name:<br/> -->
+                        <input type="text" name="enquiryName" id="enquiryName" placeholder="Enter Full Name"/><br/>
+                        <div class="flex">
+                            <div class="enquiry-phoneNumber">
+                                <!-- Phone Number:<br/> -->
+                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number"/><br/>
+                            </div>
+                            <div class="enquiry-email">
+                                <!-- Email:<br/> -->
+                                <input type="text" name="email" id="email" placeholder="Enter Email"/><br/>
+                            </div>
+                        </div>
+                        <!-- Message:<br/> -->
+                        <textarea name="message" id="message" placeholder="Enter Message"></textarea><br/>
+                        <input type="button" value="Send" onclick="sendEnquiry(this, 'sdphotography0003@gmail.com')"/>
+                    </form>
+                </div>
+                <div class="trapezoid section-bottom-trapezoid"></div>
+                <div class="theme-stripe"></div>
+            </div>
+        <div class="copyright-wrapper">
+            <div class="copyright-wrapper-inner">
+                © 2021 <a href="http://card.linkconnect.in" target="_blank"><b>card.linkconnect.in</b></a>
+            </div>
+        </div>
+        <!-- Footer Menu -->
+        <div class="footer">
+            <ul class="footer-menu">
+                <li>
+                    <a class="footer-menu-link" href="#home-section">
+                        <i class="footer-menu-icon fas fa-home"></i>
+                        <div class="footer-menu-text">HOME</div>
+                    </a>
+                </li>
+                <li>
+                        <a class="footer-menu-link" href="#about-us-section">
+                            <i class="footer-menu-icon fas fa-briefcase"></i>
+                        <div class="footer-menu-text">ABOUT US</div>
+                        </a>
+                    </li>
+                <li>
+                        <a class="footer-menu-link" href="#products-services-section">
+                            <i class="footer-menu-icon fas fa-box-open"></i>
+                        <div class="footer-menu-text">PRODUCTS</div>
+                        </a>
+                    </li>
+                
+                <li>
+                        <a class="footer-menu-link" href="#gallery-section">
+                            <i class="footer-menu-icon fas fa-file-image"></i>
+                            <div class="footer-menu-text">GALLERY</div>
+                        </a>
+                    </li>
+                
+                <li>
+                        <a class="footer-menu-link" href="#feedback-section">
+                            <i class="footer-menu-icon fas fa-star"></i>
+                            <div class="footer-menu-text">FEEDBACK</div>
+                        </a>
+                    </li>
+                <li>
+                        <a class="footer-menu-link" href="#enquiry-section">
+                            <i class="footer-menu-icon fas fa-comment-alt"></i>
+                            <div class="footer-menu-text">ENQUIRY</div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+        <!-- The image Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" id="imageModalClose">&times;</span>
+            <img class="modal-content fadeIn" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!-- The share Modal -->
+        <div id="shareModal" class="modal share-modal">
+            <div class="share-form fadeInUpBig">
+                <div class="share-form-header">
+                    <h3 class="share-form-header-text">Share Profile</h3>
+                    <span class="close" id="shareModalClose">&times;</span>
+                </div>
+                <div class="share-form-buttons-container">
+                    <p>Share my Digital vCard in your network.</p>
+                    <div class="share-buttons-heading">
+                        <img src="../templates/template5/tild-arrow.svg" class="share-buttons-arrow">
+                        <div class="share-buttons-heading-text">Share my Digital vCard</div>
+                    </div>
+                    <ul class="share-buttons">
+                        <li class="share-button">
+                        <a href="javascript:;" target="_blank" onclick="handleDirectWhatsappShare(this, 9578060003)">
+                                <i class="share-button-whatsapp fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="sms:?body=http://card.linkconnect.in/sd-photography">
+                                <i class="share-button-sms fas fa-comment-dots"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://card.linkconnect.in/sd-photography&src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                                <i class="share-button-facebook fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=http://card.linkconnect.in/sd-photography" data-size="large">
+                                <i class="share-button-twitter fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="http://pinterest.com/pin/create/link/?url=http://card.linkconnect.in/sd-photography">
+                                <i class="share-button-pinterest fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="mailto:?subject=Digital Card&amp;body=Check out this digital card http://card.linkconnect.in/sd-photography.">
+                                <i class="share-button-mail fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
+        <script src="../templates/common/js/star-rating.js"></script>
+        <script src="../templates/common/js/script.js"></script>
+    </body>
+</html>
+    

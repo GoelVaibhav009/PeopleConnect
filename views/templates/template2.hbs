@@ -1,0 +1,650 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into Light&amp;display=swap" media="all" id="shr-font-shadows-into light">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
+        <script src="https://connect.facebook.net/en_US/sdk.js?hash=9fd289b669a723c54e0d115f45a6f418&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v5.0"></script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+        <!-- comapny -->
+        <meta property="og:image" itemprop="image" content="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1586095209468.jpeg">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Mr. Mitul Patel (CEO - Founder)" />
+        <title>Digital Hub Entertainment</title>
+        <link rel="stylesheet" href="/template2/css.css">
+        <link rel="manifest" id="manifest-placeholder">
+        </head>
+    <body>
+        <div class="page-wrapper" id="home-section">
+            <div class="separator"></div>
+            <div class="views-label"><i class="fas fa-eye"></i> Views: <b>6235</b></div>
+            <div class="upper">
+                <!-- User Profile Pic -->
+                <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1586095209468.jpeg" class="profile-pic-img">
+                <!-- User Company Name -->
+                <div class="firmname">Digital Hub Entertainment</div>
+                <div class="firmname-underline"></div>
+                <!-- User First Name and Last Name -->
+                <div class="name">{{companyDetailsValue.firstName}} {{companyDetailsValue.lastName}}<span style="margin-top: 5px;display: block"><i style="font-size: 12px;">(CEO - Founder)</i></span></div>
+                
+                <div class="contact-buttons">
+                    <a class="contact-button" href="tel:7211177779">
+                        <i class="fas fa-phone fa-flip-horizontal"></i>
+                        <!-- Call -->
+                    </a>
+                    <a class="contact-button" target="_blank" href="https://wa.me/917211177779?text=Got reference from your Digital vCard. Want to know more about your products and services.">
+                        <i class="fab fa-whatsapp"></i>
+                        <!-- Whatsapp -->
+                    </a>
+                    <a class="contact-button" target="_blank" href="https://goo.gl/maps/ch6KjBaYUxzSBUfG6">
+                        <i class="fas fa-map-marker-alt fa-flip-horizontal"></i>
+                        <!-- Direction -->
+                    </a>
+                    <a class="contact-button" target="_blank" href="mailto:{{companyDetailsValue.email}}">
+                        <i class="fas fa-envelope fa-flip-horizontal"></i>
+                        <!-- Mail -->
+                    </a>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="contact-info-container">
+                    <div class="contact-info-wrapper">
+                        <a class="contact-piller-button call" target="_blank" href="tel:7211177779">
+                            <i class="fas fa-phone fa-flip-horizontal"></i>
+                        </a>
+                        <div class="contact-info">
+                            <div style="margin-bottom: 5px;"><a target="_blank" href="tel:7211177779">+917211177779</a></div>
+                            <div><a target="_blank" href="tel:9537377779">+919537377779</a></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contact-info-wrapper">
+                        <a class="contact-piller-button" target="_blank" href="mailto:digital.hub45@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <div class="contact-info">
+                            
+                                    <a href="mailto:digital.hub45@gmail.com">
+                                        digital.hub45@gmail.com
+                                    </a><br />
+                                    
+                        </div>
+                    </div>
+                    
+                                <div class="contact-info-wrapper">
+                                    <a class="contact-piller-button" target="_blank" href="https://goo.gl/maps/ch6KjBaYUxzSBUfG6">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </a>
+                                    <div class="contact-info">
+                                        <a target="_blank" href="https://goo.gl/maps/ch6KjBaYUxzSBUfG6">107/B, Vertex Vikas, 1st Floor, Opp. Andheri Rly Stn., Andheri (EAST) Mumbai - 400069</a>
+                                    </div>
+                                </div>
+                                
+                </div>
+                <div style="padding: 15px;">
+                    <div class="p-30"></div>
+                    <div class="whatsapp-input">
+                        <div class="input-wrapper">
+                            <input type="tel" id="whatsapp-input" class="input" placeholder="Enter whatsapp number" oninput="this.value=this.value.replace(/[^0-9]/g,'');"/>
+                        </div>
+                        <a class="whatsapp-button" target="_blank" href="javascript:;" onclick="handleWhatsappShare(this)">
+                        <i class="fab fa-whatsapp"></i>Share on Whatsapp
+                        </a>
+                    </div>
+                    <div class="p-20"></div>
+                    <div class="shadow-buttons">
+                        <a class="shadow-button" href="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/186.vcf" download=""><i class="fas fa-download shadow-button-icon"></i>Add to Phone Book</a>
+                        <a class="shadow-button" onclick="openShareModal(this, `Digital Hub Entertainment`)"><i class="fas fa-share-alt shadow-button-icon"></i>Share</a>
+                    </div>
+                    <div>
+                        <a class="shadow-button save-card-button"><i class="fas fa-cloud-download-alt shadow-button-icon"></i>Save Card</a>
+                    </div>
+                    <div class="p-30"></div>
+                    <ul class="inprofile share-buttons">
+                        <li class="share-button">
+                                <a target="_blank" href="http://www.facebook.com/digitalhub.entertainment"><i class="share-button-facebook fab fa-facebook-f"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" href="https://twitter.com/digitalhub_ent"><i class="share-button-twitter fab fa-twitter"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" href="https://www.instagram.com/digitalhub.entertainment"><i class="share-button-instagram fab fa-instagram"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" href="http://www.youtube.com/channel/UC5CTAQzhruz_RVxbSEn3QUQ"><i class="share-button-youtube fab fa-youtube"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-pinterest fab fa-pinterest-p"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" href="http://www.linkedin.com/company/digitalhub-entertainment"><i class="share-button-linkedin fab fa-linkedin-in"></i></a>
+                            </li>
+                        <li class="share-button">
+                                <a target="_blank" ><i class="share-button-telegram fab fa-telegram-plane"></i></a>
+                            </li>
+                    </ul>
+                    <div class="p-20"></div>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        </div>
+        
+        <div class="section-container" id="about-us-section">
+            <div class="separator"></div>
+            <div class="section-content-wrapper">
+                <h2 class="section-header">About Us</h2>
+                <div class="section-header-underline"></div>
+                <table class="about-us-table">
+                    <tbody>
+                        <tr>
+                            <td class="table-row-label">
+                                <h3 class="table-row-label-text">Company Name</h3><b class="table-row-label-separator">:</b>
+                            <td>
+                            <td class="table-row-value">
+                                Digital Hub Entertainment
+                            <td>
+                        </tr>
+                        <tr>
+                                <td class="table-row-label">
+                                    <h3 class="table-row-label-text">Category</h3><b class="table-row-label-separator">:</b>
+                                <td>
+                                <td class="table-row-value">
+                                    Entertainment
+                                <td>
+                            </tr>
+                        <tr>
+                                <td class="table-row-label">
+                                    <h3 class="table-row-label-text">Year of Est.</h3><b class="table-row-label-separator">:</b>
+                                <td>
+                                <td class="table-row-value">
+                                    2014
+                                <td>
+                            </tr>
+                        <tr>
+                                <td class="table-row-label">
+                                    <h3 class="table-row-label-text">Nature Of Business</h3><b class="table-row-label-separator">:</b>
+                                <td>
+                                <td class="table-row-value">
+                                    Service provider, Consultancy Services
+                                <td>
+                            </tr>
+                    </tbody>
+                </table>
+                <h3 class="speciality-label">Our Specialities</h3>
+                    <ul class="unorderedList">
+                        
+                                <li>Knowledgeable team of professionals</li>
+                                
+                                <li>Complete client satisfaction</li>
+                                
+                                <li>Ethical business policies</li>
+                                
+                                <li>Reliable services</li>
+                                
+                                <li>Live In Touch With Our Customers</li>
+                                
+                                <li>Customized solutions</li>
+                                
+                                <li>Best Consultancy</li>
+                                
+                                <li>Wide connectivity</li>
+                                
+                                <li>Use of advanced technology</li>
+                                
+                                <li>We listen,We understand, We provide Solution</li>
+                                
+                                <li>We Provide Pan India services</li>
+                                
+                                <li>A great experience with Happy clients</li>
+                                
+                                <li>Low Price Guarantee with best services</li>
+                                
+                    </ul>
+                <div class="about-us-text"><p>The Digital Hub is a talent and celebrity management company with a large network of renowned and upcoming artists. Since our inception, our experts and associates have assisted us in building and managing relationships not only in India but across the globe. In an endeavor to work with constant innovation &amp; creativity, our team has delivered flawless events with smooth communications between our clientele and the talent.<br>Apart from above, we also provide services like Media advertisement, Stage Show, Digital Social Media Marketing, Fashion Shows, Corporate Event, Garba Festival, Wedding Events, Movie Promotions.<br><br><strong>Our Branches : </strong>Mumbai, Ahmedabad, Vapi, Bharuch, Surat, Baroda,Mehsana,Delhi, Bhavnagar&nbsp;<br><br>We have a wide range of celebrities and artists.&nbsp;<br>Please see the below list:<br>1)Kinjal Dave<br>2)Geeta Rabari<br>3)Sheetal Thakor<br>4)Kajal Maheriya&nbsp;<br>5)Jignesh Kaviraj<br>6)Rakesh Barot<br>7)Hari Bharvad<br>8)Master Rana<br>9)vikram Thakor<br>10)Divya Chaudhary<br>11)Kirtidan Gadhvi&nbsp;<br>12)Rajal Barot<br>13)Aishwariya Majbudar</p><p>14)Akshay Barot</p><p>15)Alpa Patel</p><p>16)Margi Tevar</p><p>17)Heema Sardesai Bollywood singer<br>18)Amc Aman Bollywood Singer&nbsp;<br>19)Nidhi Kohli Bollywood Singer<br>20)Simran Chaudhary Bollywood Singer&nbsp;<br>21)Khushi Thakur Bollywood Singer&nbsp;<br>22)Karan Singh Arora Bollywood singer 23)sahil Hada Bollywood Singer&nbsp;<br><strong>Why Choose ss :&nbsp;</strong></p><ul><li>60000+ model</li><li>5000Kids Artists</li><li>250+ Singers</li><li>100+ comedian</li><li>50+ Motivational Speaker</li><li>DJs &amp; Bands</li><li>Russian Band</li><li>Belly Dancer</li><li>Bollywood Singers &amp; Dancers</li><li>Female Band</li><li>Female Dholi</li><li>Dholi Group</li><li>Tv</li></ul></div>
+                
+                
+            </div>
+            <div class="bottom-separator"></div>
+        </div>
+        <div class="section-container" id="products-services-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Products/Services</h2>
+                    <div class="section-header-underline"></div>
+                    <div>
+                        <div class="card">
+                            <h3 class="card-title">Celebrity Management</h3>
+                            <div class="product-description">We have wide range Bollywood Film Stars, Television Stars, Sports Stars.</div>
+                            <img onclick="openImageModal(this)" alt="Celebrity Management" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585585687071.jpeg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Celebrity Management. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Singer Management</h3>
+                            <div class="product-description">Bollywood Singers,Gujarati Singars, Reality Show Singers, Domestic Singers,  </div>
+                            <img onclick="openImageModal(this)" alt="Singer Management" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585455077659.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Singer Management. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Comedian, Motivation Speaker & Anchor/Emcees</h3>
+                            <div class="product-description">We Are Provided Popular Comedian, Motivation Speaker And Anchor  </div>
+                            <img onclick="openImageModal(this)" alt="Comedian, Motivation Speaker & Anchor/Emcees" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585455440881.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Comedian, Motivation Speaker & Anchor/Emcees. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Stage Show, Special Entertainment Acts, DJ’s, Item Performers & Dance Groups</h3>
+                            <div class="product-description">We Are Organized Any Type Of Stage Show Like Musicial Band, Fashion Show </div>
+                            <img onclick="openImageModal(this)" alt="Stage Show, Special Entertainment Acts, DJ’s, Item Performers & Dance Groups" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585455596830.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Stage Show, Special Entertainment Acts, DJ’s, Item Performers & Dance Groups. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Live shows & Concerts </h3>
+                            <div class="product-description">We Are Provided All Type Live Show, DJ, Rasian Band, Female Band, Bally Dancer, Dance Performance </div>
+                            <img onclick="openImageModal(this)" alt="Live shows & Concerts " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456041440.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Live shows & Concerts . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Fashion shows, Indian & Foreign Models , Photoshoot</h3>
+                            <div class="product-description">Mr. & Miss India </div>
+                            <img onclick="openImageModal(this)" alt="Fashion shows, Indian & Foreign Models , Photoshoot" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585495454719.jpeg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Fashion shows, Indian & Foreign Models , Photoshoot. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Corporate event</h3>
+                            <div class="product-description">We Are Organized All Type Corporate Event, Hotel And Banquets Hall Provide </div>
+                            <img onclick="openImageModal(this)" alt="Corporate event" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456216755.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Corporate event. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Garaba Festival </h3>
+                            <div class="product-description">All Popular Gujarati Singars Available With Sounds </div>
+                            <img onclick="openImageModal(this)" alt="Garaba Festival " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585473924387.jpeg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Garaba Festival . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Wedding Events / Sangeet Ceremony</h3>
+                            <div class="product-description">Garba Function, Rasian Band, Female Band, Bhajan Program, Daiyro </div>
+                            <img onclick="openImageModal(this)" alt="Wedding Events / Sangeet Ceremony" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456026941.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Wedding Events / Sangeet Ceremony. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title"> Panjabi Dholi,Nshik Dholi, </h3>
+                            <div class="product-description">All Type Dholi Available </div>
+                            <img onclick="openImageModal(this)" alt=" Panjabi Dholi,Nshik Dholi, " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585473993300.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service:  Panjabi Dholi,Nshik Dholi, . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Party Decorations </h3>
+                            <div class="product-description">Birthday Party, Baby Shower,Factival Decoration </div>
+                            <img onclick="openImageModal(this)" alt="Party Decorations " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585541456191.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Party Decorations . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Bouncer And Security guard </h3>
+                            <div class="product-description">We Are provided All Type Bouncer And Security guard </div>
+                            <img onclick="openImageModal(this)" alt="Bouncer And Security guard " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/digital-hub-entertainment/1589450296273.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Bouncer And Security guard . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Casting Agency /Modelling Agency </h3>
+                            <div class="product-description">Casting Agency, Casting For Moive,Casting For TV Serials,Casting For Photoshoot,Casting For Webseries,Casting For Album Song,asting For Fashion show,Casting For Brand Ambassador,Casting For Events Special Appearance And Parfomance  All Known And New Face Also Available</div>
+                            <img onclick="openImageModal(this)" alt="Casting Agency /Modelling Agency " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1598124487001.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Casting Agency /Modelling Agency . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">Production House</h3>
+                            <div class="product-description"><p>Focus Future Films</p></div>
+                            <img onclick="openImageModal(this)" alt="Production House" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610635740488.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service: Production House. Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title"> Production House </h3>
+                            <div class="product-description"><p>Any Type Webseries, moive, TV serial, Album song TV Add Making, lick Education Class, Oil Company, Air Hostess Classes, Air lines, motorcycle Company Add, Clothes Add</p></div>
+                            <img onclick="openImageModal(this)" alt=" Production House " src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636026020.jpg" style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+        <div class="product-price">
+        
+        </div>
+        <a href="https://wa.me/917211177779?text=Hi, I am interested in your product/service:  Production House . Please provide more details." target="blank" class="product-enquiry-btn">Enquiry</a>
+    </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        
+        <div class="section-container" id="gallery-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                <h2 class="section-header">Gallery</h2>
+                    <div class="section-header-underline"></div>
+                    <div class="images-container">
+                    <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 1" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414176.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 2" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414185.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 3" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414186.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 4" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414187.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 5" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414190.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 6" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414191.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 7" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414192.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 8" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585456414193.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 9" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585495515684.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 10" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/digital-hub-entertainment/1585495528706.jpeg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 11" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/digital-hub-entertainment/1589450470497.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 12" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636088050.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 13" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636099420.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 14" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636115916.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 15" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636170918.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 16" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636196573.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 17" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636217584.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 18" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636240256.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 19" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636255533.jpg" style="width:100%">
+                        </div>
+                        <div class="image-wrapper">
+                            <img onclick="openImageModal(this)" alt="Image 20" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/186/1610636271373.jpg" style="width:100%">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        <div class="section-container" id="video-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Videos</h2>
+                    <div class="section-header-underline"></div>
+                    <div>
+                        <div class="card" style="padding: 10px">
+                            <iframe src="//www.youtube.com/embed/UAiX4kK2vJY?rel=0" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        <div class="card" style="padding: 10px">
+                            <iframe src="//www.youtube.com/embed/VPtI16Th_tU?rel=0" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        <div class="card" style="padding: 10px">
+                            <iframe src="//www.youtube.com/embed/g95tu8H0eb8?rel=0" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        <div class="card" style="padding: 10px">
+                            <iframe src="//www.youtube.com/embed/VcPY-rxTaFU?rel=0" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        <div class="card" style="padding: 10px">
+                            <iframe src="//www.youtube.com/embed/35mYQ8bqp1A?rel=0" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        <div class="section-container" id="feedback-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Feedbacks</h2>
+                    <div class="section-header-underline"></div>
+                    <div class="feedback-list" id="feedback-list"></div>
+                    <div class="feedback-button-wrapper">
+                        <input type="button" value="Load more feedbacks" id="load-more-feedback-btn"/>
+                    </div>
+                    <form class="feedback-form card" novalidate>
+                        <div class="feedback-form-heading">Give Feedback</div>
+                        <select class="star-rating" id="rating" name="rating">
+                            <option value="">Select a rating</option>
+                            <option value="5">Excellent</option>
+                            <option value="4">Very Good</option>
+                            <option value="3">Average</option>
+                            <option value="2">Poor</option>
+                            <option value="1">Terrible</option>
+                        </select>
+                        <input type="text" name="feedbackName" id="feedbackName" placeholder="Enter Full Name"/>
+                        <textarea name="feedback" id="feedback" placeholder="Enter your feedback"></textarea>
+                        <!-- Message:<br/> -->
+                        <input type="button" value="Give Feedback" onclick="sendFeedback(this, 'digital-hub-entertainment')"/>
+                    </form>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        <div class="section-container" id="enquiry-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                <h2 class="section-header">Enquiry Form</h2>
+                    <div class="section-header-underline"></div>
+                    <form class="enquiry-form" novalidate>
+                        <!-- Full Name:<br/> -->
+                        <input type="text" name="enquiryName" id="enquiryName" placeholder="Enter Full Name"/><br/>
+                        <div class="flex">
+                            <div class="enquiry-phoneNumber">
+                                <!-- Phone Number:<br/> -->
+                                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number"/><br/>
+                            </div>
+                            <div class="enquiry-email">
+                                <!-- Email:<br/> -->
+                                <input type="text" name="email" id="email" placeholder="Enter Email"/><br/>
+                            </div>
+                        </div>
+                        <!-- Message:<br/> -->
+                        <textarea name="message" id="message" placeholder="Enter Message"></textarea><br/>
+                        <input type="button" value="Send" onclick="sendEnquiry(this, 'digital.hub45@gmail.com')"/>
+                    </form>
+                </div>
+                <div class="bottom-separator"></div>
+            </div>
+        <div class="copyright-wrapper">
+            <div class="copyright-wrapper-inner">
+                © 2021 <a href="http://card.linkconnect.in" target="_blank"><b>card.linkconnect.in</b></a>
+            </div>
+        </div>
+        <!-- Footer Menu -->
+        <div class="footer">
+            <ul class="footer-menu">
+                <li>
+                    <a class="footer-menu-link" href="#home-section">
+                        <i class="footer-menu-icon fas fa-home"></i>
+                        <div class="footer-menu-text">HOME</div>
+                    </a>
+                </li>
+                <li>
+                        <a class="footer-menu-link" href="#about-us-section">
+                            <i class="footer-menu-icon fas fa-briefcase"></i>
+                        <div class="footer-menu-text">ABOUT US</div>
+                        </a>
+                    </li>
+                <li>
+                        <a class="footer-menu-link" href="#products-services-section">
+                            <i class="footer-menu-icon fas fa-box-open"></i>
+                        <div class="footer-menu-text">PRODUCTS</div>
+                        </a>
+                    </li>
+                
+                <li>
+                        <a class="footer-menu-link" href="#gallery-section">
+                            <i class="footer-menu-icon fas fa-file-image"></i>
+                            <div class="footer-menu-text">GALLERY</div>
+                        </a>
+                    </li>
+                <li>
+                        <a class="footer-menu-link" href="#video-section">
+                            <i class="footer-menu-icon fas fa-video"></i>
+                            <div class="footer-menu-text">VIDEOS</div>
+                        </a>
+                    </li>
+                    
+                <li>
+                        <a class="footer-menu-link" href="#feedback-section">
+                            <i class="footer-menu-icon fas fa-star"></i>
+                            <div class="footer-menu-text">FEEDBACK</div>
+                        </a>
+                    </li>
+                <li>
+                        <a class="footer-menu-link" href="#enquiry-section">
+                            <i class="footer-menu-icon fas fa-comment-alt"></i>
+                            <div class="footer-menu-text">ENQUIRY</div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+        <!-- The image Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" id="imageModalClose">&times;</span>
+            <img class="modal-content fadeIn" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!-- The share Modal -->
+        <div id="shareModal" class="modal share-modal">
+            <div class="share-form fadeInUpBig">
+                <div class="share-form-header">
+                    <h3 class="share-form-header-text">Share Profile</h3>
+                    <span class="close" id="shareModalClose">&times;</span>
+                </div>
+                <div class="share-form-buttons-container">
+                    <p>Share my Digital vCard in your network.</p>
+                    <div class="share-buttons-heading">
+                        <img src="../templates/template5/tild-arrow.svg" class="share-buttons-arrow">
+                        <div class="share-buttons-heading-text">Share my Digital vCard</div>
+                    </div>
+                    <ul class="share-buttons">
+                        <li class="share-button">
+                        <a href="javascript:;" target="_blank" onclick="handleDirectWhatsappShare(this, 7211177779)">
+                                <i class="share-button-whatsapp fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="sms:?body=http://card.linkconnect.in/digital-hub-entertainment">
+                                <i class="share-button-sms fas fa-comment-dots"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://card.linkconnect.in/digital-hub-entertainment&src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                                <i class="share-button-facebook fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=http://card.linkconnect.in/digital-hub-entertainment" data-size="large">
+                                <i class="share-button-twitter fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="http://pinterest.com/pin/create/link/?url=http://card.linkconnect.in/digital-hub-entertainment">
+                                <i class="share-button-pinterest fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li class="share-button">
+                            <a target="_blank" href="mailto:?subject=Digital Card&amp;body=Check out this digital card http://card.linkconnect.in/digital-hub-entertainment.">
+                                <i class="share-button-mail fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
+        <script src="../templates/common/js/star-rating.js"></script>
+        <script src="../templates/common/js/script.js"></script>
+    </body>
+</html>
+    

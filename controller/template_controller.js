@@ -4,22 +4,32 @@ const templateDetails = require("../model/template");
 //@route        GET /api/v1/company
 //@acces        Public
 
-exports.getTemplates = (req, res, next) => {
+exports.getTemplates = async(req, res, next) => {
+  try {
+    const templates = await templateDetails.find();
     res.status(200).json({
       success: true,
-      msg: "Show all Details",
+      data: templates,
     });
+  } catch (error) {
+    console.log(error);
+  }
   };
   
   //@desc         GET all Company Detail
   //@route        GET /api/v1/company/:id
   //@acces        Public
   
-  exports.getTemplate = (req, res, next) => {
-      res.status(200).json({
+  exports.getTemplate = async (req, res, next) => {
+      try {
+        const template = await templateDetails.findById(req.params.id);
+        res.status(200).json({
           success: true,
-          msg: "Company Detail of" + req.params.id,
+          data: template,
         });
+      } catch (error) {
+        console.log(error);
+      }
   };
   
 //@desc         POST Template Detail

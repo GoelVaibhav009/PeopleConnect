@@ -15,7 +15,7 @@ exports.getAllCompanyDetail = async (req, res, next) => {
       companydetails: companydetails[0],
     })
     res.status(200).json({
-      lastName:companydetails[0].lastName,
+      lastName:companydetails,
       success: true,
       msg: "Show all Details",
     });

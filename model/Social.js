@@ -9,14 +9,7 @@ const SocialSchema = new Mongoose.Schema({
   linkdin: String,
   youtube: String,
   interest: String,
-  youtubeVideo: [
-    {
-      links: String,
-      type: {
-        type: String,
-      },
-    },
-  ],
+  youtubeVideo: [  ],
 });
 
 module.exports = Mongoose.model('Social', SocialSchema)

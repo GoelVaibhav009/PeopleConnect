@@ -29,7 +29,7 @@ const CompanySchema = new Mongoose.Schema({
         required:[true,'Add Company Name'],
     },
     nature:String,
-    specialities:String,
+    specialities:[],
 
 
 });

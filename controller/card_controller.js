@@ -11,18 +11,13 @@ const selectedTemplateDetails = require("../model/selectedTemplate");
 exports.getCard = async (req, res, next) => {
     try {
         let CompanyDetails = await companyDetails.find({companyUrl:req.params.companyName}).lean()
-        console.log(CompanyDetails);
         let SocialDetails = await socialDetails.find({userId: CompanyDetails[0].userId}).lean()
-        console.log(SocialDetails);
         let ContactDetails = await contactDetails.find({userId: CompanyDetails[0].userId}).lean()
-        console.log(ContactDetails);
-        let FeedbackDetails = await feedbackDetails.find({userId: CompanyDetails[0]._id}).lean()
-        console.log(FeedbackDetails);
+        let FeedbackDetails = await feedbackDetails.find({companyId: CompanyDetails[0]._id}).lean()
         let ImagesDetails = await imagesDetails.find({userId: CompanyDetails[0].userId}).lean()
         let SelectedTemplated = await selectedTemplateDetails.find({userId: CompanyDetails[0].userId}).lean()
         let TemplateDetails = await templateDetails.find({_id: SelectedTemplated[0].TemplateId}).lean()
         let EcommerceDetails = await ecommerceDetails.find({userId: CompanyDetails[0].userId}).lean()
-        console.log(EcommerceDetails);
         let PaymentDetails = await paymentDetails.find({userId: CompanyDetails[0].userId}).lean()
 
 

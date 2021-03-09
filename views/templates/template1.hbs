@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css">
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
-        <meta property="og:image" itemprop="image" content="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/rajesh-s-shah-and-associates/1587744733322.jpeg"/>
+        <meta property="og:image" itemprop="image" content="{{companyDetailsValue.logo}}"/>
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Mr. Rajesh Shah (Proprietor)" />
-        <title>Rajesh S Shah and Associates</title>
+        <meta property="og:description" content="{{companyDetailsValue.firstName}} {{companyDetailsValue.lastName}} {{companyDetailsValue.position}}" />
+        <title>{{companyDetailsValue.companyName}}</title>
         <link rel="manifest" id="manifest-placeholder">
 		<link rel="stylesheet" href="/template1/css.css">
     </head>
@@ -28,25 +28,25 @@
                 <div class="views-label"><i class="fas fa-eye"></i> Views: <b>2212</b></div>
                 <div class="profile-info">
                     <!-- User Profile Pic -->
-                <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A001/rajesh-s-shah-and-associates/1587744733322.jpeg" class="profile-pic-img">
+                <img src="{{companyDetailsValue.logo}}" class="profile-pic-img">
 
                 <!-- User Company Name -->
-                <div class="firmname">Rajesh S Shah and Associates</div>
+                <div class="firmname">{{companyDetailsValue.companyName}}</div>
 
                 <div class="company-separator"></div>
 
                 <!-- User First Name and Last Name -->
-                <div class="name">Mr. {{companyDetailsValue.firstName}} Shah <span style="margin-top: 5px;display: block"><i style="font-size: 12px;">(Proprietor)</i></span></div>
+                <div class="name">Mr. {{companyDetailsValue.firstName}} {{companyDetailsValue.lastName}} <span style="margin-top: 5px;display: block"><i style="font-size: 12px;">({{companyDetailsValue.position}})</i></span></div>
                 
                 </div>
             </div>
             <div class="contact-info-container">
                 <div class="contact-info-wrapper">
-                    <a class="contact-piller-button call" target="_blank" href="tel:9820851661">
+                    <a class="contact-piller-button call" target="_blank" href="tel:{{companyDetailsValue.phone}}">
                         <i class="fas fa-phone fa-flip-horizontal"></i>
                     </a>
                     <div class="contact-info">
-                        <div style="margin-bottom: 5px;"><a target="_blank" href="tel:9820851661">+919820851661</a></div>
+                        <div style="margin-bottom: 5px;"><a target="_blank" href="tel:{{companyDetailsValue.phone}}">+91{{companyDetailsValue.phone}}</a></div>
                         
                     </div>
                 </div>
@@ -358,20 +358,20 @@ Off no :
                 <div class="feedback-button-wrapper">
                     <input type="button" value="Load more feedbacks" id="load-more-feedback-btn"/>
                 </div>
-                <form class="feedback-form card" novalidate>
+                <form action="/api/v1/feedback" method="POST" class="feedback-form card" novalidate>
                     <div class="feedback-form-heading">Give Feedback</div>
                     <select class="star-rating" id="rating" name="rating">
                         <option value="">Select a rating</option>
-                        <option value="5">Excellent</option>
-                        <option value="4">Very Good</option>
-                        <option value="3">Average</option>
-                        <option value="2">Poor</option>
-                        <option value="1">Terrible</option>
+                        <option value="5" name="{{feedbackDetailsValue.star}}">Excellent</option>
+                        <option value="4" name="{{feedbackDetailsValue.star}}">Very Good</option>
+                        <option value="3" name="{{feedbackDetailsValue.star}}">Average</option>
+                        <option value="2" name="{{feedbackDetailsValue.star}}">Poor</option>
+                        <option value="1" name="{{feedbackDetailsValue.star}}">Terrible</option>
                     </select>
-                    <input type="text" name="feedbackName" id="feedbackName" placeholder="Enter Full Name"/>
-                    <textarea name="feedback" id="feedback" placeholder="Enter your feedback"></textarea>
+                    <input type="text" name="{{feedbackDetailsValue.name}}" id="feedbackName" placeholder="Enter Full Name"/>
+                    <textarea name="{{feedbackDetailsValue.feedback}}"  id="feedback" placeholder="Enter your feedback"></textarea>
                     <!-- Message:<br/> -->
-                    <input type="button" value="Give Feedback" onclick="sendFeedback(this, 'rajesh-s-shah-and-associates')"/>
+                    <input type="submit" value="Submit" />
                 </form>
             </div>
         
@@ -509,8 +509,7 @@ Off no :
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
-        <script src="../templates/common/js/star-rating.js"></script>
-        <script src="../templates/common/js/script.js"></script>
+        <script src="/commonjs.js"></script>
     </body>
 </html>
     

@@ -5,7 +5,7 @@ const FeedbackSchema = new Mongoose.Schema({
     name:String,
     feedback:String,
     star:String,
-    date:String,
+    date:String
 });
 
 module.exports = Mongoose.model('Feedbacks Products', FeedbackSchema)

@@ -10,20 +10,25 @@ const selectedTemplateDetails = require("../model/selectedTemplate");
 
 exports.getCard = async (req, res, next) => {
     try {
-        let CompanyDetail = await companyDetails.find({companyUrl: req.params.companyName}).lean()
-        let SocialDetails = await socialDetails.find({userId: CompanyDetail[0].userId}).lean()
-        let ContactDetails = await contactDetails.find({userId: CompanyDetail[0].userId}).lean()
-        let FeedbackDetails = await feedbackDetails.find({userId: CompanyDetail[0]._id}).lean()
-        let ImagesDetails = await imagesDetails.find({userId: CompanyDetail[0].userId}).lean()
-        let SelectedTemplated = await selectedTemplateDetails.find({userId: CompanyDetail[0].userId}).lean()
+        let CompanyDetails = await companyDetails.find({companyUrl:req.params.companyName}).lean()
+        console.log(CompanyDetails);
+        let SocialDetails = await socialDetails.find({userId: CompanyDetails[0].userId}).lean()
+        console.log(SocialDetails);
+        let ContactDetails = await contactDetails.find({userId: CompanyDetails[0].userId}).lean()
+        console.log(ContactDetails);
+        let FeedbackDetails = await feedbackDetails.find({userId: CompanyDetails[0]._id}).lean()
+        console.log(FeedbackDetails);
+        let ImagesDetails = await imagesDetails.find({userId: CompanyDetails[0].userId}).lean()
+        let SelectedTemplated = await selectedTemplateDetails.find({userId: CompanyDetails[0].userId}).lean()
         let TemplateDetails = await templateDetails.find({_id: SelectedTemplated[0].TemplateId}).lean()
-        let EcommerceDetails = await ecommerceDetails.find({userId: CompanyDetail[0].userId}).lean()
-        let PaymentDetails = await paymentDetails.find({userId: CompanyDetail[0].userId}).lean()
+        let EcommerceDetails = await ecommerceDetails.find({userId: CompanyDetails[0].userId}).lean()
+        console.log(EcommerceDetails);
+        let PaymentDetails = await paymentDetails.find({userId: CompanyDetails[0].userId}).lean()
 
 
         res.render(`templates/${TemplateDetails[0].name}`, {
             contactDetailsValue: ContactDetails[0],
-            companyDetailsValue: CompanyDetail[0],
+            companyDetailsValue: CompanyDetails[0],
             socialDetailsValue: SocialDetails[0],
             feedbackDetailsValue: FeedbackDetails[0],
             imagesDetailsValue: ImagesDetails[0],

@@ -9,7 +9,8 @@ const {
   deletePayment,
 } = require("../controller/payment_controller");
 
-router.route("/").get(getPayments).post(createPayment);
+router.route("/").get(getPayments);
+router.route("/:userId").post(createPayment);
 router
   .route("/:id")
   .get(getPayment)

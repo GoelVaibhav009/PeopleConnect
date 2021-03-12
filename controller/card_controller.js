@@ -20,7 +20,6 @@ exports.getCard = async (req, res, next) => {
         let EcommerceDetails = await ecommerceDetails.find({userId: CompanyDetails[0].userId}).lean()
         let PaymentDetails = await paymentDetails.find({userId: CompanyDetails[0].userId}).lean()
 
-
         res.render(`templates/${TemplateDetails[0].name}`, {
             contactDetailsValue: ContactDetails[0],
             companyDetailsValue: CompanyDetails[0],

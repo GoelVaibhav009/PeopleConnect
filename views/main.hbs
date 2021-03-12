@@ -1,3 +1,4630 @@
-<h6>Dashboard</h6>
-<h3>Welcome {{name}}</h3>
-<p>Here are your stories</p>
+<!doctype html>
+<html lang="zxx">
+
+    <head>
+        <title>Link Connect - Digital Business Card</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta property="title" content="Link Connect - Digital Visiting Card">
+        <meta property="description" content="Link Connect is a Digital Business/Visiting Card that is smart, elegant & affordable.">
+        <meta name="keywords" content="digital business cards, digital visiting cards, business card, visiting card, best digital business card, best digital visiting card, free business card, linkconnect, linkconnect business cards, digital business card, digital visiting card, digital cards, add video, digital business card solution, business card, e-visiting card, e visiting card, e business cards, e-card">
+        <meta name="robots" content="index, follow">
+        <meta property="og:image" itemprop="image" content="http://card.linkconnect.in/assets/img/logo-link-connect-square.png"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Link Connect - Digital Visiting Card" />
+        <meta property="og:description" content="Link Connect provides a Digital Business Card that is smart, elegant & affordable." />
+
+        <!-- Bootstrap Min CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/bootstrap.min.css'>
+        <!-- Animate Min CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/animate.min.css'>
+        <!-- FontAwesome Min CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/fontawesome.min.css'>
+        <!-- Flaticon CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/flaticon.css'>
+        <!-- Style CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/style.css'>
+        <!-- Responsive CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='assets/css/responsive.css'>
+        <!-- Link Connect Style CSS -->
+        <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='https://card.linkconnect.in/assets/css/link-connect-style.css'>
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <noscript>
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/animate.min.css">
+            <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+            <link rel="stylesheet" href="assets/css/flaticon.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="assets/css/responsive.css">
+            <link rel="stylesheet" href="assets/css/link-connect-style.css">
+        </noscript>
+        <style>
+            /*================================================
+            Preloader Area CSS
+            =================================================*/
+            .preloader {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #2d9bea;
+                z-index: 99999;
+                text-align: center;
+            }
+
+            .preloader .spinner {
+                width: 65px;
+                height: 65px;
+                background-color: #ffffff;
+                margin: 0 auto;
+                -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+                        animation: sk-rotateplane 1.2s infinite ease-in-out;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 41%;
+                -webkit-transform: translateY(-41%);
+                        transform: translateY(-41%);
+            }
+
+            @-webkit-keyframes sk-rotateplane {
+                0% {
+                -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                }
+                50% {
+                -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                }
+                100% {
+                -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                }
+            }
+
+            @keyframes sk-rotateplane {
+                0% {
+                -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                }
+                50% {
+                -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                }
+                100% {
+                -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                }
+            }
+            @media only screen and (max-width: 767px) {
+                .banner-image img {
+                    max-width: 100%;
+                }
+            }
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                .banner-image img {
+                    max-width: 100%;
+                }
+            }
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                .banner-image img {
+                    max-width: 105%;
+                }
+            }
+            @media only screen and (min-width: 1199px) and (max-width: 1442px) {
+                .banner-image img {
+                    max-width: 108%;
+                }
+            }
+            .pm-care img {
+                max-width: 100%;
+            }
+
+            /*================================================
+            Link Connect Style CSS
+            =================================================*/
+                    .navbar-brand {
+            max-width: 110px;
+            }
+
+            .opella-mobile-nav .logo {
+            width: 50%;
+            }
+
+            .opella-mobile-nav .logo a {
+            max-width: 110px;
+            }
+
+            .opella-mobile-nav .nav-create-button {
+            margin-right: 10px;
+            background: transparent;
+            border: 1px solid #ffcf58;
+            color: #ffcf58;
+            }
+
+            .mean-container a.meanmenu-reveal {
+            display: none !important;
+            }
+
+            .pm-care {
+            display: none;
+            }
+
+            .pm-care .pm-care-content {
+            margin: 30px 0;
+            margin-bottom: 70px;
+            text-align: center;
+            }
+
+            .pm-care .pm-care-content h3 {
+            color: #ffcf58;
+            }
+
+            .pm-care .pm-care-content h5 {
+            color: #ffffff;
+            line-height: 28px;
+            }
+
+            .pm-care img {
+            border-radius: 15px;
+            }
+
+            .pm-care .pm-care-content .create-button {
+            margin-bottom: 30px;
+            color: #0e101b;
+            background-color: #ffcf58;
+            }
+
+            .pm-care .pm-care-content .donate-button {
+            max-width: 135px;
+            }
+
+            .pm-care .pm-care-content .donate-button::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: -5px;
+            width: 90px;
+            height: 50px;
+            -webkit-animation: ripple 1.6s ease-out infinite;
+                    animation: ripple 1.6s ease-out infinite;
+            opacity: 0;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.5);
+            visibility: visible;
+            }
+
+            .main-banner-content .btn-box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            }
+
+            .main-banner-content {
+            color: #ffffff;
+            }
+
+            .tagline-list {
+            list-style: none;
+            line-height: 33px;
+            font-size: 17px;
+            color: #97d0fc;
+            padding: 0;
+            padding-left: 30px;
+            text-align: left;
+            }
+
+            .tagline-list li i {
+            color: #2d9bea;
+            font-size: 20px;
+            margin-right: 10px;
+            }
+
+            /* How it Works homepage */
+            .how_it_work_new_block {
+            background-image: url(../img/black-bg5.jpg);
+            font-family: 'Assistant', sans-serif;
+            color: #fff;
+            padding-bottom: 70px;
+            padding-top: 70px;
+            }
+            .how_it_work_new_block h2 {
+            font-weight: bold;
+            text-align: center;
+            }
+            .how_it_work_new_block .item {
+            text-align: center;
+
+            }
+            .how_it_work_new_block .image {
+            position: relative;
+            max-width: 170px;
+            margin: 0 auto;
+            }
+            .how_it_work_new_block .num {
+            position: absolute;
+            bottom: 5%;
+            padding: 0px 12px 0px 12px;
+            background: #7ad4ff;
+            border: 3px solid #f4ffff;
+            font-size: 21px;
+            line-height: 34px;
+            font-weight: bold;
+            color: black;
+            }
+            .how_it_work_new_block .title {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 15px;
+            }
+            .how_it_work_new_block .subtitle {
+            font-size: 16px;
+            padding-top: 9px;
+            padding-bottom: 15px;
+
+            }
+            .how_it_work_new_block .button {
+            border: 2px solid;
+            width: auto;
+            display: inline-block;
+            border-color: white;
+            color: white;
+            border-radius: 25px;
+            padding: 6px 40px 6px 40px;
+            margin: 50px auto 75px auto;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            text-align: center;
+            color: white;
+            }
+            .how_it_work_new_block a{
+            color: white;
+            text-decoration: none;
+            }
+            .how_it_work_new_block .button:hover{
+            background: black;
+
+            }
+
+            .how_it_work_new_block .sub-title {
+            color: #2d9bea;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: "Nunito", sans-serif;
+            text-align: center;
+            }
+
+            .how_it_work_new_block .sub-title i {
+            background-color: rgba(45,155,234,0.15);
+            color: #2d9bea;
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 4px;
+            }
+
+            .samples-area {
+            background-color: #FCFCFC;
+            padding-top: 60px;
+            }
+
+            .samples-area .row {
+            justify-content: center;
+            }
+
+            .samples-area .sample-container {
+            text-align: center;
+            max-width: 260px;
+            margin-bottom: 60px;
+            }
+
+            .samples-area .sample-container img {
+            margin-bottom: 10px;
+            }
+
+            .samples-area .sub-title {
+            color: #2d9bea;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: "Nunito", sans-serif;
+            text-align: center;
+            }
+
+            .samples-area .sub-title i {
+            background-color: rgba(45,155,234,0.15);
+            color: #2d9bea;
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 4px;
+            }
+
+            .samples-area h2 {
+            font-weight: bold;
+            text-align: center;
+            }
+
+            .section-title span span {
+            display: inline-block;
+            margin-left: 10px;
+            }
+
+            .single-services-box .icon i::before {
+            font-size: 30px;
+            }
+
+            .footer-logo {
+            max-width: 110px;
+            margin: 0 auto;
+            }
+
+            .pricing-header .price-wrapper {
+            text-align: center;
+            line-height: 40px;
+            color: #ffffff;
+            margin-top: 30px;
+            }
+            .pricing-header .price-wrapper .value {
+            font-size: 54px;
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+            }
+
+            .pricing-header .p-table-large .price-wrapper .value {
+                font-size: 52px;
+            }
+            .pricing-header .price-wrapper .curency {
+            position: absolute;
+            top: -12px;
+            font-size: 28px;
+            font-weight: 500;
+            left: -18px;
+            }
+            .pricing-header .price-wrapper .time {
+            font-size: 30px;
+            letter-spacing: 0.2px;
+            font-weight: 500;
+            }
+
+            .mean-container .mean-bar, .mean-container .mean-bar * {
+            display: none;
+            }
+
+            @media (max-width: 992px) {
+            .how_it_work_new_block .item {
+                margin:20px 0;
+            }
+            .how_it_work_new_block .button {
+                margin-top: 30px;
+                margin-bottom: 65px;
+            }
+            }
+            /* End How it Works homepage */
+
+            @media only screen and (max-width: 991px) {
+            .pm-care {
+                display: block;
+            }
+
+            .main-banner-buttons {
+                display: none;
+            }
+
+            .opella-mobile-nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            }
+
+
+
+            /*================================================
+            Main Style CSS
+            =================================================*/
+
+            @import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap");
+            @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap");
+
+            body {
+            padding: 0;
+            margin: 0;
+            font-family: "Nunito", sans-serif;
+            font-size: 16px;
+            }
+
+            img {
+            max-width: 100%;
+            }
+
+            p {
+            line-height: 1.9;
+            color: #666666;
+            margin-bottom: 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            }
+
+            p:last-child {
+            margin-bottom: 0;
+            }
+
+            a {
+            display: block;
+            color: #0e101b;
+            text-decoration: none;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            a:hover {
+            color: #2d9bea;
+            text-decoration: none;
+            }
+
+            .ptb-100 {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            }
+
+            /*btn*/
+            .btn {
+            border: none;
+            padding: 15px 30px;
+            line-height: initial;
+            border-radius: 30px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            position: relative;
+            z-index: 1;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            }
+
+            .btn.disabled, .btn:disabled {
+            opacity: 1;
+            }
+
+            .btn-primary {
+            color: #0e101b;
+            background-color: #ffcf58;
+            }
+
+            .btn-primary::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            border-radius: 30px 0 0 30px;
+            z-index: -1;
+            background: #2d9bea;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .btn-primary::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            border-radius: 0 30px 30px 0;
+            z-index: -1;
+            background: #2d9bea;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .btn-primary.disabled, .btn-primary:disabled {
+            color: #0e101b;
+            background-color: #ffcf58;
+            }
+
+            .btn-primary:hover, .btn-primary:focus {
+            color: #ffffff !important;
+            background-color: #ffcf58 !important;
+            -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
+            }
+
+            .btn-primary:hover::before, .btn-primary:focus::before {
+            width: 60%;
+            opacity: 1;
+            visibility: visible;
+            }
+
+            .btn-primary:hover::after, .btn-primary:focus::after {
+            width: 60%;
+            opacity: 1;
+            visibility: visible;
+            }
+
+            /*section-title*/
+            .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin-bottom: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            .section-title span {
+            display: inline-block;
+            color: #2d9bea;
+            font-size: 19px;
+            margin-bottom: 5px;
+            }
+
+            .section-title span .icon {
+            background-color: rgba(45,155,234,0.15);
+            color: #2d9bea;
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            font-size: 15px;
+            line-height: 30px;
+            display: inline-block;
+            margin-top: 0;
+            }
+
+            .section-title span .icon::before {
+            font-size: 12px;
+            }
+
+            .section-title span span {
+            display: block;
+            margin-bottom: 0;
+            margin-top: 13px;
+            }
+
+            .section-title h2 {
+            margin-bottom: 0;
+            font-size: 38px;
+            font-weight: 700;
+            }
+
+            .section-title p {
+            margin-bottom: 0;
+            margin-top: 12px;
+            }
+
+            /*================================================
+            Header Area CSS
+            =================================================*/
+            .top-header {
+            background-color: #242733;
+            border-bottom: 1px solid #2c303f;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            }
+
+            .top-header-left {
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: initial;
+            }
+
+            .top-header-left p a {
+            display: inline-block;
+            color: #ffffff;
+            }
+
+            .top-header-left p a:hover {
+            color: #2d9bea;
+            }
+
+            .top-header-left p span {
+            color: #ffcf58;
+            }
+
+            .top-header-right {
+            text-align: right;
+            }
+
+            .top-header-right .login-signup-btn {
+            display: inline-block;
+            position: relative;
+            padding-right: 15px;
+            }
+
+            .top-header-right .login-signup-btn p {
+            color: #8b8b89;
+            }
+
+            .top-header-right .login-signup-btn p a {
+            display: inline-block;
+            color: #e1e1e1;
+            }
+
+            .top-header-right .login-signup-btn p a:hover {
+            color: #ffcf58;
+            }
+
+            .top-header-right .login-signup-btn p span {
+            display: inline-block;
+            margin: 0 3px;
+            }
+
+            .top-header-right .login-signup-btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background: #8b8b89;
+            width: 1px;
+            height: 12px;
+            }
+
+            .top-header-right .social {
+            display: inline-block;
+            padding-left: 15px;
+            margin-bottom: 0;
+            list-style-type: none;
+            }
+
+            .top-header-right .social li {
+            display: inline-block;
+            }
+
+            .top-header-right .social li a {
+            width: 35px;
+            height: 35px;
+            line-height: 37px;
+            background-color: #3d4152;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 14px;
+            }
+
+            .top-header-right .social li a:hover {
+            background-color: #2d9bea;
+            color: #ffffff;
+            }
+
+            .opella-mobile-nav {
+            display: none;
+            }
+
+            .opella-mobile-nav.mean-container .mean-nav ul li a.active {
+            color: #2d9bea;
+            }
+
+            .navbar-brand {
+            padding-top: 0;
+            padding-bottom: 0;
+            }
+
+            .opella-nav {
+            background-color: transparent;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            }
+
+            .opella-nav .navbar {
+            padding-right: 0;
+            padding-top: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+            }
+
+            .opella-nav .navbar .others-options {
+            margin-left: 30px;
+            }
+
+            .opella-nav .navbar .others-options .btn-primary {
+            border: 1px solid #2d9bea;
+            background-color: transparent;
+            color: #2d9bea;
+            padding: 13px 26px;
+            }
+
+            .opella-nav .navbar .others-options .btn-primary:hover, .opella-nav .navbar .others-options .btn-primary:focus {
+            background-color: transparent !important;
+            }
+
+            .navbar-area {
+            background-color: #242733;
+            }
+
+            .navbar-area.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+            background-color: #242733 !important;
+            -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+            animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+            }
+
+            /*================================================
+            Main Banner Area CSS
+            =================================================*/
+            .main-banner {
+            position: relative;
+            z-index: 1;
+            background-color: #fcfcfc;
+            background-image: url(../img/black-bg1.png);
+            background-position: bottom left;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 0;
+            padding-bottom: 90px;
+            }
+
+            .main-banner .container {
+            position: relative;
+            }
+
+            .main-banner-content h1 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            font-size: 60px;
+            font-weight: 900;
+            }
+
+            .main-banner-content h1 span {
+            color: #2d9bea;
+            }
+
+            .main-banner-content .btn-box {
+            margin-top: 30px;
+            }
+
+            .main-banner-content .btn-box .btn-primary {
+            background-color: #2d9bea;
+            color: #ffffff;
+            }
+
+            .main-banner-content .btn-box .btn-primary::after, .main-banner-content .btn-box .btn-primary::before {
+            background: #ffcf58;
+            }
+
+            .main-banner-content .btn-box .btn-primary:hover, .main-banner-content .btn-box .btn-primary:focus {
+            background-color: #2d9bea !important;
+            color: #0e101b !important;
+            }
+
+            .banner-image img {
+            max-width: 130%;
+            }
+
+            .shape-img1 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            }
+
+            /*================================================
+            Features Area CSS
+            =================================================*/
+            .features-area {
+            padding-bottom: 70px;
+            padding-top: 70px;
+            }
+
+            .features-area.bg-image {
+            background-color: #FCFCFC;
+            }
+
+            .single-features-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #ffffff;
+            -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            }
+
+            .single-features-box .icon {
+            color: #2d9bea;
+            margin-bottom: 10px;
+            }
+
+            .single-features-box .icon i::before {
+            font-size: 40px;
+            }
+
+            .single-features-box h3 {
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            }
+
+            .single-features-box p {
+            margin-bottom: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-features-box .back-icon {
+            color: #2d9bea;
+            opacity: .05;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 0;
+            margin: 0 auto;
+            left: 0;
+            z-index: -1;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-features-box .back-icon i::before {
+            font-size: 200px;
+            }
+
+            .single-features-box .details-btn {
+            margin-top: 18px;
+            display: block;
+            margin: 20px auto 0;
+            }
+
+            .single-features-box .image-box img {
+            position: absolute;
+            max-width: 60%;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            opacity: 0;
+            z-index: -1;
+            visibility: hidden;
+            }
+
+            .single-features-box .image-box img:nth-child(1) {
+            top: 0;
+            right: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            }
+
+            .single-features-box .image-box img:nth-child(2) {
+            bottom: 0;
+            left: 0;
+            }
+
+            .details-btn {
+            display: inline-block;
+            position: relative;
+            color: #c2c2c2;
+            z-index: 1;
+            width: 35px;
+            height: 35px;
+            line-height: 36px;
+            left: -9px;
+            border-radius: 50%;
+            }
+
+            .details-btn i::before {
+            font-size: 23px;
+            }
+
+            .details-btn::before {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #c2c2c2;
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 0;
+            border-radius: 50%;
+            z-index: -1;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            /*================================================
+            About Area CSS
+            =================================================*/
+            .about-content span {
+            display: inline-block;
+            color: #2d9bea;
+            font-size: 18px;
+            margin-bottom: 15px;
+            }
+
+            .about-content span i {
+            background-color: rgba(45,155,234,0.15);
+            color: #2d9bea;
+            width: 30px;
+            height: 30px;
+            border-radius: 7px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-right: 4px;
+            }
+
+            .about-content span i::before {
+            font-size: 12px;
+            }
+
+            .about-content h2 {
+            margin-bottom: 15px;
+            font-size: 38px;
+            font-weight: 700;
+            }
+
+            .about-content p {
+            margin-bottom: 15px;
+            }
+
+            .about-content p:last-child {
+            margin-bottom: 0;
+            }
+
+            .about-content .btn {
+            margin-top: 5px;
+            }
+
+            .about-image {
+            text-align: center;
+            }
+
+            /*================================================
+            Services Area CSS
+            =================================================*/
+            .services-area {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 70px;
+            }
+
+            .services-area.bg-image {
+            background-color: #20222E;
+            }
+
+            .services-area.bg-image .section-title h2 {
+            color: #ffffff;
+            }
+
+            .single-services-box {
+            margin-bottom: 30px;
+            text-align: center;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            padding: 25px;
+            border: 2px solid #35384a;
+            }
+
+            .single-services-box .icon {
+            color: #ffcf58;
+            margin-bottom: 10px;
+            }
+
+            .single-services-box .icon i::before {
+            font-size: 40px;
+            }
+
+            .single-services-box h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            }
+
+            .single-services-box p {
+            margin-bottom: 0;
+            color: #d7d7d7;
+            }
+            /*================================================
+            Pricing Area CSS
+            =================================================*/
+            .pricing-area {
+            padding-bottom: 70px;
+            padding-top: 70px;
+            }
+
+            .pricing-area.extra-mb {
+            margin-bottom: -480px;
+            }
+
+            .single-pricing-table {
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+            -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.05);
+            z-index: 1;
+            background-color: #2d9bea;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            padding: 0;
+            }
+
+            .single-pricing-table .pricing-header {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            border-bottom: 1px solid #ffffff;
+            text-align: center;
+            }
+
+            .single-pricing-table .pricing-header .icon {
+            display: inline-block;
+            background-color: #ffabae;
+            color: #0e101b;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 50%;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            margin-bottom: 20px;
+            }
+
+            .single-pricing-table .pricing-header .icon i::before {
+            font-size: 30px;
+            }
+
+            /* .single-pricing-table .pricing-header span {
+            display: block;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 3px;
+            } */
+
+            .single-pricing-table .pricing-header h3 {
+            margin-bottom: 0;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            }
+
+            .single-pricing-table .pricing-features-list {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            list-style-type: none;
+            margin-bottom: 0;
+            }
+
+            .single-pricing-table .pricing-features-list li {
+            color: #ffffff;
+            margin-bottom: 10px;
+            }
+
+            .single-pricing-table .pricing-features-list li i {
+            background-color: #fb898d;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-pricing-table .pricing-features-list li i::before {
+            font-size: 9px;
+            }
+
+            .single-pricing-table::before {
+            z-index: -1;
+            background: #2d9bea;
+            width: 60%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-pricing-table::after {
+            z-index: -1;
+            background: #2d9bea;
+            width: 60%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-pricing-table .image-box img {
+            position: absolute;
+            max-width: 90%;
+            opacity: .09;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            }
+
+            .single-pricing-table .image-box img:nth-child(1) {
+            top: 0;
+            right: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            }
+
+            .single-pricing-table .image-box img:nth-child(2) {
+            bottom: 0;
+            left: 0;
+            }
+
+            .single-pricing-table:hover, .single-pricing-table.active {
+            background-color: #21232f;
+            }
+
+            .single-pricing-table:hover::before, .single-pricing-table:hover::after, .single-pricing-table.active::before, .single-pricing-table.active::after {
+            width: 0;
+            }
+
+            .single-pricing-table:hover .icon, .single-pricing-table.active .icon {
+            background-color: #ffcf58;
+            }
+
+            .single-pricing-table:hover .pricing-features-list li i, .single-pricing-table.active .pricing-features-list li i {
+            background-color: #393d4b;
+            }
+
+            .single-pricing-table:hover .view-plans-btn, .single-pricing-table.active .view-plans-btn {
+            background-color: #ffcf58;
+            border-color: #ffcf58;
+            color: #0e101b;
+            }
+
+            /*================================================
+            CTA Area CSS
+            =================================================*/
+            .cta-area {
+            background-color: #0e101b;
+            background-image: url(../img/black-bg3.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            }
+
+            .cta-content h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            }
+
+            .cta-content h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 30px;
+            font-weight: 700;
+            }
+
+            .cta-content a {
+            display: inline-block;
+            color: #ffcf58;
+            font-size: 35px;
+            font-weight: 700;
+            }
+
+            .cta-btn {
+            text-align: right;
+            }
+
+            /*================================================
+            404 Error Area CSS
+            =================================================*/
+            .error-area {
+            height: 100vh;
+            }
+
+            .error-content {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 700px;
+            }
+
+            .error-content h3 {
+            font-size: 35px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 17px;
+            }
+
+            .error-content p {
+            max-width: 520px;
+            margin: 0 auto 20px;
+            }
+
+            /*================================================
+            Footer Area CSS
+            =================================================*/
+            .footer-area {
+            background-color: #20222E;
+            /* padding-top: 100px; */
+            background-image: url(../img/black-bg5.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+
+            .copyright-area {
+            border-top: 1px solid #292b38;
+            text-align: center;
+            /* margin-top: 60px; */
+            padding-top: 30px;
+            padding-bottom: 30px;
+            }
+
+            .copyright-area p {
+            margin-bottom: 0;
+            color: #d7d7d7;
+            }
+
+            /*================================================
+            Go Top CSS
+            =================================================*/
+            .go-top {
+            position: fixed;
+            cursor: pointer;
+            bottom: 0;
+            right: 25px;
+            background-color: #0e101b;
+            color: #ffffff;
+            z-index: 4;
+            width: 40px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: .9s;
+            transition: .9s;
+            }
+
+            .go-top.active {
+            bottom: 25px;
+            opacity: 1;
+            visibility: visible;
+            }
+
+            .go-top:hover, .go-top:focus {
+            background-color: #2d9bea;
+            color: #ffffff;
+            }
+
+            .sample-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            }
+
+            .main-banner-content .subheading {
+            margin-bottom: 40px;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.2;
+            }
+
+
+            /*================================================
+            Responsive Css
+            =================================================*/
+
+                    @media only screen and (max-width: 767px) {
+            body {
+            font-size: 14px;
+            }
+            p {
+            font-size: 13px;
+            }
+            .btn {
+            padding: 14px 25px;
+            font-size: 13px;
+            }
+            .ptb-100 {
+            padding-top: 65px;
+            padding-bottom: 65px;
+            }
+            .section-title {
+            margin-bottom: 40px;
+            }
+            .section-title span {
+            font-size: 15px;
+            }
+            .section-title h2 {
+            font-size: 25px;
+            line-height: 1.3;
+            }
+            .top-header-left {
+            text-align: center;
+            }
+            .top-header-right {
+            text-align: center;
+            margin-top: 10px;
+            }
+            .top-header-right .social li {
+            margin-right: 3px;
+            }
+            .top-header-right .social li:last-child {
+            margin-right: 0;
+            }
+            .top-header-right .social li a {
+            width: 30px;
+            height: 30px;
+            line-height: 31px;
+            font-size: 12px;
+            }
+            .header-area.header-style-two {
+            border-bottom: 1px solid #4e4957;
+            }
+            .main-banner {
+            background-image: unset;
+            background-color: #262735;
+            padding-top: 50px;
+            padding-bottom: 80px;
+            }
+            .main-banner-content {
+            text-align: center;
+            }
+            .main-banner-content .sub-title {
+            margin-bottom: 10px;
+            font-size: 15px;
+            }
+            .main-banner-content .sub-title i {
+            width: 20px;
+            position: relative;
+            top: -3px;
+            height: 20px;
+            line-height: 17px;
+            }
+            .main-banner-content .sub-title i::before {
+            font-size: 8px;
+            }
+            .main-banner-content h1 {
+            font-size: 38px;
+            }
+            .main-banner-content p {
+            font-size: 14px;
+            }
+            .main-banner-content .price {
+            margin-top: 10px;
+            font-size: 38px;
+            }
+            .main-banner-content .price span {
+            left: -7px;
+            font-size: 16px;
+            }
+            .main-banner-content .btn-box {
+            margin-top: 10px;
+            }
+            .main-banner-content .btn-box .video-btn {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            top: 4px;
+            }
+            .banner-image {
+            text-align: center;
+            margin-top: 50px;
+            }
+            .banner-image img {
+            max-width: 100%;
+            }
+            .banner-section {
+            padding-top: 290px;
+            padding-bottom: 290px;
+            }
+            .hero-content {
+            text-align: center;
+            max-width: 100%;
+            }
+            .hero-content .sub-title {
+            font-size: 15px;
+            }
+            .hero-content h1 {
+            line-height: 1.3;
+            font-size: 38px;
+            }
+            .hero-content p {
+            font-size: 14px;
+            }
+            .home-slides.owl-theme .owl-nav {
+            right: 0;
+            left: 0;
+            bottom: 130px;
+            }
+            .home-slides.owl-theme .owl-nav [class*=owl-] {
+            font-size: 15px;
+            margin: 0 5px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            }
+            .features-area {
+            padding-bottom: 0;
+            }
+            .single-features-box {
+            padding: 20px;
+            }
+            .single-features-box .icon {
+            margin-bottom: 6px;
+            }
+            .single-features-box .icon i::before {
+            font-size: 35px;
+            }
+            .single-features-box h3 {
+            font-size: 19px;
+            }
+            .single-box {
+            padding: 20px;
+            }
+            .single-box .icon {
+            width: 65px;
+            height: 65px;
+            margin-bottom: 20px;
+            line-height: 66px;
+            }
+            .single-box .icon i::before {
+            font-size: 25px;
+            }
+            .single-box h3 {
+            font-size: 19px;
+            }
+            .single-box .details-btn {
+            margin-top: 15px;
+            }
+            .about-content {
+            text-align: center;
+            }
+            .about-content span {
+            font-size: 15px;
+            }
+            .about-content h2 {
+            line-height: 1.3;
+            margin-bottom: 12px;
+            font-size: 25px;
+            }
+            .about-image {
+            margin-top: 40px;
+            }
+            .about-main-image {
+            margin-top: 35px;
+            }
+            .about-inner-area {
+            margin-bottom: 20px;
+            }
+            .single-about-box {
+            padding: 20px;
+            }
+            .single-about-box .icon {
+            width: 70px;
+            height: 70px;
+            line-height: 72px;
+            }
+            .single-about-box .icon i::before {
+            font-size: 25px;
+            }
+            .single-about-box h3 {
+            font-size: 18px;
+            }
+            .services-area {
+            padding-bottom: 35px;
+            }
+            .services-area.bg-image {
+            background-image: unset;
+            background-color: #262735;
+            }
+            .single-services-box {
+            padding: 20px;
+            }
+            .single-services-box .icon i::before {
+            font-size: 30px;
+            }
+            .single-services-box h3 {
+            font-size: 19px;
+            }
+            .services-box {
+            padding: 20px;
+            }
+            .services-box .icon {
+            margin-bottom: 20px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            }
+            .services-box .icon i::before {
+            font-size: 25px;
+            }
+            .services-box h3 {
+            font-size: 19px;
+            }
+            .packages-area {
+            margin-bottom: -30px;
+            }
+            .single-packages-box {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            }
+            .single-packages-box h3 {
+            font-size: 18px;
+            }
+            .single-packages-box .btn {
+            padding: 11px 25px;
+            margin-top: 20px;
+            }
+            .services-details .services-details-desc h3 {
+            margin-bottom: 10px;
+            font-size: 19px;
+            }
+            .services-details .services-details-desc h3:not(:first-child) {
+            margin-bottom: 8px;
+            }
+            .services-details .services-details-desc .services-details-faq .accordion .accordion-item .accordion-title {
+            font-size: 14px;
+            }
+            .services-sidebar {
+            margin-top: 30px;
+            }
+            .pricing-area {
+            padding-bottom: 35px;
+            }
+            .single-pricing-table {
+            /* text-align: center; */
+            padding: 0;
+            }
+            .single-pricing-table .pricing-header .icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            }
+            .single-pricing-table .pricing-header .icon i::before {
+            font-size: 25px;
+            }
+            .single-pricing-table .pricing-header h3 {
+            font-size: 19px;
+            }
+            .single-pricing-table .price {
+            font-size: 25px;
+            }
+            .single-pricing-table .price span:nth-child(1) {
+            margin-bottom: -3px;
+            }
+            .single-pricing-table .view-plans-btn {
+            margin-top: 20px;
+            font-size: 14px;
+            }
+            .single-tv-show h3 {
+            font-size: 18px;
+            }
+            .coverage-area-content {
+            text-align: center;
+            }
+            .coverage-area-content span {
+            font-size: 15px;
+            }
+            .coverage-area-content h2 {
+            margin-bottom: 12px;
+            font-size: 25px;
+            }
+            .coverage-area-map {
+            margin-top: 35px;
+            }
+            .coverage-area-map img {
+            max-width: 100%;
+            }
+            .faq-area.extra-pt {
+            padding-top: 520px;
+            }
+            .col-lg-6:last-child .faq-accordion {
+            margin-top: 15px;
+            }
+            .faq-accordion .accordion .accordion-item .accordion-title {
+            font-size: 14px;
+            padding: 12px 20px 12px 48px;
+            }
+            .faq-accordion .accordion .accordion-item .accordion-title i {
+            width: 35px;
+            }
+            .faq-accordion .accordion .accordion-item .accordion-title i::before {
+            font-size: 13px;
+            }
+            .faq-accordion .accordion .accordion-item .accordion-content {
+            font-size: 13px;
+            }
+            .team-area {
+            padding-bottom: 35px;
+            }
+            .single-team-member .member-image {
+            -ms-flex: 0 0 100%;
+            -webkit-box-flex: 0;
+            flex: 0 0 100%;
+            max-width: 100%;
+            }
+            .single-team-member .member-content {
+            -ms-flex: 0 0 100%;
+            -webkit-box-flex: 0;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 20px;
+            }
+            .single-team-member .member-content h3 {
+            font-size: 19px;
+            }
+            .single-team-member .member-content span {
+            font-size: 13px;
+            }
+            .single-team-member .member-content .info {
+            margin-top: 15px;
+            }
+            .single-team-member .member-content .info li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            }
+            .single-team-member .member-content .info li span {
+            font-size: 15px;
+            }
+            .feedback-area {
+            padding-bottom: 35px;
+            }
+            .feedback-area .section-title {
+            margin-bottom: 10px;
+            }
+            .single-feedback-item {
+            padding-top: 70px;
+            }
+            .single-feedback-item i {
+            left: 0;
+            right: 0;
+            }
+            .single-feedback-item i::before {
+            font-size: 45px;
+            }
+            .single-feedback-item .client-info h3 {
+            font-size: 17px;
+            }
+            .single-feedback-item .client-info span {
+            margin-top: 5px;
+            font-size: 13px;
+            }
+            .feedback-slides.owl-theme .owl-nav.disabled + .owl-dots {
+            margin-top: 10px;
+            }
+            .cta-area {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            }
+            .cta-content {
+            text-align: center;
+            }
+            .cta-content h3 {
+            font-size: 19px;
+            line-height: 1.3;
+            }
+            .cta-content a {
+            font-size: 25px;
+            }
+            .cta-btn {
+            text-align: center;
+            margin-top: 15px;
+            }
+            .pricing-about-content {
+            text-align: center;
+            }
+            .pricing-about-content span {
+            font-size: 15px;
+            }
+            .pricing-about-content h2 {
+            font-size: 25px;
+            line-height: 1.3;
+            }
+            .why-choose-us-content {
+            text-align: center;
+            }
+            .why-choose-us-content span {
+            font-size: 15px;
+            }
+            .why-choose-us-content h2 {
+            font-size: 25px;
+            line-height: 1.3;
+            }
+            .why-choose-us-content ul li {
+            padding-left: 0;
+            }
+            .why-choose-us-content ul li::before {
+            position: relative;
+            left: -5px;
+            }
+            .why-choose-us-image {
+            margin-top: 40px;
+            }
+            .why-choose-us-image img {
+            max-width: 100%;
+            }
+            .why-choose-us-image .text {
+            width: 170px;
+            height: 170px;
+            padding: 5px;
+            }
+            .why-choose-us-image .text .inner-text h3 {
+            font-size: 22px;
+            }
+            .why-choose-us-image .text .inner-text span {
+            margin-left: -30px;
+            }
+            .blog-area {
+            padding-bottom: 35px;
+            }
+            .blog-area .widget-area {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            }
+            .single-blog-post .blog-post-content {
+            padding: 20px;
+            }
+            .single-blog-post .blog-post-content ul li {
+            font-size: 14px;
+            }
+            .single-blog-post .blog-post-content h3 {
+            line-height: 28px;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 7px;
+            }
+            .blog-slides.owl-theme .owl-nav.disabled + .owl-dots {
+            margin-top: 10px;
+            }
+            .blog-details .article-content h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            }
+            .blog-details .article-content .wp-block-gallery.columns-3 {
+            margin-right: -5px;
+            margin-left: -5px;
+            }
+            .blog-details .article-content .wp-block-gallery.columns-3 li {
+            padding-right: 5px;
+            padding-left: 5px;
+            }
+            blockquote, .blockquote {
+            padding: 20px !important;
+            }
+            blockquote p, .blockquote p {
+            font-size: 15px;
+            }
+            .comments-area {
+            padding: 15px;
+            }
+            .comments-area .comments-title {
+            font-size: 19px;
+            }
+            .comments-area .comments-title::before {
+            left: -15px;
+            }
+            .comments-area .comment-body {
+            padding-left: 0;
+            }
+            .comments-area .comment-author .avatar {
+            height: 50px;
+            left: 0;
+            position: relative;
+            width: 50px;
+            display: block;
+            margin-bottom: 10px;
+            }
+            .comments-area .comment-content p {
+            font-size: 13px;
+            }
+            .comments-area .comment-respond .comment-reply-title {
+            font-size: 19px;
+            }
+            .comments-area .comment-respond .comment-reply-title::before {
+            left: -15px;
+            }
+            .comments-area .comment-respond .comment-form-author {
+            width: 100%;
+            padding-right: 0;
+            }
+            .comments-area .comment-respond .comment-form-email {
+            width: 100%;
+            padding-left: 0;
+            }
+            .offer-content .sub-title {
+            font-size: 15px;
+            }
+            .offer-content h2 {
+            font-size: 25px;
+            }
+            .offer-content .list {
+            margin-bottom: 20px;
+            }
+            .offer-content .price .old-price {
+            font-size: 20px;
+            }
+            .offer-content .price .new-price {
+            font-size: 24px;
+            }
+            .offer-time {
+            padding: 20px;
+            margin-top: 30px;
+            }
+            .offer-time::before, .offer-time:after {
+            display: none;
+            }
+            .offer-time h2 {
+            font-size: 25px;
+            }
+            .offer-time #timer {
+            margin-top: 10px;
+            }
+            .offer-time #timer div {
+            width: 85px;
+            height: 85px;
+            padding-top: 16px;
+            font-size: 22px;
+            margin-top: 10px;
+            }
+            .offer-time #timer div span {
+            font-size: 13px;
+            }
+            .page-title-area {
+            background-position: center center;
+            padding-top: 75px;
+            padding-bottom: 80px;
+            }
+            .page-title-area.page-title-style-two {
+            padding-top: 130px;
+            }
+            .page-title-content {
+            text-align: center;
+            }
+            .page-title-content h2 {
+            font-size: 25px;
+            }
+            .page-title-content ul {
+            margin-top: 10px;
+            }
+            .page-title-content ul li {
+            font-size: 13px;
+            }
+            .woocommerce-topbar {
+            text-align: center;
+            }
+            .woocommerce-topbar .woocommerce-result-count {
+            margin-bottom: 20px;
+            }
+            .single-product-box .product-content h3 {
+            font-size: 19px;
+            }
+            .product-details-desc {
+            margin-top: 25px;
+            }
+            .product-details-desc h3 {
+            font-size: 19px;
+            }
+            .product-details-desc .product-add-to-cart .input-counter {
+            max-width: 120px;
+            min-width: 120px;
+            }
+            .products-details-tab {
+            margin-top: 35px;
+            }
+            .products-details-tab .tabs {
+            margin-bottom: -9px;
+            }
+            .products-details-tab .tabs li {
+            margin-bottom: 8px;
+            }
+            .products-details-tab .tabs li a {
+            font-size: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            padding-left: 40px;
+            }
+            .products-details-tab .tabs li a .dot {
+            left: 20px;
+            }
+            .products-details-tab .tab_content {
+            padding: 20px;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content .additional-information li span {
+            display: block;
+            width: 100%;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content h3 {
+            font-size: 19px;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-title .btn {
+            position: relative;
+            right: 0;
+            top: 0;
+            -webkit-transform: unset;
+                    transform: unset;
+            margin-top: 13px;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item {
+            padding-right: 0;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item .review-report-link {
+            position: relative;
+            right: 0;
+            top: 0;
+            margin-top: 10px;
+            }
+            .cart-table {
+            text-align: center;
+            }
+            .cart-table table thead tr th {
+            padding: 0 40px 10px;
+            white-space: nowrap;
+            }
+            .cart-table table thead tr th:first-child {
+            text-align: left;
+            padding-left: 0;
+            }
+            .cart-table table tbody tr td {
+            white-space: nowrap;
+            }
+            .cart-table table tbody tr td:first-child {
+            text-align: left;
+            padding-left: 0;
+            }
+            .cart-buttons {
+            text-align: center;
+            }
+            .cart-buttons .shopping-coupon-code {
+            max-width: 100%;
+            }
+            .cart-buttons .text-right {
+            text-align: center !important;
+            margin-top: 20px;
+            }
+            .cart-totals {
+            padding: 25px;
+            margin-top: 40px;
+            }
+            .cart-totals h3 {
+            margin-bottom: 20px;
+            font-size: 19px;
+            }
+            .checkout-area .title {
+            margin-bottom: 20px;
+            font-size: 19px;
+            }
+            .billing-details .form-group label {
+            margin-bottom: 7px;
+            font-size: 13px;
+            }
+            .billing-details .form-check label {
+            top: 2px;
+            font-size: 13px;
+            }
+            .order-details {
+            margin-top: 30px;
+            }
+            .order-details .order-table table thead tr th {
+            white-space: nowrap;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            font-size: 13px;
+            }
+            .order-details .order-table table tbody tr td {
+            white-space: nowrap;
+            font-size: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+            }
+            .order-details .payment-box {
+            padding: 20px;
+            }
+            .error-area {
+            height: 100%;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            }
+            .error-content h3 {
+            font-size: 28px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            }
+            .pagination-area {
+            margin-top: 20px;
+            }
+            .pagination-area .page-numbers {
+            width: 38px;
+            height: 38px;
+            margin: 0 2px;
+            line-height: 38px;
+            font-size: 16px;
+            }
+            .widget-area {
+            padding-left: 0;
+            margin-top: 40px;
+            }
+            .widget-area .widget .widget-title {
+            font-size: 19px;
+            }
+            .widget-area .widget_opella_posts_thumb .item .info time {
+            font-size: 11px;
+            }
+            .widget-area .widget_opella_posts_thumb .item .info .title {
+            font-size: 14px;
+            }
+            .widget-area .widget_recent_comments ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_recent_entries ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_archive ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_categories ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_meta ul li {
+            font-size: 14px;
+            }
+            .widget-area .tagcloud a {
+            font-size: 13px !important;
+            }
+            .contact-info-box-area {
+            padding-top: 35px;
+            }
+            .single-contact-info {
+            padding: 20px;
+            }
+            .single-contact-info .icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            }
+            .single-contact-info .icon i::before {
+            font-size: 25px;
+            }
+            .single-contact-info h3 {
+            font-size: 19px;
+            }
+            .footer-area {
+            /* padding-top: 65px; */
+            }
+            .single-footer-widget .logo p {
+            font-size: 13px;
+            margin-top: 12px;
+            }
+            .single-footer-widget h3 {
+            margin-bottom: 20px;
+            font-size: 19px;
+            }
+            .copyright-area {
+            /* margin-top: 35px; */
+            padding-top: 25px;
+            padding-bottom: 25px;
+            }
+            .footer-style-two .copyright-area {
+            text-align: center;
+            }
+            .footer-style-two .social {
+            text-align: center;
+            margin-bottom: 15px;
+            }
+            .go-top {
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            line-height: 36px;
+            }
+            .go-top.active {
+            bottom: 15px;
+            }
+            }
+
+            @media only screen and (min-width: 576px) and (max-width: 767px) {
+            .footer-style-two .copyright-area {
+            text-align: right;
+            }
+            .footer-style-two .copyright-area .social {
+            text-align: left;
+            }
+            .page-title-content h2 {
+            font-size: 30px;
+            }
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+            body {
+            font-size: 15px;
+            }
+            p {
+            font-size: 15px;
+            }
+            .section-title span {
+            font-size: 17px;
+            }
+            .section-title h2 {
+            font-size: 32px;
+            }
+            .ptb-100 {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            }
+            .header-area .top-header {
+            padding-left: 20px;
+            padding-right: 20px;
+            }
+            .header-area .top-header .container {
+            max-width: 100%;
+            }
+            .navbar-area .opella-mobile-nav .logo {
+            left: 35px;
+            }
+            .navbar-area .opella-mobile-nav.mean-container a.meanmenu-reveal {
+            padding: 5px 35px 0 0;
+            }
+            .navbar-area.is-sticky .opella-mobile-nav.mean-container a.meanmenu-reveal {
+            padding: 9px 35px 0 0 !important;
+            }
+            .main-banner {
+            background-image: unset;
+            background-color: #262735;
+            padding-top: 45px;
+            padding-bottom: 80px;
+            }
+            .main-banner-content .sub-title {
+            font-size: 15px;
+            }
+            .main-banner-content h1 {
+            font-size: 50px;
+            }
+            .main-banner-content p {
+            font-size: 15px;
+            }
+            .main-banner-content .price {
+            font-size: 50px;
+            }
+            .main-banner-content .price span {
+            left: -8px;
+            font-size: 28px;
+            }
+            .banner-image {
+            text-align: center;
+            margin-top: 55px;
+            }
+            .banner-image img {
+            max-width: 100%;
+            }
+            .banner-section {
+            padding-top: 270px;
+            padding-bottom: 310px;
+            }
+            .hero-content .sub-title {
+            font-size: 16px;
+            }
+            .hero-content h1 {
+            font-size: 50px;
+            }
+            .hero-content p {
+            font-size: 15px;
+            }
+            .home-slides.owl-theme .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            right: 0;
+            bottom: 140px;
+            left: 0;
+            }
+            .features-area {
+            padding-bottom: 0;
+            }
+            .single-features-box h3 {
+            font-size: 21px;
+            }
+            .about-content span {
+            font-size: 17px;
+            }
+            .about-content h2 {
+            font-size: 32px;
+            }
+            .about-image {
+            margin-top: 40px;
+            }
+            .about-main-image {
+            margin-top: 40px;
+            }
+            .single-box h3 {
+            font-size: 22px;
+            }
+            .services-area {
+            padding-bottom: 50px;
+            }
+            .single-services-box h3 {
+            font-size: 22px;
+            }
+            .services-box h3 {
+            font-size: 22px;
+            }
+            .single-tv-show h3 {
+            font-size: 22px;
+            }
+            .pricing-area {
+            padding-bottom: 50px;
+            }
+            .single-pricing-table {
+            padding: 0;
+            }
+            .single-pricing-table .pricing-header h3 {
+            font-size: 22px;
+            }
+            .packages-area {
+            margin-bottom: -30px;
+            }
+            .single-packages-box {
+            margin-bottom: 30px;
+            }
+            .single-packages-box h3 {
+            font-size: 22px;
+            }
+            .faq-area.extra-pt {
+            padding-top: 530px;
+            }
+            .col-lg-6:last-child .faq-accordion {
+            margin-top: 15px;
+            }
+            .faq-accordion .accordion .accordion-item .accordion-title {
+            font-size: 15px;
+            }
+            .why-choose-us-content span {
+            font-size: 17px;
+            }
+            .why-choose-us-content h2 {
+            font-size: 32px;
+            }
+            .why-choose-us-image {
+            margin-top: 35px;
+            }
+            .why-choose-us-image img {
+            max-width: 100%;
+            }
+            .offer-content .sub-title {
+            font-size: 17px;
+            }
+            .offer-content h2 {
+            font-size: 32px;
+            }
+            .offer-content .price .old-price {
+            font-size: 22px;
+            }
+            .offer-content .price .new-price {
+            font-size: 27px;
+            }
+            .offer-time {
+            margin-top: 30px;
+            }
+            .offer-time h2 {
+            font-size: 32px;
+            }
+            .cta-area {
+            text-align: center;
+            }
+            .cta-content h3 {
+            font-size: 22px;
+            }
+            .cta-content a {
+            font-size: 32px;
+            }
+            .cta-btn {
+            text-align: center;
+            margin-top: 20px;
+            }
+            .blog-area {
+            padding-bottom: 50px;
+            }
+            .blog-area .widget-area {
+            margin-top: 5px;
+            margin-bottom: 30px;
+            }
+            .single-blog-post .blog-post-content h3 {
+            font-size: 22px;
+            }
+            .page-title-area {
+            padding-top: 100px;
+            padding-bottom: 120px;
+            }
+            .page-title-area.page-title-style-two {
+            padding-top: 230px;
+            padding-bottom: 145px;
+            }
+            .page-title-content h2 {
+            font-size: 34px;
+            }
+            .about-inner-area {
+            margin-bottom: 40px;
+            }
+            .single-about-box h3 {
+            font-size: 22px;
+            }
+            .coverage-area-map {
+            margin-top: 35px;
+            }
+            .coverage-area-map img {
+            max-width: 100%;
+            }
+            .feedback-area {
+            padding-bottom: 50px;
+            }
+            .single-feedback-item .client-info h3 {
+            font-size: 18px;
+            }
+            .team-area {
+            padding-bottom: 50px;
+            }
+            .single-team-member .member-image {
+            padding-left: 20px;
+            }
+            .single-team-member .member-content {
+            padding: 20px;
+            position: relative;
+            }
+            .single-team-member .member-content h3 {
+            font-size: 22px;
+            }
+            .single-team-member .member-content span {
+            font-size: 14px;
+            margin-top: -1px;
+            }
+            .single-team-member .member-content .info {
+            margin-top: 15px;
+            }
+            .single-team-member .member-content .info li {
+            margin-bottom: 8px;
+            }
+            .error-area {
+            height: 100%;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            }
+            .pricing-about-content span {
+            font-size: 17px;
+            }
+            .pricing-about-content h2 {
+            font-size: 32px;
+            }
+            .services-details .services-details-desc h3 {
+            font-size: 22px;
+            }
+            .services-sidebar {
+            margin-top: 35px;
+            }
+            .single-product-box .product-content h3 {
+            font-size: 22px;
+            }
+            .product-details-desc {
+            margin-top: 30px;
+            }
+            .product-details-desc h3 {
+            font-size: 22px;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content h3 {
+            font-size: 22px;
+            }
+            .cart-totals h3 {
+            font-size: 22px;
+            }
+            .checkout-area .title {
+            margin-bottom: 20px;
+            font-size: 22px;
+            }
+            .order-details {
+            margin-top: 30px;
+            }
+            .widget-area {
+            padding-left: 0;
+            margin-top: 35px;
+            }
+            .widget-area .widget .widget-title {
+            font-size: 21px;
+            }
+            .widget-area .widget_recent_comments ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_recent_entries ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_archive ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_categories ul li {
+            font-size: 14px;
+            }
+            .widget-area .widget_meta ul li {
+            font-size: 14px;
+            }
+            .blog-details .article-content h3 {
+            font-size: 22px;
+            }
+            .blog-details .article-content p {
+            font-size: 14px;
+            }
+            blockquote, .blockquote {
+            padding: 40px !important;
+            }
+            blockquote p, .blockquote p {
+            font-size: 17px;
+            }
+            .comments-area .comments-title {
+            font-size: 22px;
+            }
+            .comments-area .comment-respond .comment-reply-title {
+            font-size: 22px;
+            }
+            .contact-info-box-area {
+            padding-top: 50px;
+            }
+            .single-contact-info h3 {
+            font-size: 22px;
+            }
+            .footer-area {
+            padding-top: 80px;
+            }
+            .single-footer-widget h3 {
+            font-size: 22px;
+            }
+            .copyright-area {
+            margin-top: 50px;
+            }
+            }
+
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            p {
+            font-size: 14px;
+            }
+            .section-title {
+            max-width: 565px;
+            }
+            .section-title span {
+            font-size: 17px;
+            }
+            .section-title h2 {
+            font-size: 35px;
+            }
+            .main-banner {
+            background-image: unset;
+            background-color: #262735;
+            padding-top: 0;
+            padding-bottom: 130px;
+            }
+            .main-banner-content h1 {
+            font-size: 60px;
+            }
+            .main-banner-content .price {
+            font-size: 60px;
+            }
+            .main-banner-content p {
+            font-size: 15px;
+            }
+            .banner-image img {
+            max-width: 105%;
+            }
+            .hero-content h1 {
+            font-size: 62px;
+            }
+            .home-slides.owl-theme .owl-nav {
+            right: 0;
+            left: 0;
+            bottom: 145px;
+            }
+            .why-choose-us-image img {
+            max-width: 104%;
+            }
+            .single-feedback-item .client-info h3 {
+            font-size: 18px;
+            }
+            .coverage-area-content span {
+            font-size: 17px;
+            }
+            .coverage-area-content h2 {
+            font-size: 35px;
+            }
+            .coverage-area-map img {
+            max-width: 105%;
+            }
+            .single-features-box h3 {
+            font-size: 22px;
+            }
+            .about-content span {
+            font-size: 17px;
+            }
+            .about-content h2 {
+            font-size: 35px;
+            }
+            .single-services-box h3 {
+            font-size: 22px;
+            }
+            .single-pricing-table {
+            padding: 0;
+            }
+            .single-pricing-table .pricing-header span {
+            font-size: 14px;
+            }
+            .single-pricing-table .pricing-header h3 {
+            font-size: 22px;
+            }
+            .pricing-about-content span {
+            font-size: 17px;
+            }
+            .pricing-about-content h2 {
+            font-size: 35px;
+            }
+            .single-blog-post .blog-post-content h3 {
+            font-size: 22px;
+            }
+            .single-footer-widget h3 {
+            font-size: 22px;
+            }
+            .single-box h3 {
+            font-size: 22px;
+            }
+            .single-packages-box h3 {
+            font-size: 22px;
+            }
+            .services-box h3 {
+            font-size: 22px;
+            }
+            .single-tv-show h3 {
+            font-size: 23px;
+            }
+            .why-choose-us-content span {
+            font-size: 17px;
+            }
+            .why-choose-us-content h2 {
+            font-size: 35px;
+            }
+            .single-about-box h3 {
+            font-size: 22px;
+            }
+            .single-team-member .member-content h3 {
+            font-size: 22px;
+            }
+            .services-details .services-details-desc h3 {
+            line-height: 1.4;
+            font-size: 22px;
+            }
+            .single-product-box .product-content h3 {
+            font-size: 22px;
+            }
+            .product-details-desc h3 {
+            font-size: 22px;
+            }
+            .products-details-tab .tab_content .tabs_item .products-details-tab-content h3 {
+            font-size: 22px;
+            }
+            .cart-totals h3 {
+            font-size: 22px;
+            }
+            .checkout-area .title {
+            font-size: 22px;
+            }
+            .widget-area .widget .widget-title {
+            font-size: 21px;
+            }
+            .blog-details .article-content h3 {
+            font-size: 22px;
+            }
+            .comments-area .comments-title {
+            font-size: 22px;
+            }
+            .comments-area .comment-respond .comment-reply-title {
+            font-size: 22px;
+            }
+            .single-contact-info h3 {
+            font-size: 22px;
+            }
+            }
+
+            @media only screen and (min-width: 1199px) and (max-width: 1442px) {
+            .banner-image img {
+            max-width: 108%;
+            }
+            .why-choose-us-image img {
+            max-width: 107%;
+            }
+            .coverage-area-map img {
+            max-width: 105%;
+            }
+            }
+
+            @media only screen and (min-width: 1550px) {
+            .home-slides.owl-theme .owl-nav {
+            right: 395px;
+            bottom: 170px;
+            }
+            }
+
+            @media only screen and (max-width: 991px) {
+            .opella-mobile-nav {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            }
+            .opella-mobile-nav .logo {
+            position: relative;
+            z-index: 9910;
+            width: 60%;
+            left: 15px;
+            }
+            .opella-mobile-nav .logo a {
+            display: inline-block;
+            }
+            .opella-mobile-nav.mean-container .mean-nav .navbar-nav {
+            height: 343px;
+            overflow-y: scroll;
+            }
+            .opella-nav {
+            display: none;
+            }
+            .navbar-area.is-sticky .mean-container .mean-bar {
+            border-bottom: none;
+            }
+            .navbar-area.is-sticky .mean-container .mean-nav {
+            margin-top: 56px;
+            }
+            .navbar-area.is-sticky .opella-mobile-nav {
+            padding-top: 15px;
+            padding-bottom: 16px;
+            }
+            .navbar-area.is-sticky .opella-mobile-nav.mean-container a.meanmenu-reveal {
+            padding: 9px 15px 0 0;
+            }
+            .navbar-area .mean-container .mean-nav ul li a {
+            font-size: 16px;
+            }
+            .navbar-area .mean-container .mean-nav ul li li a {
+            font-size: 15px;
+            }
+            .others-options {
+            display: none;
+            }
+}
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        {{!-- <div class="preloader">
+            <div class="spinner"></div>
+        </div> --}}
+        <!-- End Preloader Area -->
+
+        <!-- Start Header Area -->
+        <header class="header-area">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="top-header-left">
+                                <p><span>Call Now At:</span> <a target="_blank" href="tel:+919588076690">+919588076690</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 col-md-7">
+                            <div class="top-header-right">
+                                <div class="login-signup-btn">
+                                    <p><a target="_blank" href="http://www.card.linkconnect.in/panel/login">Login</a> <span>or</span> <a  target="_blank" href="http://www.card.linkconnect.in/panel/franchisee-login">Franchisee Login</a></p>
+                                </div>
+
+                                <ul class="social">
+                                    <li><a href="https://facebook.com/Digital-Vcard-101768194678968" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="opella-mobile-nav">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo-link-connect.png" alt="logo">
+                        </a>
+                    </div>
+                    <a target="_blank" href="https://wa.me/919588076690?text=Hi, Got your reference from your Website. I want to learn more about digital visiting card and make one for me." class="btn btn-primary nav-create-button">Create your card</a>
+                </div>
+
+                <div class="opella-nav">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/img/logo-link-connect.png" alt="logo">
+                            </a>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="justify-content: flex-end;">
+                                <div class="others-options">
+                                    <a target="_blank" href="https://wa.me/919588076690?text=Hi, Got your reference from your Website. I want to learn more about digital visiting card and make one for me." class="btn btn-primary">Create Your Card</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+        <!-- End Header Area -->
+
+        <!-- Start Main Banner Area -->
+        <div class="main-banner">
+            <div class="container">
+                <div class="row align-items-center m-0">
+                    <div class="col-lg-6 p-0">
+                        <div class="main-banner-content">
+                            <div class="pm-care">
+                                <a target="_blank" href="https://www.phonepe.com/i4india/index.html"><img src="assets/img/pm_care_banner.jpeg" alt="image" /></a>
+                                <div class="pm-care-content">
+                                    <h3>#IndiaFightCorona</h3>
+                                    <h5>Make your card at <span style="color: #2d9bea;">Affordable Price</span> and Donate small amount ₹10 directly to the <span style="color: #2d9bea;">#PMCARESFund</span> and help build a healthier and stronger nation.</h5>
+                                    <div class="btn-box">
+                                        <a target="_blank" href="https://wa.me/919588076690?text=Hi, I want to know more about your products and services." class="btn btn-primary create-button">Create your card</a>
+                                        <a target="_blank" href="https://www.phonepe.com/i4india/index.html" class="btn btn-primary donate-button">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1>Inspire your client. Digitally</h1>
+                            <h1 class="subheading">Link Connect provides Digital Business Card that is smart, elegant & affordable.</h1>
+                            <ul class="tagline-list">
+                                <li><i class="fa fa-paint-brush"></i> Easy. Create within minutes</li>
+                                <li><i class="fa fa-poll-h"></i> Impressive Rich Content</li>
+                                <li><i class="fa fa-share-alt"></i>Share from anywhere & anytime</li>
+                                <li><i class="fab fa-envira"></i>Save trees and contribute to the environment</li>
+                            </ul>
+
+                            <div class="btn-box main-banner-buttons">
+                                <a target="_blank" href="https://wa.me/919588076690?text=Hi, I want to know more about your products and services." class="btn btn-primary">Create your card</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 p-0">
+                        <div class="banner-image">
+                            <img src="assets/img/banner-img1.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shape-img1"><img src="assets/img/shape-image/1.png" alt="imgae" style="max-width: 100%;"></div>
+        </div>
+        <!-- End Main Banner Area -->
+
+        <!-- Start About Area -->
+        <section class="about-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-content">
+                            <span class="sub-title"><i class="flaticon-care-about-environment"></i> About Link Connect</span>
+                            <h2>Freedom from Boring Printed Business Cards</h2>
+                            <p>Design your digital visiting card in 2 minutes - it's easy, elegant and affordable. Link Connect is always in your pocket, never tears and never runs out. Your DIGI-VCARD can be easily updated with our user-friendly dashboard, so you won't need to re-print a business card again.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <img src="assets/img/feature1.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Area -->
+
+        <!-- Start How It works Section -->
+        <section class="how_it_work_new_block" data-anchor="how_it_work">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 center f_t" style="margin-bottom: 30px;">
+                        <div class="sub-title"><i class="flaticon-care-about-environment"></i> Working</div>
+                        <h2>How it Works?</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 item" style="height: 292px;">
+                        <div class="image">
+                            <img data-externalsrc="assets/img/img_sec1.png" alt="Create your Own">
+                            <div class="num">1</div>
+
+                        </div>
+                        <div class="title">Create your Card</div>
+                        <div class="subtitle">It takes 2 minutes. <u><a href="http://www.card.linkconnect.in/panel/login">Click here to begin</a></u></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 item" style="height: 292px;">
+                        <div class="image">
+                            <img data-externalsrc="assets/img/img_sec2.png" alt="Save to your Device">
+                            <div class="num">2</div>
+
+                        </div>
+                        <div class="title">Save to your Device</div>
+                        <div class="subtitle">Link Connect is accessible anytime from anywhere</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 item" style="height: 292px;">
+                        <div class="image">
+                            <img data-externalsrc="assets/img/img_sec3.png" alt="Share with friends and colleagues">
+                            <div class="num">3</div>
+                        </div>
+                        <div class="title">Share with friends and colleagues</div>
+                        <div class="subtitle">through a variety of channels</div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-12" style="text-align: center;">
+                    <a class="button main-cta bottom" href="/en/how">Learn more</a>
+                </div> -->
+            </div>
+        </section>
+        <!-- End How It works Section -->
+
+        <!-- Start samples section -->
+        <section class="samples-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 center f_t" style="margin-bottom: 30px;">
+                        <div class="sub-title"><i class="flaticon-care-about-environment"></i> Samples</div>
+                        <h2>Sample vCard Templates with Live Preview</h2>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-1 </div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect"><img data-externalsrc="assets/img/template1.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-2 <br>(Color Option Available)</div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-1"><img data-externalsrc="assets/img/template2.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-1" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-3 <br>(Color Option Available) </div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-2"><img data-externalsrc="assets/img/template3.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-2" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-4 <br>(Color Option Available)</div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-3"><img data-externalsrc="assets/img/template4.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-3" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-5 <br>(Color Option Available)</div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-4"><img data-externalsrc="assets/img/template5.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-4" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-6 <br>(Color Option Available)</div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-5"><img data-externalsrc="assets/img/template6.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-5" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                    <div class="sample-container col-xs-12 col-sm-4 col-md-4">
+                        <div class="sample-label">Template-7 <br>(Color Option Available)</div>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-6"><img data-externalsrc="assets/img/template7.png" alt="image"></a>
+                        <a target="_blank" href="http://card.linkconnect.in/link-connect-6" class="btn btn-primary">Preview Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End samples section -->
+
+        <!-- Start Features Area -->
+        <section class="services-area bg-image ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span>
+                        <span class="icon">
+                            <i class="flaticon-technical-support"></i>
+                        </span>
+
+                        <span>Features</span>
+                    </span>
+                    <h2>One business card, endless possibilities</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-phone fa-flip-horizontal"></i>
+                            </div>
+
+                            <h3>Click to Call</h3>
+
+                            <p>Your customers will reach you by just tapping on mobile number on vCard.</p>
+
+                            <!-- <a href="#" class="read-more-btn">Read More <i class="flaticon-arrow-pointing-to-right"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fab fa-whatsapp fa-flip-horizontal"></i>
+                            </div>
+
+                            <h3>Click To WhatsApp</h3>
+
+                            <p>Your customers can whatsapp you without even saving your number!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <h3>Click to Email</h3>
+
+                            <p>One Click and your customer will be able to send you an email directly.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+
+                            <h3>Click to Navigate</h3>
+
+                            <p>Using digital visiting Card, people can navigate to your store with Google Maps.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-mobile"></i>
+                            </div>
+
+                            <h3>Add to Contacts</h3>
+
+                            <p>People can save all your contact details in their phone address book.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+
+                            <h3>Website & Social Links</h3>
+
+                            <p>With digital visiting card, Customers can visit websites and social sites.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+
+                            <h3>Share Unlimited</h3>
+
+                            <p>You can share your digital visiting card unlimited times to anyone using social media.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+
+                            <h3>Easy To Update</h3>
+
+                            <p>You can update your details as and when you want to change unlimited times.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+
+                            <h3>Photo Gallery</h3>
+
+                            <p>Showcase your business realted images and products to your customers (15 to 20 photo ).</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+
+                            <h3>Youtube Video Gallery</h3>
+
+                            <p>Impress your customer by showing them your business related youtube videos.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+
+                            <h3>Payment Section</h3>
+
+                            <p>Display payment details to your customers, Like: Paytm, Phonepe, Google Pay, Bank Account (Including QR code)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+
+                            <h3>Enquiry Form</h3>
+
+                            <p>Our Card can help to capture leads with enquiry form. You will get Email notification for each enquiry.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+
+                            <h3>Reviews & Ratings</h3>
+
+                            <p>Anyone can give feedback about your organization and rate out of 5 stars and others can see on the cards.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services-box">
+                            <div class="icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+
+                            <h3>Visitors count</h3>
+
+                            <p>Card shows the unique visitor count who viewed your card, Isn't it cool!!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Features Area -->
+
+        <!-- Start Pricing Area -->
+        <section class="pricing-area">
+            <div class="container">
+                <div class="section-title">
+                    <span>
+                        <span class="icon">
+                            <i class="flaticon-resume"></i>
+                        </span>
+
+                        <span>Link Connect Pricing</span>
+                    </span>
+                    <h2>Discover our best plan</h2>
+                    <p>You can use Our Digital Visiting card at very affordable price.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <!-- <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="single-pricing-table">
+                            <div class="pricing-header">
+                                <h3>LinkConnect</h3>
+                                <div class="price-wrapper">
+                                    <span class="value">
+                                        <span class="curency">₹</span>0</span>
+                                    <span class="time">/year</span>
+                                </div>
+                            </div>
+
+                            <ul class="pricing-features-list">
+                                <li><i class="fa fa-check"></i> Share card with anyone, Unlimited times</li>
+                                <li><i class="fa fa-check"></i> Update card Unlimited times.</li>
+                                <li><i class="fa fa-check"></i> Profile Photo</li>
+                                <li><i class="fa fa-check"></i> 5 Photos in Gallery</li>
+                                <li><i class="fa fa-check"></i> Select design from available templates</li>
+                                <li style="text-decoration: line-through;"><i class="fa fa-times"></i> 5 Videos in Youtube Video Gallery</li>
+                                <li style="text-decoration: line-through;"><i class="fa fa-times"></i> Products with description and an image.</li>
+                                <li style="text-decoration: line-through;"><i class="fa fa-times"></i> Payment Section</li>
+                                <li style="text-decoration: line-through;"><i class="fa fa-times"></i> Contact Form Included</li>
+                            </ul>
+
+                            <div class="image-box">
+                                <img src="assets/img/shape-image/2.png" alt="image">
+                                <img src="assets/img/shape-image/2.png" alt="image">
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="single-pricing-table active">
+                            <div class="pricing-header">
+                                <h3>LinkConnect Pro</h3>
+                                <div class="price-wrapper">
+                                    <span class="value">
+                                        <span class="curency">₹</span>300</span>
+                                    <span class="time">/year</span>
+                                </div>
+                            </div>
+
+                            <ul class="pricing-features-list">
+                                <li><i class="fa fa-check"></i> Share cards with anyone, Unlimited times</li>
+                                <li><i class="fa fa-check"></i> Update card Unlimited times.</li>
+                                <li><i class="fa fa-check"></i> Profile Photo</li>
+                                <li><i class="fa fa-check"></i> 20 Photos in Gallery</li>
+                                <li><i class="fa fa-check"></i> Select design from available templates</li>
+                                <li><i class="fa fa-check"></i> Customise color as per your brand</li>
+                                <li><i class="fa fa-check"></i> 5 Videos in Youtube Video Gallery</li>
+                                <li><i class="fa fa-check"></i> Products with description and an image.</li>
+                                <li><i class="fa fa-check"></i> Payment Section</li>
+                                <li><i class="fa fa-check"></i> Contact Form Included</li>
+                                <li><i class="fa fa-check"></i> Rating and Review</li>
+                                <li><i class="fa fa-check"></i> Card Visitor's Count</li>
+                            </ul>
+
+                            <!-- <a href="#" class="view-plans-btn">View Plans</a> -->
+
+                            <div class="image-box">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Pricing Area -->
+
+        <!-- Start Call us Area -->
+        <section class="cta-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="cta-content">
+                            <div>
+                                <h2>White Label Franchise Available</h2>
+                            </div>
+                            <h3>Call Us Now For Connect LinkConnect</h3>
+                            <a target="_blank" href="tel:+919588076690">+919588076690</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="cta-btn">
+                            <a target="_blank" href="https://wa.me/919588076690?text=Hi, I want to know more about your products and services." class="btn btn-primary">Reach Out to us on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Call us Area -->
+
+        <!-- Start Other Service Area -->
+        <section class="features-area bg-image">
+            <div class="container">
+                <div class="section-title">
+                    <span>
+                        <span class="icon">
+                            <i class="flaticon-wifi"></i>
+                        </span>
+
+                        <span>Services</span>
+                    </span>
+                    <h2>Find Our service below:</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-features-box">
+                            <div class="icon">
+                                <i class="far fa-file-code"></i>
+                            </div>
+
+                            <h3>Web Development</h3>
+
+                            <p>Static and Dynamic website Development with mobile friendly and eye catching design built on top of latest technology that takes your business to the next level!</p>
+                            <b>Pricing starts from ₹3999</b>
+
+                            <div class="back-icon">
+                                <i class="far fa-file-code"></i>
+                            </div>
+
+                            <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
+
+                            <div class="image-box">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-features-box">
+                            <div class="icon">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+
+                            <h3>Offline Pdf Business Card</h3>
+
+                            <p>Downloadable, Easy-to-use, Low cost PDF business card provide you with all the information you'll need to share with your customers.</p>
+                            <b>Pricing starts from ₹99</b>
+
+                            <div class="back-icon">
+                                <i class="far fa-file-pdf"></i>
+                            </div>
+
+                            <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
+
+                            <div class="image-box">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                        <div class="single-features-box">
+                            <div class="icon">
+                                <i class="far fa-id-card"></i>
+                            </div>
+
+                            <h3>Digital Visiting Card</h3>
+
+                            <p>We help businesses and individuals to share their contact details using Digital Visiting Card. Make Digital Visiting Card => Share digital Card => Add Leads In Business</p>
+                            <b>Pricing starts from ₹300</b>
+
+                            <div class="back-icon">
+                                <i class="far fa-id-card"></i>
+                            </div>
+
+                            <a href="#" class="details-btn"><i class="flaticon-arrow-pointing-to-right"></i></a>
+
+                            <div class="image-box">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                                <img data-externalsrc="assets/img/shape-image/2.png" alt="image" style="max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End  Other Service Area -->
+
+        <!-- Start Footer Area -->
+        <footer class="footer-area">
+            <div class="copyright-area">
+                <div class="container">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/img/logo-link-connect.png" alt="logo">
+                    </a>
+                    <p><i class="far fa-copyright"></i> Copyright 2020 - All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <div class="go-top"><i class="fas fa-arrow-up"></i></div>
+
+        <!-- jQuery Min JS -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- Bootstrap Min JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- MeanMenu JS -->
+        <script src="assets/js/jquery.meanmenu.js"></script>
+        <!-- WOW Min JS -->
+        <script src="assets/js/wow.min.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5f5791274704467e89ed2677/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+        <!--End of Tawk.to Script-->
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!--  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+        body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700);
+
+
+
+html {overflow-x: hidden;scroll-behavior: smooth;}
+body {padding:0;margin:0;font-family:Montserrat;background:white;}
+	a {text-decoration:none;color:unset;}
+div,h1,h2,h3,h4,p,i,a {position:relative;transition:0.4s;}
+
+form,input,textarea,select {font-family:Montserrat;}
+:root {
+	--color:#848484;
+	--color2:#64af35;
+}
+/*alerts */
+div,h1,h2,h3,h4,p,i,a,footer {position:relative;transition:0.4s;}
+
+input,select,textarea,button {font-family: Montserrat;}
+
+a {    text-decoration: unset;
+    color: unset;}
+
+
+.head_up {background: black;
+    color: white;display:flex;}
+.head_up p{padding: 4px 26px;
+    margin: 0px;
+    font-size: 13px;
+    float: unset;}
+
+.wtsp_chat {    width: fit-content;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 8;}
+.wtsp_chat img {width: 57px;
+    height: auto;
+    margin: 10px;}
+header {  background: white;
+    width: -webkit-fill-available;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    display: flex;
+    padding: 0px 68px;
+    top: 0;
+    z-index: 22;
+    box-shadow: 0px 0px 10px 0px #00000026;
+}
+header .logo{    display: flex}
+header .logo h3{margin: 19px 0px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #454b50;
+    letter-spacing: -2px;
+    text-transform: capitalize;}
+header .logo img{width: 81px;
+    height: 81px;}
+	
+header .head_txt {display: flex;
+    position: absolute;
+    right: 80px;}
+header .head_txt h3{   margin: 0px;
+    font-weight: 500;
+    padding: 29.5px 11px;
+    cursor: pointer;
+    color: #544b4b;
+    font-size: 12px;
+    letter-spacing: 0px;
+
+	}
+	
+header .head_txt h3:hover {
+	transition:0.3s;color:black;
+}	
+
+
+.fa-line-chart {color: #4caf50;
+    font-weight: 800;}
+.mobile_home {display:none;}
+
+.main {background:linear-gradient(0deg,black, #a71327, #38213a,#000000);
+    overflow: hidden;}
+	
+.clip_path1 {        position: absolute;
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(45deg, #000000b3 20%, #9b1eb18f), linear-gradient(-45deg, #f32121c4 71%, #de1fffe0 31%), repeating-linear-gradient(90deg, #ff0000 67%, #07b2ff52 59%);
+    z-index: 1;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    color: white;}	
+.main img{    width: -webkit-fill-available;
+    position: absolute;
+    top: 0px;}
+.main .main_txt{  margin: 8% 10% 10%;
+    text-align: center;
+    z-index: 4;
+    color: white;}
+.main .main_txt h1{font-size: 53px;
+    letter-spacing: -3px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+	text-shadow: 0px 0px 10px #0000003b;
+}
+
+/*water wave*/
+
+.water_wave1,.water_wave2,.water_wave3,.water_wave4{position: absolute;
+    width: -webkit-fill-available;
+    height: auto;}
+.water_wave1 {z-index:4;}
+.water_wave3 {}
+.water_wave1 svg{}
+.water_wave2 svg{animation:wave_ani 4s linear infinite;animation-delay:1s;}
+.water_wave3 svg{animation:wave_ani 4s linear infinite;animation-delay:2s;}
+.water_wave4 svg{animation:wave_ani 4s linear infinite;animation-delay:4s;}
+
+
+@keyframes wave_ani {
+	0%{transform:scale(1);}
+	50%{transform:scale(1.5);}
+	100%{transform:scale(1);}
+	
+}
+
+.main .main_txt h2{font-size: 28px;
+    font-weight: 300;
+    margin: 16px 0px;}
+.main .main_txt p{    font-size: 15px;
+    font-weight: 500;
+    margin: 47px auto 5px;}
+.btn_1 {  background: #a70000;
+    width: fit-content;
+    margin: 38px auto;
+    color: white;
+    padding: 13px 36px;
+    border-radius: 5px;
+    font-size: 23px;}
+	.btn_1:hover {
+		background: #c8222a;	
+	}
+	
+.btn_2 { background: #ffffff38;
+    width: fit-content;
+    margin: 38px auto;
+    color: white;
+    padding: 13px 36px;
+    border-radius: 5px;
+    border: 2px solid;
+    font-size: 23px;
+    animation: shining1 1s linear infinite;}
+
+.btn_2:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: -1px;
+    width: 0px;
+    background: #ffffff26;
+}
+.btn_2:hover:after {
+	content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    background: #ffffff26;
+	transition:0.4s;
+}	
+@keyframes shining1 {
+	
+}
+	
+	iframe {height: 316px;
+    cursor: zoom-out;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px 0px #00000029;
+    border-radius: 20px;}
+	
+	
+.w_l_f {width: auto;
+    margin: 0 auto;
+    background: repeating-linear-gradient(0deg,black, #a71327, #38213a,#000000);
+    padding: 20px;}	
+.w_l_f h1{    margin: 0px;
+    padding: 20px 39px;
+    font-weight: 800;
+    color: white;
+    text-align: center;}	
+.w_l_f h3{background: #FF5722;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 5px;}	
+.w_l_f img{width: 401px;}	
+.w_l_f ul,img{display:inline-block}	
+.w_l_f ul {vertical-align: top;
+    background: white;
+    border-radius: 13px;
+    overflow: hidden;
+    padding: 38px 45px;}	
+.w_l_f ul li{padding: 13px;}	
+.w_l_f ul li:nth-child(2n) {
+    background: #efefef;
+}	
+	
+	/*scroll bar*/
+	/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+	
+	
+	/* page 3 */
+	
+	.display_flex {display: flex;
+    padding: 50px;}
+	.side1,.side2 {    width: -webkit-fill-available;
+    padding: 18px;
+    text-align: center;}
+	.side1 img {width: 95%;
+    margin: 10px;
+    filter: brightness(1.5);
+    border-radius: 14px;}
+	.side2 p{font-weight: 500;
+    text-align: center;
+    color: #000000;
+    font-size: 23px;}
+	.side2 h1{font-weight: 500;
+    text-align: left;
+    font-size: 41px;
+    color: #3f5c84;
+    text-transform: capitalize;
+}
+
+	.side2 h3{font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+    text-align: initial;}
+	
+.row {}
+.row_backimg {  background: linear-gradient(0deg,black, #a71327, #38213a,#000000);
+    padding: 68px;
+    overflow: hidden;
+    text-align: center;
+   }
+.row_backimg h1{color: white;
+    font-size: 50px;
+    margin: 20px 0px 56px;}
+.row_backimg .flex_box{display: flex;
+   }
+.row_backimg .flex_box .flex_boxin{background: #ffffff;
+    margin: 15px;
+    width: -webkit-fill-available;
+    border-radius: 0px;
+    transform: rotate(-9deg);
+    padding: 25px 24px;}
+	
+	.row_backimg .flex_box .flex_boxin:hover {
+		transform: rotate(0deg);
+	}
+.row_backimg .flex_box .flex_boxin i{    font-size: 60px;
+    color: #16a1a9;}
+.row_backimg .flex_box .flex_boxin h1{font-size: 25px;
+    margin: 33px 0px;
+    color: #545454;
+    font-weight: 500;
+    letter-spacing: -1px;}
+.row_backimg .flex_box .flex_boxin p{    font-weight: 500;
+    color: #16a1a9;}
+	
+.row2 {
+	padding: 50px;
+}
+.row2 h1 {text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    color: #16a1a9;}
+.flex_pricing {display: flex;
+    
+    width: fit-content;
+    margin: 0 auto;}
+.flex_pricingin {    padding: 0px 0px;
+    box-shadow: 0px 0px 10px 0px #00000038;
+}
+.flex_pricingin h3{    background: #4d0152;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 29px;
+    letter-spacing: -0.7px;
+}
+
+.flex_pricingin h1 p{    font-size: 10px;}
+.flex_pricingin h1{color: #ffffff;
+    background: #a70000;
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;}
+.flex_pricingin ul{padding: 0px 0px;}
+.flex_pricingin li{background: white;
+    padding: 10px 29px;
+    list-style-type: none;}
+.flex_pricingin li.back{background: #3f5c8417;}
+.flex_pricingin li i{background: green;
+    color: white;
+    border-radius: 50px;
+    padding: 6px;
+    font-size: 11px;
+    margin: 0px 10px;}
+	
+	.row_contact {  background: #fff190;
+    color: black;
+    padding: 91px 50px;
+    text-align: center;}
+	.row_contact h3{font-weight: 500;
+    width: fit-content;
+    font-size: 40px;
+    margin: 5px auto;
+    padding: 20px;}
+	.row_contact h1{font-size: 40px;
+    font-weight: 500;
+    background: #ffffff91;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;}
+	
+	.row_features {padding: 50px;text-align:center}
+	.row_features p{    text-align: center;
+    color: #2ed09b;
+}
+	
+	.row_features h1{text-align: center;
+    font-size: 38px;
+    color: #363c3f;
+    width: auto;
+    letter-spacing: -0.6px;
+    font-weight: 400;
+    text-transform: capitalize;}
+    
+	#svg_fea {position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    height: auto;
+    bottom: 0;}
+	.cont_share_boxes {
+  width: 200px;
+    display: inline-grid;
+    font-size: 16px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px #00000017;
+    padding: 13px 13px 26px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #444b4f;
+}
+
+.cont_share_boxes:hover:after {
+    content: '';
+    position: absolute;
+    border: 6px solid orange;
+    width: 30px;
+    height: 27px;
+    border-bottom: none;
+    border-left: none;
+    right: 0;
+    top: 0;
+	transition:0.3s;
+}
+.cont_share_boxes:hover:before {
+    content: '';
+    position: absolute;
+    border: 6px solid orange;
+    width: 30px;
+    height: 27px;
+    border-top: none;
+    border-right: none;
+    left: 0;
+    bottom: 0;
+	transition:0.3s;
+}
+
+.cont_share_boxes:hover {
+	box-shadow: 0px 0px 10px 0px #0000002e;
+	color:black;
+}
+
+
+	.cont_share_boxes i{font-size: 43px;
+    margin: 20px;
+    color: #444b4f;}
+	
+	.row_bottom {background: linear-gradient(0deg,black, #a71327, #38213a,#000000);
+    color: white;}
+	.row_bottom  .side1{text-align: left;
+    padding: 20px 0px 20px 62px;
+    background: white;
+    color: black;
+    width: 63%;}
+	.row_bottom  .side1 h1 img{width: 61px;
+    height: 61px;
+    margin: 0px;
+    padding: 0px;}
+	.row_bottom  .side1 h1{    display: flex;
+    margin: 0px;
+    margin: 24px 0px;
+    padding: 0px;	}
+	.row_bottom  .side1 h3{font-weight: 500;
+    font-size: 27px;
+    color: #000000;}
+	.row_bottom  .side1 .row_bt_p{display: flex;
+    margin: 10px 0px;
+}
+	.row_bottom  .side1 .row_bt_p h4{line-height: 2;
+    margin: 8px;
+    font-weight: 500;
+    font-size: 14px;}
+	.row_bottom  .side1 .row_bt_p i{color: black;
+    padding: 8px;
+    width: 29px;
+    text-align: center;
+    font-size: 27px;
+    margin: 2px 10px 0px 0px;
+    border-radius: 100%;
+    height: fit-content;}
+	.row_bottom  .side2 h3{text-align: center;
+    font-size: 30px;
+    margin: 0;}
+	.row_bottom  .side2 form{}
+	.row_bottom  .side2 input,.row_bottom  .side2  textarea {width: 63%;
+    padding: 14px;
+    background: #00000000;
+    border: 1px solid #61616100;
+    border-bottom: 2px solid white;
+    margin: 3px;
+    color: white;
+    font-size: 13px;
+    outline: none;}
+	
+	.row_bottom input[type=submit]{width: 365px;
+    background: #000000;
+    font-size: 22px;
+    padding: 11px;
+    border-radius: 3px; border-bottom: 2px solid transparent;}
+	.row_bottom  .side2  textarea  {
+		height:100px
+	}
+	
+	.row_bottom  .side2 input::placeholder,	.row_bottom  .side2 textarea::placeholder {color:#dcd6d6;font-style: italic;}
+	
+	.success_alert,.danger_alert  {padding: 16px 43px;
+    background: #ececec1f;
+    width: fit-content;
+    font-size: 13px;
+    margin: 6px auto;
+    border-radius: 5px;}
+	
+	.temp_preview {padding: 50px;
+    text-align: center;}
+	.temp_preview h1{text-align: center;
+    font-weight: 400;
+    margin: 0px 10px 40px;}
+	.temp_pre {    display: inline-grid;
+    margin: 10px 30px;
+    text-align: center;}
+	.temp_pre img {width: 100px;
+    border: 21px solid #31354c;
+    height: 194px;
+    border-radius: 23px;
+    margin: 0 auto;
+    border-left: 5px solid #343538;
+    border-right: 5px solid #333438;
+    padding: 0px;}
+	
+	.temp_pre:hover img {
+		transition:0.3s;
+		transform: scale(1.2);
+	}
+	
+	.join_facebook {width: 51% !important;
+    border-radius: 11px !important;
+    margin: 5px !important;
+    filter: brightness(1) !important;
+}
+	 .pre_btn{background: #ffffff;
+    width: fit-content;
+    margin: 13px auto;
+    padding: 10px 30px;
+    color: #3F51B5;
+    border: 1px solid;
+    font-weight: 500;
+    border-radius: 35px;
+    cursor: pointer;}
+	
+	 .pre_btn:hover {
+		    background: #2196F3;
+    transition: 0.3s;
+    color: white;
+	}
+	
+	
+	#qr_code_d {left: 50%;
+    position: relative;
+    transform: translate(-50%, 0px);
+    margin: 0px 0px 24px;
+}
+	
+	.services {
+    padding: 20px;
+    text-align: center;
+    display: flex;}
+	#servicesh2 {      text-align: center;
+    font-size: 38px;
+    color: #000000;
+    font-weight: 700;
+    margin: 0px 0px 1px;
+    text-shadow: 0px 0px 2px black;
+}
+
+		.services h3 {    height: 50px;
+    margin: 0px;
+    font-weight: 600;
+   }
+	 .services_box{   width: 200px;
+    vertical-align: middle;
+    height: auto;
+    background: linear-gradient(0deg,black, #a71327, #38213a,#000000);
+    padding: 27px;
+    text-align: center;
+    color: white;
+    margin: 10px 4px;
+    box-shadow: 0px 0px 10px 0px #00000012;
+    border-radius: 10px;}
+	.scroll_cont {display: flex;
+    position: relative;
+    margin: 0 auto;}
+	.services_box h2 {}
+	.services_box p{font-size: 12px;
+    height: 65px;}
+	
+	
+	.share_wtsp form{    display: flex;
+    margin: 14px auto 20px;
+    position: relative;
+    width: fit-content;}
+	.wtsp_share_btn  {background: #1aab2c;
+    font-size: 12px;
+    padding: 10px;cursor:pointer}
+	.wtsp_share_btn i {}
+	
+	
+	.share_box .close { font-size: 47px;
+    text-align: end;
+    padding: 0px 10px;
+    font-weight: 400;
+    color: red;}
+	
+	#whatsapp2 {background:#1aab2c;color:white}
+	.fa-comment-dots	 {background: #1cbdff;
+    color: white;}
+	.share_box .close i {}
+	.share_box {
+		display:none;
+		background: white;
+    color: black;
+    position: fixed;
+    top: 10%;
+    width: 351px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px #00000033;
+    z-index: 3;
+    border-radius: 11px;}
+	.shar_btns {    width: 100px;
+    text-align: center;
+    display: inline-block;}
+	.shar_btns i{padding: 10px;
+    border-radius: 8px;}
+	.shar_btns p{font-size: 10px;}
+	
+	/* animated button */
+	.btn2 {background: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px 0px #00000017;}
+	
+	.row33 {padding: 20px;
+    color: #313131;
+    text-align: center;}
+	.row33 h1{      margin: 21px 0px 10px;
+    text-align: center;
+    font-weight: 500;
+    color: #333333;
+}
+	.row33 p{font-size: 15px;
+    text-align: center;
+    width: 80%;
+    margin: 27px auto;
+    color: gray;}
+	.row33 .benefit_box {width: 208px;
+    display: inline-block;
+    margin: 6px;
+    background: white;
+    text-align: center;
+    padding: 21px;
+    height: 151px;
+    vertical-align: top;
+    box-shadow: 0px 0px 10px 0px #0000001f;
+    border-radius: 5px;
+}
+
+
+	.row33 .benefit_box i {font-size: 29px;
+    color: #FF5722;}
+	.row33 .benefit_box h3 {margin: 7px;
+    font-weight: 600;}
+	.row33 .benefit_box p {color: #383838;
+    font-size: 12px;
+    font-weight: 400;}
+	
+	/*view counter*/
+	
+	.view_counter {width: fit-content;
+    max-width: 200px;
+    text-align: center;
+    font-size: 10px;
+    padding: 2px 12px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    margin: 0 auto;
+    top: 0px;}
+	/*footer*/
+	
+	
+	
+	
+	footer {background: black;
+    color: white;}
+	footer p{margin: 0px;
+    padding: 14px;
+    text-align: center;
+    font-size: 11px;}
+	
+
+/* Mobile View Header */
+
+@media screen and (max-width: 700px){
+.add_height {
+    height: 350px !important;
+    transition: 0.3s;
+}
+}
+
+@media screen and (max-width: 700px){
+header {
+    background: white;
+    width: -webkit-fill-available;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    display: block;
+    padding: 3px;
+    top: 0;
+    z-index: 22;
+    height: 82px;
+    box-shadow: 0px 0px 10px 0px #00000026;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+<header id="header" class="add_height">
+        <div class="logo">
+          <img src="https://www.freelogodesign.org/file/app/client/thumb/79c59a42-f5be-4cd2-a8ff-aa7b6c831ffd_200x200.png?1614236864594" alt="logo"/>
+          <h3>People's Connect</h3>
+        </div>
+        <div class="mobile_home">≡</div>
+        <div class="head_txt">
+          <a href="panel/login/login.php"><h3>Customer Login</h3></a>
+          <a href="#start_business"><h3>Start Business <i class="fa fa-line-chart"></i></h3></a>
+          <a href="#servicesh2"><h3>Services We Offer</h3></a>
+          <a href="#contact"><h3>Contact</h3></a>
+        </div>
+</header>
+
+
+<div class="main">
+	    <div class="water_wave1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#000b76" fill-opacity="1" d="M0,96L30,90.7C60,85,120,75,180,101.3C240,128,300,192,360,229.3C420,267,480,277,540,282.7C600,288,660,288,720,266.7C780,245,840,203,900,170.7C960,139,1020,117,1080,133.3C1140,149,1200,203,1260,186.7C1320,171,1380,85,1410,42.7L1440,0L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            </svg>
+        </div>
+	    <div class="water_wave2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#5000ca" fill-opacity="1" d="M0,128L30,160C60,192,120,256,180,234.7C240,213,300,107,360,64C420,21,480,43,540,64C600,85,660,107,720,138.7C780,171,840,213,900,224C960,235,1020,213,1080,213.3C1140,213,1200,235,1260,213.3C1320,192,1380,128,1410,96L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            </svg>
+        </div>
+	    <div class="water_wave3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,96L30,133.3C60,171,120,245,180,256C240,267,300,213,360,181.3C420,149,480,139,540,138.7C600,139,660,149,720,165.3C780,181,840,203,900,218.7C960,235,1020,245,1080,218.7C1140,192,1200,128,1260,133.3C1320,139,1380,213,1410,250.7L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            </svg>
+        </div>
+        <div class="water_wave4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#a2d9ff" fill-opacity="1" d="M0,256L16,234.7C32,213,64,171,96,165.3C128,160,160,192,192,186.7C224,181,256,139,288,138.7C320,139,352,181,384,186.7C416,192,448,160,480,149.3C512,139,544,149,576,176C608,203,640,245,672,234.7C704,224,736,160,768,160C800,160,832,224,864,224C896,224,928,160,960,154.7C992,149,1024,203,1056,202.7C1088,203,1120,149,1152,112C1184,75,1216,53,1248,53.3C1280,53,1312,75,1344,117.3C1376,160,1408,224,1424,256L1440,288L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z"></path>
+            </svg>
+        </div>
+
+	    <img 
+            src="images/young-positive-cool-lady-with-curly-hair-using-laptop-isolated_171337-6666.jpg"
+            alt="hi" />
+	   
+        <div class="main_txt">
+		<h1>Digital Business Cards for All Business</h1>
+		<h2>Our digital business card platform makes designing a card simple, convenient, and reliable. <br/>Create what you need in Just 5 minutes </h2>
+		<p>THIS IS A DIGITAL BUSINESS CARD THAT IS SMART, ELEGANT &amp; AFFORDABLE.</p>
+		
+		<a href="panel/login/" target="_blank"><div class="btn_2">Create Card <i class="fa fa-caret-right"></i></div></a>
+	    </div>
+	</div>
+
+    {{!-- Main --}}
+
+    <div className="row display_flex">
+        <div className="side2">
+          <p>About Us</p>
+
+          <h1>Freedom from Boring Printed Business Cards</h1>
+
+          <h3>
+            Design your digital visiting card in 2 minutes - it's easy, elegant
+            and free. We are always in your pocket, never tears and never runs
+            out. Your Digital Visiting Card can be easily updated with our
+            user-friendly dashboard, so you won't need to re-print a business
+            card again.
+          </h3>
+
+            <div className="btn_1">Demo</div>
+          
+        </div>
+
+        <div className="side1">
+          <iframe
+            title="Main Video"
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed//u8CTwJmG30g"
+          ></iframe>
+        </div>
+      </div>
+
+      {{!-- How Works --}}
+      <div className="row row_backimg">
+        <h1>How It Works?</h1>
+
+        <div className="flex_box">
+          <div className="flex_boxin">
+            <i className="fa fa-edit"></i>
+            <h1>1. Create your Card</h1>
+            <p>Design your digital visiting card in 2 minutes</p>
+          </div>
+          <div className="flex_boxin">
+            <i className="fa fa-download"></i>
+            <h1>2. Save to your Device</h1>
+            <p>Digital Visiting Card is accessible anytime from anywhere</p>
+          </div>
+          <div className="flex_boxin">
+            <i className="fa fa-share-alt"></i>
+            <h1>3. Share with friends and colleagues</h1>
+            <p>through a variety of channels</p>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Affordable --}}
+      <div className="row2">
+        <h1>Affordable prices plus more</h1>
+        <div className="flex_pricing">
+          <div className="flex_pricingin">
+            <h3>Digital Card with Ecommerce </h3>
+            <h1>₹ 999 Only</h1>
+
+            <ul>
+              <li className="back">
+                <i className="fa fa-check"></i> Share cards with anyone,
+                Unlimited times
+              </li>
+              <li>
+                <i className="fa fa-check"></i> Update card Unlimited times.
+              </li>
+              <li className="back">
+                <i className="fa fa-check"></i> Profile Photo
+              </li>
+              <li>
+                <i className="fa fa-check"></i> Select design from available
+                templates
+              </li>
+              <li className="back">
+                <i className="fa fa-check"></i> 10 Products or Services
+              </li>
+              <li>
+                <i className="fa fa-check"></i> 10 Photos in Gallery
+              </li>
+              <li className="back">
+                {" "}
+                <i className="fa fa-check"></i> Social Media Links
+              </li>
+              <li>
+                {" "}
+                <i className="fa fa-check"></i> 5 Videos in Youtube Video
+                Gallery
+              </li>
+              <li className="back">
+                <i className="fa fa-check"></i> Products with images.
+              </li>
+              <li>
+                <i className="fa fa-check"></i> Payment Section
+              </li>
+              <li className="back">
+                <i className="fa fa-check"></i> Contact Form Included
+              </li>
+              <li>
+                <i className="fa fa-check"></i> Ecommerce Online Store{" "}
+              </li>
+            </ul>
+            <a href="panel/login">
+              <div className="btn_1">Create Now Online</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Vacrd --}}
+      <div className="temp_preview">
+	<h1>Sample vCard Templates with Live Preview</h1>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+	<div class="temp_pre"><img src="panel/images/template1.png"></img><a href="panel/login" target="_blank"><div class="pre_btn">Select</div></a></div>
+
+             
+             
+             </div>
+
+               {{!-- Digital Card --}}
+    <div className="row33">
+      <h1>Digital Card is Beneficial for</h1>
+      <p>
+        If you meet your prospective customers in person (one to one meeting) or
+        atleast you do telephonic conversations to market and sell your products
+        or services, then our Digital Business Card will help convey your
+        message in a more strategic way.
+      </p>
+
+      <div className="benefit_box">
+        <i className="fa fa-briefcase"></i>
+        <h3>Business Owners</h3>
+        <p>
+          Business owners who call and/or meet prospects personally to get
+          business.
+        </p>
+      </div>
+
+      <div className="benefit_box">
+        <i className="fa fa-handshake-o"></i>
+        <h3>Sales Professionals</h3>
+        <p>
+          Independent Sales Professionals, Field Staff and Sales Executives.
+        </p>
+      </div>
+
+      <div className="benefit_box">
+        <i className="fa fa-sellsy"></i>
+        <h3>Software & IT</h3>
+        <p>
+          Web Designers, Digital and Social Media Marketers who call / meet
+          business people.
+        </p>
+      </div>
+
+      <div className="benefit_box">
+        <i className="fa fa-bullhorn"></i>
+        <h3>Marketing Agencies</h3>
+        <p>
+          Advertising, Branding, News Paper, Printing and Media Planning Houses.
+        </p>
+      </div>
+
+      <div className="benefit_box">
+        <i className="fa fa-black-tie"></i>
+        <h3>Consultants</h3>
+        <p>Architect, Interior Designers, CA, Finance and other Consultants.</p>
+      </div>
+
+      <div className="benefit_box">
+        <i className="fa fa-plane"></i>
+        <h3>Events and Travels</h3>
+        <p>Professionals from Event Management, Tours and Travel Companies.</p>
+      </div>
+      <div className="benefit_box">
+        <i className="fa fa-bar-chart"></i>
+        <h3>Finance & Realtors</h3>
+        <p>People from Real Estate Brokers and Insurance Advisors.</p>
+      </div>
+      <div className="benefit_box">
+        <i className="fa fa-graduation-cap"></i>
+        <h3>Education & Training</h3>
+        <p>
+          Corporate Trainers, Educational Workshops, HR Consultants and
+          Teachers.
+        </p>
+      </div>
+      <div className="benefit_box">
+        <i className="fa fa-heartbeat"></i>
+        <h3>Health and Beauty</h3>
+        <p>
+          Gym, Beautician, Salon, Dietician, Image Consultants Yoga & Dance
+          Professionals.
+        </p>
+      </div>
+    </div>
+
+    <div className="row_features">
+      <p>FEATURES</p>
+      <h1>One business card, endless possibilities</h1>
+
+      <div className="cont_share_boxes">
+        <i className="fa fa-phone"></i> One CLick Call
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-whatsapp"></i> One CLick WhatsApp
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-envelope"></i> One Click Email
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-map-marker"></i> One CLick Navigate
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-mobile"></i> Add to Contacts
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-facebook"></i>Website & Social Links
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-share-alt"></i> Share Unlimited
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-bank"></i> Online Store
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-edit"></i> Easy To Update
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-image"></i> Photo Gallery
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-youtube"></i> Youtube Video Gallery
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-rupee"></i> Payment Section
+      </div>
+      <div className="cont_share_boxes">
+        <i className="fa fa-comment"></i> Enquiry Form
+      </div>
+    </div>
+
+    {{!-- Label Seller --}}
+    <div class="w_l_f" id="start_business">
+        <h1>White Label Reseller Website</h1>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMNKnsIbE48s8ZDyCzI9vWAhudy0t1mI-5g&usqp=CAU" alt=""></img>
+        <ul>
+          <li>Custom Domain Name</li>
+          <li>Create Unlimited Cards</li>
+          <li>No Commission On Cards</li>
+          <li>100% Your Business</li>
+          <li>Your Server and desired Domain</li>
+          <li>Payment Gateway Integration</li>
+        </ul>
+
+        <a href="#" target="_blank">
+          <h3>
+            <del>INR 50000</del> INR 25000 One time
+          </h3>
+          <div class="btn_2">Start Now</div>
+        </a>
+      </div>
+
+      <div class="row_contact">
+        <h3>
+          Contact Us<br></br>
+          For Registration
+        </h3>
+
+        <h1>
+          <i class="fa fa-phone"></i>8000552603<br></br>
+          <i class="fa fa-phone"></i>8305413296
+        </h1>
+      </div>
+      <br></br>
+
+      <h2 id="servicesh2">Services We Offer</h2>
+
+      <div class="services" id="services">
+        <div class="scroll_cont">
+          <div class="services_box" onclick="location.href='#contact'">
+            <h3>Digital Visiting Card</h3>
+            <p>
+              Still using old boring visiting cards? Now its time to change. Use
+              our Online Visiting Card service and GO DIGITAL.
+            </p>
+            <div class="pre_btn">Select</div>
+          </div>
+          <div class="services_box" onclick="location.href='#contact'">
+            <h3>Website Design/Developement</h3>
+            <p>
+              Design your own Business/Professional websiste in just 6,999 Rs
+              only.
+            </p>
+            <div class="pre_btn">Select</div>
+          </div>
+          <div class="services_box" onclick="location.href='#contact'">
+            <h3>Social Media Marketing</h3>
+            <p>Advertise online and expand your business. </p>
+            <div class="pre_btn">Select</div>
+          </div>
+          <div class="services_box" onclick="location.href='#contact'">
+            <h3>Marketing Softwares</h3>
+            <p>
+              WhatsApp Marketing, SMS Marketing, Email Marketing, JustDial /
+              Google / IndiaMart / Social Media Data Extractor.
+            </p>
+            <div class="pre_btn">Select</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row_bottom display_flex" id="contact">
+        <div class="side1">
+          <h1>
+            <img src="https://www.mybusinessdvc.com/images/logo.png" alt=""></img>Business DVC
+          </h1>
+
+          <h3>Contact Details</h3>
+
+          <div class="row_bt_p">
+
+            <i class="fa fa-map-marker"></i>
+            <h4>
+              Address: SF-54, Earth Alpha<br></br> Vadodara, Gujarat 390007
+            </h4>
+          </div>
+          <div class="row_bt_p">
+
+            <i class="fa fa-phone"></i>{" "}
+            <h4>
+              <a href="tel:918000552603">+91 8000552603</a>
+            </h4>
+          </div>
+          <div class="row_bt_p">
+            
+            <i class="fa fa-envelope"></i>
+
+            <h4>
+              <a href="mailto:digitalbusinesssoftware@gmail.com">
+                digitalbusinesssoftware@gmail.com
+              </a>        
+            </h4>
+        
+          </div>
+        
+        
+
+        </div>
+
+        <div class="side2">
+          <h3>CONTACT US</h3>
+          <form action="" method="post">
+            <input
+              type=""
+              name="user_name"
+              placeholder="Enter your name"
+              required
+            ></input>
+            <input
+              type=""
+              name="user_contact"
+              placeholder="Enter contact number"
+              required
+            ></input>
+            <input
+              type=""
+              name="user_email"
+              placeholder="Enter email"
+              required
+            ></input>
+            <textarea
+              name="user_msg"
+              placeholder="Enter your query"
+              required
+            ></textarea>
+            <input type="submit" value="Send" name="send_email"></input>
+          </form>
+        </div>
+      
+      </div>
+</body>
+</html>
+--}}

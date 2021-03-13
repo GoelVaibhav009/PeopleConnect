@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const exphbs = require('express-handlebars')
 const colors = require("colors");
+const methodOverride = require('method-override')
 const errorHandler = require("./middleware/error");
 const morgan = require("morgan");
 const fileupload = require("express-fileupload");
@@ -33,6 +34,18 @@ const app = express();
 
 app.use(express.json());
 
+// Method Overide
+// app.use(
+//   methodOverride(function (req, res) {
+//     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+//       // look in urlencoded POST bodies and delete it
+//       let method = req.body._method
+//       delete req.body._method
+//       return method
+//     }
+//   })
+// )
+
 app.use(cokkie());
 // Dev Logging Middleware
 if (process.env.NODE_ENV == "development") {
@@ -55,6 +68,7 @@ app.set('view engine', '.hbs')
 
 //File  upload
 app.use(fileupload());
+
 
 //Set Static Folder
 

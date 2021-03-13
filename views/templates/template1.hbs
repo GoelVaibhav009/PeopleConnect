@@ -284,7 +284,7 @@
         <h2 class="section-header">Products/Services</h2>
         <div class="p-10"></div>
         <div>
-            {{#with ecommerceDetailsValue}}
+            {{#each ecommerceDetailsValue}}
             <div class="card">
                 <h3 class="card-title">{{productName}}</h3>
                 <div class="product-description">{{description}}</div>
@@ -304,7 +304,7 @@
                         target="blank" class="product-enquiry-btn">Enquiry</a>
                 </div>
             </div>
-            {{/with}}
+            {{/each}}
         </div>
         <div class="section-close"></div>
     </div>
@@ -453,7 +453,7 @@
     {{/if}}
 
     {{!-- Feedback --}}
-    <div class="section-container" id="feedback-section">
+    <div class="section-container" id="feedback-section" >
         <div class="section-separator">
             <div></div>
             <div></div>
@@ -466,21 +466,22 @@
         <div class="feedback-button-wrapper">
             <input type="button" value="Load more feedbacks" id="load-more-feedback-btn" />
         </div>
-        <form action="/api/v1/feedback" method="POST" class="feedback-form card" novalidate>
+
+        <form action="/api/v1/feedback" method="post" role="form" class="feedback-form card" enctype="application/x-www-form-urlencoded">
             <div class="feedback-form-heading">Give Feedback</div>
-            <select class="star-rating" id="rating" name="rating">
+            <select class="star-rating" id="rating" name="star">
                 <option value="">Select a rating</option>
-                <option value="5" name="{{feedbackDetailsValue.star}}">Excellent</option>
-                <option value="4" name="{{feedbackDetailsValue.star}}">Very Good</option>
-                <option value="3" name="{{feedbackDetailsValue.star}}">Average</option>
-                <option value="2" name="{{feedbackDetailsValue.star}}">Poor</option>
-                <option value="1" name="{{feedbackDetailsValue.star}}">Terrible</option>
+                <option value="5"  >Excellent</option>
+                <option value="4"  >Very Good</option>
+                <option value="3"  >Average</option>
+                <option value="2"  >Poor</option>
+                <option value="1"  >Terrible</option>
             </select>
-            <input type="text" name="{{feedbackDetailsValue.name}}" id="feedbackName" placeholder="Enter Full Name" />
-            <textarea name="{{feedbackDetailsValue.feedback}}" id="feedback"
+            <input type="text" name="name" id="feedbackName" placeholder="Enter Full Name" />
+            <textarea name="feedback" id="feedback"
                 placeholder="Enter your feedback"></textarea>
             <!-- Message:<br/> -->
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Save" />
         </form>
     </div>
 

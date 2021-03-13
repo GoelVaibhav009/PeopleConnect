@@ -26,7 +26,7 @@ exports.getCard = async (req, res, next) => {
             socialDetailsValue: SocialDetails[0],
             feedbackDetailsValue: FeedbackDetails[0],
             imagesDetailsValue: ImagesDetails[0],
-            ecommerceDetailsValue: EcommerceDetails[0],
+            ecommerceDetailsValue: EcommerceDetails,
             paymentDetailsValue: PaymentDetails[0]
         })
 

@@ -293,8 +293,12 @@
                     style="width:100%;margin-bottom: 15px;">
                 <div class="product-enquiry-section">
                     <div class="product-price">
+                       {{#if mrp}}
                        <strike style="color:red;">Mrp: {{mrp}}</strike> &nbsp;&nbsp;
+                       {{/if}}
+                       {{#if sellingPrice}}
                        <span>SP: {{sellingPrice}}</span>
+                       {{/if}}
                     </div>
                     <a href="https://wa.me/{{companyDetailsValue.whatsApp}}?text=Hi, I am interested in your product/service"
                         target="blank" class="product-enquiry-btn">Enquiry</a>

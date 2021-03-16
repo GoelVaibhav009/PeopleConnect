@@ -310,6 +310,48 @@
     </div>
     {{/if}}
 
+    {{!-- Gallery --}}
+    {{#if imagesDetailsValue}}
+    <div class="section-container" id="gallery-section">
+        <div class="section-separator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h2 class="section-header">Gallery</h2>
+        <div class="p-10"></div>
+        <div class="images-container">
+            {{#each imagesDetailsValue.images}}
+            <div class="image-wrapper">
+                <img onclick="openImageModal(this)" alt="" src="{{this}}" style="width:100%">
+            </div>
+            {{/each}}
+        </div>
+        <div class="section-close"></div>
+    </div>
+    {{/if}}
+
+    {{!-- Videos Section --}}
+    {{#if socialDetailsValue.youtubeVideo}}
+    <div class="section-container" id="video-section">
+                <div class="separator"></div>
+                <div class="section-content-wrapper">
+                    <h2 class="section-header">Videos</h2>
+                    <div class="section-header-underline"></div>
+                    <div>
+                        {{#each socialDetailsValue.youtubeVideo}}
+                        <div class="card" style="padding: 10px">
+                            <iframe src="{{this}}" frameborder="0" allowfullscreen style="width: 100%"></iframe>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="bottom-separator"></div>
+    </div>
+    {{/if}}
+
     {{!-- Payments --}}
     {{#if paymentDetailsValue}}
     <div class="section-container" id="payment-options-section">
@@ -426,29 +468,6 @@
 
         </div>
         <div class="corner-bottom"></div>
-    </div>
-    {{/if}}
-
-    {{!-- Gallery --}}
-    {{#if imagesDetailsValue}}
-    <div class="section-container" id="gallery-section">
-        <div class="section-separator">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <h2 class="section-header">Gallery</h2>
-        <div class="p-10"></div>
-        <div class="images-container">
-            {{#each imagesDetailsValue.images}}
-            <div class="image-wrapper">
-                <img onclick="openImageModal(this)" alt="" src="{{this}}" style="width:100%">
-            </div>
-            {{/each}}
-        </div>
-        <div class="section-close"></div>
     </div>
     {{/if}}
 

@@ -264,27 +264,27 @@
                     <h2 class="section-header">Products/Services</h2>
                     <div class="section-header-underline"></div>
                     <div>
-            {{#each ecommerceDetailsValue}}
-            <div class="card">
-                <h3 class="card-title">{{productName}}</h3>
-                <div class="product-description">{{description}}</div>
-                <img onclick="openImageModal(this)" alt="{{productName}}"
-                    src="{{image}}"
-                    style="width:100%;margin-bottom: 15px;">
-                <div class="product-enquiry-section">
-                    <div class="product-price">
-                       {{#if mrp}}
-                       <strike style="color:red;">Mrp: {{mrp}}</strike> &nbsp;&nbsp;
-                       {{/if}}
-                       {{#if sellingPrice}}
-                       <span>SP: {{sellingPrice}}</span>
-                       {{/if}}
-                    </div>
-                    <a href="https://wa.me/{{companyDetailsValue.whatsApp}}?text=Hi, I am interested in your product/service"
-                        target="blank" class="product-enquiry-btn">Enquiry</a>
-                </div>
-            </div>
-            {{/each}}
+                        {{#each ecommerceDetailsValue}}
+                        <div class="card">
+                            <h3 class="card-title">{{productName}}</h3>
+                            <div class="product-description">{{description}}</div>
+                            <img onclick="openImageModal(this)" alt="{{productName}}"
+                                src="{{image}}"
+                                style="width:100%;margin-bottom: 15px;">
+                            <div class="product-enquiry-section">
+                                <div class="product-price">
+                                    {{#if mrp}}
+                                    <strike style="color:red;">Mrp: {{mrp}}</strike> &nbsp;&nbsp;
+                                    {{/if}}
+                                    {{#if sellingPrice}}
+                                    <span>SP: {{sellingPrice}}</span>
+                                    {{/if}}
+                                </div>
+                                <a href="https://wa.me/{{companyDetailsValue.whatsApp}}?text=Hi, I am interested in your product/service"
+                                    target="blank" class="product-enquiry-btn">Enquiry</a>
+                            </div>
+                        </div>
+                        {{/each}}
                     </div>
                 </div>
                 <div class="bottom-separator"></div>
@@ -313,19 +313,19 @@
         {{!-- Video section --}}
         {{#if socialDetailsValue.youtubeVideo}}
         <div class="section-container" id="video-section">
-                    <div class="separator"></div>
-                    <div class="section-content-wrapper">
-                        <h2 class="section-header">Videos</h2>
-                        <div class="section-header-underline"></div>
-                        <div>
-                            {{#each socialDetailsValue.youtubeVideo}}
-                            <div class="card" style="padding: 10px">
-                                <iframe src="{{this}}" frameborder="0" allowfullscreen style="width: 100%"></iframe>
-                            </div>
-                            {{/each}}
-                        </div>
+            <div class="separator"></div>
+            <div class="section-content-wrapper">
+                <h2 class="section-header">Videos</h2>
+                <div class="section-header-underline"></div>
+                <div>
+                    {{#each socialDetailsValue.youtubeVideo}}
+                    <div class="card" style="padding: 10px">
+                        <iframe src="{{this}}" frameborder="0" allowfullscreen style="width: 100%"></iframe>
                     </div>
-                    <div class="bottom-separator"></div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="bottom-separator"></div>
         </div>
         {{/if}}
 
@@ -618,9 +618,9 @@
                 </div>
             </div>
         </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
-        <script src="../templates/common/js/star-rating.js"></script>
         <script src="/commonjs.js"></script>
     </body>
 </html>

@@ -1,0 +1,378 @@
+<title>Digital Visiting Card</title>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon"
+        href="https://lh3.googleusercontent.com/fife/ABSRlIqqB-Og25r4HjVboG-CxDXzpRUEX6R0AKgO4c5L1oDg5mH9fEW8h0YQ07upxfHnns3IAgnCAS8Oi__1N3HMJzzysT9Ft7YDs2n7tSC7bj6xr2gqxtMwEieXt3uZXm99VARQ6g53SJKeDpAzuc_EfIk1B9YwEvs9E6Gwam9MOVl5G8bbQlGhg5PY-1Zxe61-XsV2uVQFhz3BONQ725Cor3-2Mkx5CdtDDZlTq81mr263dQ9mS72N9rBKX9OmhekORTJQo-ZEV0xFNlWRmrGSvmWvDn9NUbnxBClrXQNqCK2jG6ngeMca_gr05LyClYdMpsbxdHuyewg4SpBJBLheKsGmEb-xUib2F4Xvy1pZj3KZjqjV0yd8tlBnlU8xdT-ZLana2NF0QT_En6_p_mBd99I0cUq_5c5n6iYPOB_j0UzdxlTesjnQ6WwBWtNO6K7Le1s3Dv7CplmX7Qi8c5cdXbVtKtawaWXtGhjY0tWoDbJ4lrJ2R57Xx9YZ0_tOhxAXwdG_kKh5vqqrL5JWGn-sWyu8s2jsQZOdidhGx-ex9X8yDvkc0DfAFZVB0cFOgD11nbsnhUS_s7kqGzGBylkIS3ypA3k47g9GzdRhUr-v_6AyjsRDkNhhqwSF4p5cpkIB5GMHf2evWSIplQMjAP_LDv9D5zJ-4KRz63SQF1dLMf8iKQ6x0I9Xm7kwF7kuqRBR3a018L6yCs8BkvnXenDbBRtiC0jffZvQBhcbIw=s200-no?authuser=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <title>People's Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="/main/mobile.css">
+    <script src="/main/master_js.js"></script>
+</head>
+
+
+{{!-- Header --}}
+<header id="header">
+    <div class="logo">
+        <img src="https://lh3.googleusercontent.com/fife/ABSRlIqqB-Og25r4HjVboG-CxDXzpRUEX6R0AKgO4c5L1oDg5mH9fEW8h0YQ07upxfHnns3IAgnCAS8Oi__1N3HMJzzysT9Ft7YDs2n7tSC7bj6xr2gqxtMwEieXt3uZXm99VARQ6g53SJKeDpAzuc_EfIk1B9YwEvs9E6Gwam9MOVl5G8bbQlGhg5PY-1Zxe61-XsV2uVQFhz3BONQ725Cor3-2Mkx5CdtDDZlTq81mr263dQ9mS72N9rBKX9OmhekORTJQo-ZEV0xFNlWRmrGSvmWvDn9NUbnxBClrXQNqCK2jG6ngeMca_gr05LyClYdMpsbxdHuyewg4SpBJBLheKsGmEb-xUib2F4Xvy1pZj3KZjqjV0yd8tlBnlU8xdT-ZLana2NF0QT_En6_p_mBd99I0cUq_5c5n6iYPOB_j0UzdxlTesjnQ6WwBWtNO6K7Le1s3Dv7CplmX7Qi8c5cdXbVtKtawaWXtGhjY0tWoDbJ4lrJ2R57Xx9YZ0_tOhxAXwdG_kKh5vqqrL5JWGn-sWyu8s2jsQZOdidhGx-ex9X8yDvkc0DfAFZVB0cFOgD11nbsnhUS_s7kqGzGBylkIS3ypA3k47g9GzdRhUr-v_6AyjsRDkNhhqwSF4p5cpkIB5GMHf2evWSIplQMjAP_LDv9D5zJ-4KRz63SQF1dLMf8iKQ6x0I9Xm7kwF7kuqRBR3a018L6yCs8BkvnXenDbBRtiC0jffZvQBhcbIw=s200-no?authuser=0">
+        <h3>People's Connect</h3>
+    </div>
+    <div class="mobile_home">&equiv;</div>
+    <div class="head_txt">
+        {{!-- <a href="panel/login/login.php">
+            <h3>Customer Login</h3>
+        </a> --}}
+        <a href="#start_business">
+            <h3>Start Business <i class="fa fa-line-chart"></i></h3>
+        </a>
+        {{!-- <a href="panel/franchisee-login/login.php">
+            <h3>Franchisee Login</h3>
+        </a> --}}
+        <a href="#servicesh2">
+            <h3>Services We Offer</h3>
+        </a>
+        <a href="#contact">
+            <h3>Contact</h3>
+        </a>
+    </div>
+
+
+</header>
+
+<script>
+
+    $(document).ready(function () {
+        $('.mobile_home').on('click', function () {
+            $('#header').toggleClass('add_height');
+
+        })
+    })
+
+</script>
+
+{{!-- Main --}}
+<div class="main">
+
+    <div class="main_txt">
+        <h1>Digital Business Cards for All Business</h1>
+        <h2>Our digital business card platform makes designing a card simple, convenient, and reliable. <br>Create what
+            you need in Just 5 minutes </h2>
+        <p>THIS IS A DIGITAL BUSINESS CARD THAT IS SMART, ELEGANT & AFFORDABLE.</p>
+
+        <a href="https://wa.me/9821741623?text=Got reference from People's Connect your Digital vCard Maker. Want to know more about your products and services." target="_blank">
+            <div class="btn_2">Create Card <i class="fa fa-caret-right"></i></div>
+        </a>
+    </div>
+</div>
+<br>
+
+{{!-- About --}}
+<div class="row display_flex">
+
+    <div class="side2">
+        <p>About Us</p>
+        <h1>Freedom from Boring Printed Business Cards</h1>
+        <h3>
+            Design your digital visiting card in 2 minutes - it's easy, elegant and free. We are always in your pocket,
+            never tears and never runs out. Your Digital Visiting Card can be easily updated with our user-friendly
+            dashboard, so you won't need to re-print a business card again.</h3>
+        <a href="http://peopleconnect21.herokuapp.com/template7" target="_blank">
+            <div class="btn_1">Demo</div>
+        </a>
+    </div>
+
+    <div class="side1">
+        <iframe width="500" height="1000" src="https://www.youtube.com/embed//u8CTwJmG30g">
+        </iframe>
+    </div>
+
+
+</div>
+
+{{!-- How works --}}
+<div class="row row_backimg">
+
+    <h1>How It Works?</h1>
+
+    <div class="flex_box">
+        <div class="flex_boxin">
+            <i class="fa fa-edit"></i>
+            <h1>1. Create your Card</h1>
+            <p>Design your digital visiting card in 2 minutes</p>
+
+        </div>
+        <div class="flex_boxin">
+            <i class="fa fa-download"></i>
+            <h1>2. Save to your Device</h1>
+            <p>Digital Visiting Card is accessible anytime from anywhere</p>
+
+        </div>
+        <div class="flex_boxin">
+            <i class="fa fa-share-alt"></i>
+            <h1>3. Share with friends and colleagues</h1>
+            <p>through a variety of channels</p>
+
+        </div>
+    </div>
+</div>
+
+{{!-- Pricing --}}
+<div class="row2">
+
+    <h1>Affordable prices plus more</h1>
+    <div class="flex_pricing">
+
+        <div class="flex_pricingin">
+            <h3>Digital Card with Ecommerce </h3>
+            <h1>₹ 599 Only<p>
+            </h1>
+
+            <ul>
+                <li class="back"><i class="fa fa-check"></i> Share cards with anyone, Unlimited times</li>
+                <li><i class="fa fa-check"></i> Update card Unlimited times.</li>
+                <li class="back"><i class="fa fa-check"></i> Profile Photo</li>
+                <li><i class="fa fa-check"></i> Select design from available templates</li>
+                <li class="back"><i class="fa fa-check"></i> 10 Products or Services</li>
+                <li><i class="fa fa-check"></i> 10 Photos in Gallery</li>
+                <li class="back"> <i class="fa fa-check"></i> Social Media Links</li>
+                <li> <i class="fa fa-check"></i> 5 Videos in Youtube Video Gallery</li>
+                <li class="back"><i class="fa fa-check"></i> Products with images.</li>
+                <li><i class="fa fa-check"></i> Payment Section</li>
+                <li class="back"><i class="fa fa-check"></i> Contact Form Included</li>
+                <li><i class="fa fa-check"></i> Ecommerce Online Store </li>
+            </ul>
+            <a href="panel/login">
+                <div class="btn_1">Create Now Online >></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{{!-- Template preview --}}
+<div class="temp_preview">
+
+    <h1>Sample vCard Templates with Live Preview</h1>
+
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template1" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template2" target="_blank">
+        </a><div class="pre_btn">Select</div>
+    </div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template3" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template4" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template5" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template6" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+    <div class="temp_pre"><img src="https://card.linkconnect.in/assets/img/template1.png"><a href="http://peopleconnect21.herokuapp.com/template7" target="_blank">
+            <div class="pre_btn">Select</div>
+        </a></div>
+</div>
+
+{{!-- Benfits --}}
+<div class="row33">
+    <h1>Digital Card is Beneficial for</h1>
+    <p>If you meet your prospective customers in person (one to one meeting) or atleast you do telephonic conversations
+        to market and sell your products or services, then our Digital Business Card will help convey your message in a
+        more strategic way.</p>
+
+    <div class="benefit_box">
+        <i class="fa fa-briefcase"></i>
+        <h3>Business Owners</h3>
+        <p>Business owners who call and/or meet prospects personally to get business.</p>
+    </div>
+
+    <div class="benefit_box">
+        <i class="fa fa-handshake-o"></i>
+        <h3>Sales Professionals</h3>
+        <p>Independent Sales Professionals, Field Staff and Sales Executives.</p>
+    </div>
+
+    <div class="benefit_box">
+        <i class="fa fa-sellsy"></i>
+        <h3>Software & IT</h3>
+        <p>Web Designers, Digital and Social Media Marketers who call / meet business people.</p>
+    </div>
+
+    <div class="benefit_box">
+        <i class="fa fa-bullhorn"></i>
+        <h3>Marketing Agencies</h3>
+        <p>Advertising, Branding, News Paper, Printing and Media Planning Houses.</p>
+    </div>
+
+    <div class="benefit_box">
+        <i class="fa fa-black-tie"></i>
+        <h3>Consultants</h3>
+        <p>Architect, Interior Designers, CA, Finance and other Consultants.</p>
+    </div>
+
+    <div class="benefit_box">
+        <i class="fa fa-plane"></i>
+        <h3>Events and Travels</h3>
+        <p>Professionals from Event Management, Tours and Travel Companies.</p>
+    </div>
+    <div class="benefit_box">
+        <i class="fa fa-bar-chart"></i>
+        <h3>Finance & Realtors</h3>
+        <p>People from Real Estate Brokers and Insurance Advisors.</p>
+    </div>
+    <div class="benefit_box">
+        <i class="fa fa-graduation-cap"></i>
+        <h3>Education & Training</h3>
+        <p>Corporate Trainers, Educational Workshops, HR Consultants and Teachers.</p>
+    </div>
+    <div class="benefit_box">
+        <i class="fa fa-heartbeat"></i>
+        <h3>Health and Beauty</h3>
+        <p>Gym, Beautician, Salon, Dietician, Image Consultants Yoga & Dance Professionals.</p>
+    </div>
+
+</div>
+
+{{!-- Befints --}}
+<div class="row_features">
+    <p>FEATURES</p>
+    <h1>One business card, endless possibilities</h1>
+
+    <div class="cont_share_boxes"><i class="fa fa-phone"></i> One CLick Call</div>
+    <div class="cont_share_boxes"><i class="fa fa-whatsapp"></i> One CLick WhatsApp</div>
+    <div class="cont_share_boxes"><i class="fa fa-envelope"></i> One Click Email</div>
+    <div class="cont_share_boxes"><i class="fa fa-map-marker"></i> One CLick Navigate</div>
+    <div class="cont_share_boxes"><i class="fa fa-mobile"></i> Add to Contacts</div>
+    <div class="cont_share_boxes"><i class="fa fa-facebook"></i>Website & Social Links</div>
+    <div class="cont_share_boxes"><i class="fa fa-share-alt"></i> Share Unlimited</div>
+    <div class="cont_share_boxes"><i class="fa fa-bank"></i> Online Store</div>
+    <div class="cont_share_boxes"><i class="fa fa-edit"></i> Easy To Update</div>
+    <div class="cont_share_boxes"><i class="fa fa-image"></i> Photo Gallery</div>
+    <div class="cont_share_boxes"><i class="fa fa-youtube"></i> Youtube Video Gallery</div>
+    <div class="cont_share_boxes"><i class="fa fa-rupee"></i> Payment Section</div>
+    <div class="cont_share_boxes"><i class="fa fa-comment"></i> Enquiry Form</div>
+</div>
+
+{{!-- Reseller --}}
+<div class="w_l_f" id="start_business">
+    <h1>White Label Reseller Website</h1>
+
+    <img src="https://www.mybusinessdvc.com/images/ladder-clipart-business-1.png">
+    <ul>
+        <li>Custom Domain Name</li>
+        <li>Create Unlimited Cards</li>
+        <li>No Commission On Cards</li>
+        <li>100% Your Business</li>
+        <li>Your Server and desired Domain</li>
+        <li>Payment Gateway Integration</li>
+    </ul>
+
+    <a href="https://wa.me/9821741623?text=I am interested in White Label Reseller Website" target="_blank">
+        <h3><del>INR 50000</del> INR 25000 One time</h3>
+        <div class="btn_2">Start Now</div>
+    </a>
+</div>
+
+{{!-- Contact Us for Registration --}}
+<div class="row_contact">
+    <h3>Contact Us<br>
+        For Registration</h3>
+
+    <h1><i class="fa fa-phone"></i>9821741623<br>
+        <i class="fa fa-phone"></i>9560790693
+    </h1>
+
+</div>
+<br>
+
+{{!-- Services --}}
+<h2 id="servicesh2">Services We Offer</h2>
+<div class="services" id="services">
+    <div class="scroll_cont">
+
+        <div class="services_box" onclick="location.href='#contact'">
+            <h3>Digital Visiting Card</h3>
+            <p>Still using old boring visiting cards? Now its time to change. Use our Online Visiting Card service and
+                GO DIGITAL.</p>
+            <div class="pre_btn">Select</div>
+        </div>
+        <div class="services_box" onclick="location.href='#contact'">
+            <h3>Website Design/Developement</h3>
+            <p>Design your own Business/Professional websiste in just 6,999 Rs only.</p>
+            <div class="pre_btn">Select</div>
+        </div>
+        <div class="services_box" onclick="location.href='#contact'">
+            <h3>Social Media Marketing</h3>
+            <p>Advertise online and expand your business. </p>
+            <div class="pre_btn">Select</div>
+        </div>
+        <div class="services_box" onclick="location.href='#contact'">
+            <h3>Marketing Softwares</h3>
+            <p>WhatsApp Marketing, SMS Marketing, Email Marketing, JustDial / Google / IndiaMart / Social Media Data
+                Extractor.</p>
+            <div class="pre_btn">Select</div>
+        </div>
+
+        {{!-- <div 
+        class="services_box" 
+        onclick="location.href='https://api.whatsapp.com/send?phone=918000552603&text=Website Developement&source=&data=&app_absent'">
+        <h3>Website Design/Developement</h3>
+        <p>Design your own Business/Professional websiste in just 6,999 Rs only.</p>
+        <div class="pre_btn">Select</div></div> --}}
+
+
+    </div>
+</div>
+
+{{!-- Contact --}}
+<div class="row_bottom display_flex" id="contact">
+
+    <div class="side1">
+        <h1>
+            <img 
+            src="https://lh3.googleusercontent.com/fife/ABSRlIqqB-Og25r4HjVboG-CxDXzpRUEX6R0AKgO4c5L1oDg5mH9fEW8h0YQ07upxfHnns3IAgnCAS8Oi__1N3HMJzzysT9Ft7YDs2n7tSC7bj6xr2gqxtMwEieXt3uZXm99VARQ6g53SJKeDpAzuc_EfIk1B9YwEvs9E6Gwam9MOVl5G8bbQlGhg5PY-1Zxe61-XsV2uVQFhz3BONQ725Cor3-2Mkx5CdtDDZlTq81mr263dQ9mS72N9rBKX9OmhekORTJQo-ZEV0xFNlWRmrGSvmWvDn9NUbnxBClrXQNqCK2jG6ngeMca_gr05LyClYdMpsbxdHuyewg4SpBJBLheKsGmEb-xUib2F4Xvy1pZj3KZjqjV0yd8tlBnlU8xdT-ZLana2NF0QT_En6_p_mBd99I0cUq_5c5n6iYPOB_j0UzdxlTesjnQ6WwBWtNO6K7Le1s3Dv7CplmX7Qi8c5cdXbVtKtawaWXtGhjY0tWoDbJ4lrJ2R57Xx9YZ0_tOhxAXwdG_kKh5vqqrL5JWGn-sWyu8s2jsQZOdidhGx-ex9X8yDvkc0DfAFZVB0cFOgD11nbsnhUS_s7kqGzGBylkIS3ypA3k47g9GzdRhUr-v_6AyjsRDkNhhqwSF4p5cpkIB5GMHf2evWSIplQMjAP_LDv9D5zJ-4KRz63SQF1dLMf8iKQ6x0I9Xm7kwF7kuqRBR3a018L6yCs8BkvnXenDbBRtiC0jffZvQBhcbIw=s200-no?authuser=0">
+            People's Connect
+        </h1>
+
+        <h3>Contact Details</h3>
+
+        <div class="row_bt_p"><i class="fa fa-map-marker"></i>
+            <h4>Address: C-6/51 Yamuna Vihar<br> North-East, Delhi 110053</h4>
+        </div>
+
+        <div class="row_bt_p"><i class="fa fa-phone"></i>
+            <h4><a href="tel:919821741623">+91 9821741623</a></h4>
+        </div>
+        <div class="row_bt_p"><i class="fa fa-envelope"></i>
+            <h4>
+
+                <a href="mailto:vcardmakers@gmail.com">vcardmakers@gmail.com</a>
+            </h4>
+        </div>
+    </div>
+    <div class="side2">
+        <h3>CONTACT US</h3>
+        {{!-- Form --}}
+        <form action="" method="post">
+            <input type="" name="user_name" placeholder="Enter your name" required>
+            <input type="" name="user_contact" placeholder="Enter contact number" required>
+            <input type="" name="user_email" placeholder="Enter email" required>
+            <textarea name="user_msg" placeholder="Enter your query" required></textarea>
+            <input type="submit" value="Send" name="send_email">
+        </form>
+    </div>
+</div>
+
+{{!-- Footer --}}
+<footer class="">
+    <p>Copyright 2021 || Website developed & Maintained by <a href="https://www.localtodigital.in/"
+            target="_blank"><u><strong>People's Connect</strong></u></a></p>
+</footer>

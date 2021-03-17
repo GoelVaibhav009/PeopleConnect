@@ -293,6 +293,22 @@
         </div>
         {{/if}}  
 
+        {{!-- Gallery --}}
+        {{#if imagesDetailsValue}}
+        <div class="section-container" id="gallery-section">
+                <h2 class="section-header">Gallery</h2>
+                <div class="p-10"></div>
+                <div class="images-container">
+                    {{#each imagesDetailsValue.images}}
+                    <div class="image-wrapper">
+                    <img onclick="openImageModal(this)" alt="" src="{{this}}" style="width:100%">
+                    </div>
+                    {{/each}}
+                    </div>
+                <div class="section-close"></div>
+        </div>
+        {{/if}}
+
         {{!-- Payments --}}
         {{#if paymentDetailsValue}}
         <div class="section-container" id="payment-options-section">
@@ -411,22 +427,6 @@
             <div class="section-close"></div>
         </div>
         {{/if}}     
-
-        {{!-- Gallery --}}
-        {{#if imagesDetailsValue}}
-        <div class="section-container" id="gallery-section">
-                <h2 class="section-header">Gallery</h2>
-                <div class="p-10"></div>
-                <div class="images-container">
-                    {{#each imagesDetailsValue.images}}
-                    <div class="image-wrapper">
-                    <img onclick="openImageModal(this)" alt="" src="{{this}}" style="width:100%">
-                    </div>
-                    {{/each}}
-                    </div>
-                <div class="section-close"></div>
-        </div>
-        {{/if}}
 
         {{!-- Video section --}}
         {{#if socialDetailsValue.youtubeVideo}}

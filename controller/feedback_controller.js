@@ -33,7 +33,7 @@ exports.getFeedback = async (req, res, next) => {
 exports.createFeedback = async (req, res, next) => {
   try {
     req.body,
-    await FeedBack.create(req.body),
+    await FeedBack.create(req.body)
   } catch (e) {
     console.error(e)
   }

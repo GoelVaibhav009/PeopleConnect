@@ -32,16 +32,13 @@ exports.getContact = async (req, res, next) => {
 
 exports.createContact = async (req, res, next) => {
   try {
-    await ContactDetail.create(req.body),
-    res.status(200).json({
-    success: true,
-    msg: " Created Contact Detail ",
-  });
+    req.body,
+    await ContactDetail.create(req.body)
   } catch (e) {
-   console.log(e)
+   console.error(e)
   }
-  
 };
+
 //@desc         PUT all Contact Detail
 //@route        PUT /api/v1/company/:id
 //@acces        Private

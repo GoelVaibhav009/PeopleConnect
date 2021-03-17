@@ -100,13 +100,13 @@ function sendEnquiry(ele, mailTo) {
     ele.value = 'Sending...';
     ele.disabled = true;
     const name = document.getElementById('enquiryName');
-    const phoneNumber = document.getElementById('phoneNumber');
+    const mobile = document.getElementById('phoneNumber');
     const email = document.getElementById('email');
     const message = document.getElementById('message');
     const data = {};
     data.mailTo = mailTo;
     data.name = name.value;
-    data.phoneNumber = phoneNumber.value;
+    data.mobile = mobile.value;
     data.email = email.value;
     data.message = message.value;
     const xhr = new XMLHttpRequest();
@@ -116,7 +116,7 @@ function sendEnquiry(ele, mailTo) {
             if (this.status === 200) {
                 alert('Success: Mail sent Successfuly');
                 name.value = '';
-                phoneNumber.value = '';
+                mobile.value = '';
                 email.value = '';
                 message.value = '';
             } else {
@@ -126,7 +126,7 @@ function sendEnquiry(ele, mailTo) {
             ele.disabled = false;
         }
     };
-    xhr.open('POST', '/api/v1/sendEnquiry');
+    xhr.open('POST', '/api/v1/contact');
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.send(JSON.stringify(data));
 }
@@ -140,12 +140,12 @@ function sendFeedback(ele, cardId) {
     ele.value = 'Sending...';
     ele.disabled = true;
     const feedbackList = document.getElementsByClassName('feedback-list')[0];
-    const rating = document.getElementById('rating');
+    const star = document.getElementById('rating');
     const name = document.getElementById('feedbackName');
     const feedback = document.getElementById('feedback');
     const data = {};
     data.cardId = cardId;
-    data.rating = rating.value;
+    data.star = star.value;
     data.name = name.value;
     data.feedback = feedback.value;
     const xhr = new XMLHttpRequest();
@@ -154,7 +154,7 @@ function sendFeedback(ele, cardId) {
             const response = JSON.parse(this.response);
             if (this.status === 200) {
                 alert('Success: Feedback Given Successfully');
-                rating.value = '';
+                star.value = '';
                 name.value = '';
                 feedback.value = '';
 
@@ -162,7 +162,7 @@ function sendFeedback(ele, cardId) {
                 const feedbackResponse = response.data.feedback;
                 const newFeedback = `<div class="feedback-wrapper">
                     <span class="feedback-name-wrapper"><span class="feedback-name">${feedbackResponse.name}</span> on ${feedbackResponse.date} </span>
-                    <div><span class="gl-star-rating-stars s${feedbackResponse.rating}0"><span data-value="1" data-text="Terrible"></span><span data-value="2" data-text="Poor"></span><span data-value="3" data-text="Average"></span><span data-value="4" data-text="Very Good"></span><span data-value="5" data-text="Excellent"></span></span></div>
+                    <div><span class="gl-star-rating-stars s${feedbackResponse.star}0"><span data-value="1" data-text="Terrible"></span><span data-value="2" data-text="Poor"></span><span data-value="3" data-text="Average"></span><span data-value="4" data-text="Very Good"></span><span data-value="5" data-text="Excellent"></span></span></div>
                     <div>${feedbackResponse.feedback}</div>
                     <hr />
                 </div>`;

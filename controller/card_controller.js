@@ -12,7 +12,7 @@ exports.getCard = async (req, res, next) => {
     try {
         let CompanyDetails = await companyDetails.find({companyUrl:req.params.companyName}).lean()
         let SocialDetails = await socialDetails.find({userId: CompanyDetails[0].userId}).lean()
-        let ContactDetails = await contactDetails.find({userId: CompanyDetails[0].userId}).lean()
+        // let ContactDetails = await contactDetails.find({userId: CompanyDetails[0].userId}).lean()
         let FeedbackDetails = await feedbackDetails.find({companyId: CompanyDetails[0]._id}).lean()
         let ImagesDetails = await imagesDetails.find({userId: CompanyDetails[0].userId}).lean()
         let SelectedTemplated = await selectedTemplateDetails.find({userId: CompanyDetails[0].userId}).lean()
@@ -21,7 +21,7 @@ exports.getCard = async (req, res, next) => {
         let PaymentDetails = await paymentDetails.find({userId: CompanyDetails[0].userId}).lean()
 
         res.render(`templates/${TemplateDetails[0].name}`, {
-            contactDetailsValue: ContactDetails[0],
+            // contactDetailsValue: ContactDetails[0],
             companyDetailsValue: CompanyDetails[0],
             socialDetailsValue: SocialDetails[0],
             feedbackDetailsValue: FeedbackDetails[0],

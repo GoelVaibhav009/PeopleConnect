@@ -30,7 +30,7 @@ exports.getAllCompanyDetail = async (req, res, next) => {
 
 exports.getCompanyDetail = async (req, res, next) => {
   try {
-    const companydetails = await CompanyDetail.findById(req.params.id);
+    const companydetails = await CompanyDetail.find({userId:req.params.id});
     if (!companydetails) {
       return res.status(400).json({ success: false });
     }

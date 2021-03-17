@@ -18,7 +18,7 @@ exports.getAllContacts = async (req, res, next) => {
 //@acces        Public
   
 exports.getContact = async (req, res, next) => {
-  const contactdetails = await ContactDetail.findById(req.params.id)  
+  const contactdetails = await ContactDetail.find({companyId:req.params.id})  
   res.status(200).json({
         contactdetails,
         success: true,

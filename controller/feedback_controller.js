@@ -31,11 +31,13 @@ exports.getFeedback = async (req, res, next) => {
 //@acces        Private
 
 exports.createFeedback = async (req, res, next) => {
-  await FeedBack.create(req.body),
-  res.status(200).json({
-      success: true,
-      msg: " Created Feedback Detail ",
-    });
+  try {
+    req.body,
+    await FeedBack.create(req.body)
+  } catch (e) {
+    console.error(e)
+  }
+  
 };
 //@desc         PUT all Feedback Detail
 //@route        PUT /api/v1/feedback/:id

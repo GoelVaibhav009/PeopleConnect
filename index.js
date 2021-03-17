@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const exphbs = require('express-handlebars')
 const colors = require("colors");
+const methodOverride = require('method-override')
 const errorHandler = require("./middleware/error");
 const morgan = require("morgan");
 const fileupload = require("express-fileupload");
@@ -31,9 +32,24 @@ connectDB();
 
 const app = express();
 
-app.use(express.json());
+// Body parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
+// Method Overide
+// app.use(
+//   methodOverride(function (req, res) {
+//     if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+//       // look in urlencoded POST bodies and delete it
+//       let method = req.body._method
+//       delete req.body._method
+//       return method
+//     }
+//   })
+// )
 
 app.use(cokkie());
+
 // Dev Logging Middleware
 if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
@@ -41,20 +57,13 @@ if (process.env.NODE_ENV == "development") {
 
 //Handlesbars
 app.engine('.hbs', exphbs({defaultLayout: 'template', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template2', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template3', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template4', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template5', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template6', extname: '.hbs'}))
-// app.engine('.hbs', exphbs({defaultLayout: 'template7', extname: '.hbs'}))
-
 
 app.set('view engine', '.hbs')
 
 
 //File  upload
 app.use(fileupload());
+
 
 //Set Static Folder
 

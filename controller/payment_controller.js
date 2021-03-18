@@ -22,11 +22,19 @@ exports.getPayments = async (req, res, next) => {
 //@acces        Public
 
 exports.getPayment = async (req, res, next) => {
-  await PaymentDetail.find({ userId: req.params.userId });
-  res.status(200).json({
-    success: true,
-    msg: "Company Detail of" + req.params.id,
-  });
+  try {
+    const companydetails = await PaymentDetail.find({userId:req.params.id});
+    if (!companydetails) {
+      return res.status(400).json({ success: false });
+    }
+    res.status(200).json({
+      companydetails,
+      success: true,
+      msg: "Company Detail of" + req.params.id,
+    });
+  } catch (error) {
+    next(new ErrorResponse('Company Not found '));
+  }
 };
 
 exports.createPayment = async (req, res, next) => {
@@ -42,7 +50,7 @@ exports.createPayment = async (req, res, next) => {
 };
 
 exports.updatePayment = async (req, res, next) => {
-  let paymentdetails = await PaymentDetail.findById(req.params.id);
+  let paymentdetails = await PaymentDetail.find({userId:req.params.id});
   try {
     if (!paymentdetails) {
       res.json({
@@ -50,7 +58,7 @@ exports.updatePayment = async (req, res, next) => {
       });
     } else {
       paymentdetails = await PaymentDetail.findOneAndUpdate(
-        { _id: req.params.id },
+        { userId: req.params.id },
         req.body,
         {
           new: true,
@@ -59,7 +67,6 @@ exports.updatePayment = async (req, res, next) => {
       );
 
       res.status(200).json({
-        paymentdetails,
         success: true,
         msg: " Update Payment Detail of" + req.params.id,
       });

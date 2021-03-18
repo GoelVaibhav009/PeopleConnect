@@ -18,12 +18,19 @@ exports.getproducts = async (req, res, next) => {
 //@acces        Public
   
 exports.getproduct = async (req, res, next) => {
-  const ecomproducts = await EcomProducts.findById(req.params.id)  
-  res.status(200).json({
-        ecomproducts,
-        success: true,
-        msg: "Ecom Detail of" + req.params.id,
-      });
+  try {
+    const companydetails = await EcomProducts.find({ userId: req.params.id });
+    if (!companydetails) {
+      return res.status(400).json({ success: false });
+    }
+    res.status(200).json({
+      companydetails,
+      success: true,
+      msg: "Company Detail of" + req.params.id,
+    });
+  } catch (error) {
+    next(new ErrorResponse("Company Not found "));
+  }
 };
   
 //@desc         POST Ecom Detail
@@ -47,7 +54,7 @@ exports.createproduct = async (req, res, next) => {
 //@acces        Private
 
 exports.updateproduct = async (req, res, next) => {
-  let ecomproducts = await EcomProducts.findById(req.params.id)
+  let ecomproducts = await EcomProducts.find({ userId: req.params.id })
   try {
     if (!ecomproducts) {
       res.json({
@@ -55,7 +62,7 @@ exports.updateproduct = async (req, res, next) => {
       })
     } else {
       ecomproducts= await EcomProducts.findOneAndUpdate(
-        {_id: req.params.id }, 
+        {userId: req.params.id }, 
         req.body, 
         {
           new: true,
@@ -63,7 +70,6 @@ exports.updateproduct = async (req, res, next) => {
         })
   
       res.status(200).json({
-        ecomproducts,
         success: true,
         msg: " Update Ecom Detail of" + req.params.id,
       });

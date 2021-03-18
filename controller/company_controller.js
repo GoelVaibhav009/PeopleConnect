@@ -60,7 +60,7 @@ exports.createCompanyDetail = async (req, res, next) => {
 //@acces        Private
 
 exports.updateCompanyDetail = async (req, res, next) => {  
-    let companydetails = await CompanyDetail.findById(req.params.id)
+    let companydetails = await CompanyDetail.find({userId:req.params.id})
     try {
       if (!companydetails) {
         res.json({
@@ -68,7 +68,7 @@ exports.updateCompanyDetail = async (req, res, next) => {
         })
       } else {
         companydetails= await CompanyDetail.findOneAndUpdate(
-          {_id: req.params.id }, 
+          {userId: req.params.id }, 
           req.body, 
           {
             new: true,
@@ -76,7 +76,6 @@ exports.updateCompanyDetail = async (req, res, next) => {
           })
     
         res.status(200).json({
-          companydetails,
           success: true,
           msg: " Update Company Detail of" + req.params.id,
         });

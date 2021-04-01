@@ -673,3 +673,22 @@ header .head_txt h3:hover {
     text-align: center;
     font-size: 11px;}
 	
+.input-button{
+    width: 63%;
+    padding: 14px;
+    background: #00000000;
+    border: 1px solid #61616100;
+    border-bottom: 2px solid white;
+    margin: 3px;
+    color: white;
+    font-size: 13px;
+    outline: none;
+    width: 365px;
+    background: #000000;
+    font-size: 22px;
+    padding: 11px;
+    border-radius: 3px; 
+    border-bottom: 2px solid transparent;
+    border: 1px solid #61616100;
+}
+

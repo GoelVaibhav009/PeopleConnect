@@ -26,7 +26,7 @@ exports.getAllSelectedTemplate = async (req, res, next) => {
 
 exports.getSelectedTemplate = async (req, res, next) => {
   try {
-    const SelectedTemplates = await SelectedTemplate.findById(req.params.id);
+    const SelectedTemplates = await SelectedTemplate.find({ userId: req.params.id });
     if (!SelectedTemplates) {
       return res.status(400).json({ success: false });
     }
